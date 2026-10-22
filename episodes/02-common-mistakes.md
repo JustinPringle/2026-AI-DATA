@@ -1,344 +1,236 @@
 ---
-title: Formatting problems
-teaching: 20
+title: Common mistakes
+teaching: 0
 exercises: 0
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Recognize and resolve common spreadsheet formatting problems.
+- Recognise and fix common spreadsheet formatting problems.
+- Explain how each problem misleads a script or an AI tool.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What are some common challenges with formatting data in spreadsheets and how can we avoid them?
+- What are the common formatting problems, and how do I avoid them?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Common Spreadsheet Errors
+::::::::::::::::::::::::::::::::::::::::: instructor
 
-This episode is meant to be used as a reference for discussion as learners identify issues with the messy dataset discussed in the
-previous episode. Instructors: don't go through this episode except to refer to responses to the exercise in the previous episode.
+This episode is a reference. Do not teach it line by line; refer to it
+during the debrief of the "spot the mess" exercise.
 
-There are a few potential errors to be on the lookout for in your own data as well as data from collaborators or the Internet. If you are aware of the errors and the possible negative effect on downstream data analysis and result interpretation, it might motivate yourself and your project members to try and avoid them. Making small changes to the way you format your data in spreadsheets can have a great impact on efficiency and reliability when it comes to data cleaning and analysis.
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
-- [Using multiple tables](#tables)
-- [Using multiple tabs](#tabs)
-- [Not filling in zeros](#zeros)
-- [Using problematic null values](#null)
-- [Using formatting to convey information](#formatting)
-- [Using formatting to make the data sheet look pretty](#formatting-pretty)
-- [Placing comments or units in cells](#units)
-- [Entering more than one piece of information in a cell](#info)
-- [Using problematic field names](#field-name)
-- [Using special characters in data](#special)
-- [Inclusion of metadata in data table](#metadata)
-- [Date formatting](03-dates-as-data.md)
+Each problem below appears in `beach_water_quality_MESSY.xlsx`. The cell
+reference tells you where to look.
 
-## Using multiple tables {#tables}
+- [Multiple tables on one sheet](#multiple-tables-on-one-sheet)
+- [Multiple tabs for the same kind of data](#multiple-tabs-for-the-same-kind-of-data)
+- [Blanks and zeros](#blanks-and-zeros)
+- [Problematic null values](#problematic-null-values)
+- [Censored values: below detection, too many to count](#censored-values-below-detection-too-many-to-count)
+- [Inconsistent categories](#inconsistent-categories)
+- [Formatting that carries meaning](#formatting-that-carries-meaning)
+- [Merged cells](#merged-cells)
+- [Comments and units in cells](#comments-and-units-in-cells)
+- [More than one value in a cell](#more-than-one-value-in-a-cell)
+- [Calculations and repeated headers inside the data](#calculations-and-repeated-headers-inside-the-data)
+- [Problematic column names](#problematic-column-names)
+- [Special characters](#special-characters)
+- [Metadata inside the data table](#metadata-inside-the-data-table)
+- [Dates](03-dates-as-data.md)
 
-A common strategy is creating multiple data tables within
-one spreadsheet. This confuses the computer, so don't do this!
-When you create multiple tables within one
-spreadsheet, you're drawing false associations between things for the computer,
-which sees each row as an observation. You're also potentially using the same
-field name in multiple places, which will make it harder to clean your data up
-into a usable form. The example below depicts the problem:
+## Multiple tables on one sheet
 
-![](fig/2_datasheet_example.jpg){alt='multiple tabs'}
+*Where:* `2024 Sipho`, columns A-D and F-I.
 
-In the example above, the computer will see (for example) row 4 and assume that all columns A-AF
-refer to the same sample. This row actually represents four distinct samples
-(sample 1 for each of four different collection dates - May 29th, June 12th, June 19th, and June 26th),
-as well as some calculated summary statistics (an average (avr) and standard error of measurement (SEM)) for two of those samples. Other rows are similarly problematic.
+A computer treats each row as one observation. Two tables side by side make
+it read a North Beach sample and an Addington sample as one record, with two
+columns of the same name.
 
-## Using multiple tabs {#tabs}
+**Fix:** one table, with a `site` column.
 
-But what about workbook tabs? That seems like an easy way to organize data, right? Well, yes and no. When you create extra tabs, you fail to allow the computer to see connections in the data that are there (you have to introduce spreadsheet application-specific functions or scripting to ensure this connection). Say, for instance, you make a separate tab for each day you take a measurement.
+## Multiple tabs for the same kind of data
 
-This isn't good practice for two reasons:
+*Where:* the `2024 Sipho` and `2025_Lerato (final) v2` tabs.
 
-1) you are more likely to accidentally add inconsistencies to your data if each time you take a measurement, you start recording data in a new tab, and
-2) even if you manage to prevent all inconsistencies from creeping in, you will add an extra step for yourself before you analyze the
-  data because you will have to combine these data into a single datatable. You will have to explicitly tell the computer how to combine
-  tabs - and if the tabs are inconsistently formatted, you might even have to do it manually.
+Separate tabs invite inconsistency: here the two collectors used different
+column names, orders and units. Before any analysis someone must combine
+them, and must do it correctly.
 
-The next time you're entering data, and you go to create another tab or table, ask yourself if you could avoid adding this tab by adding another column to your original spreadsheet. We used multiple tabs in our example of a messy data file, but now you've seen how you can reorganize your data to consolidate across tabs.
+**Fix:** one table, with `collector` and date columns. When a long sheet
+hides its header, freeze the top row (View > Freeze Panes) rather than
+repeating the header.
 
-Your data sheet might get very long over the course of the experiment. This makes it harder to enter data if you can't see your headers
-at the top of the spreadsheet. But don't repeat your header row. These can easily get mixed into the data,
-leading to problems down the road.
+## Blanks and zeros
 
-Instead you can freeze the column headers so that they remain visible even when you have a spreadsheet with many rows.
+*Where:* `2024 Sipho`, G9.
 
-[Documentation on how to freeze column headers in MS Excel](https://support.office.com/en-ca/article/Freeze-column-headings-for-easy-scrolling-57ccce0c-cf85-4725-9579-c5d13106ca6a)
+A zero is a measurement. A blank means nothing was recorded. Is G9 a count of
+zero, a sample not taken, or a value someone forgot to type? Nobody can tell,
+and the answer changes the mean.
 
-## Not filling in zeros {#zeros}
+**Fix:** record true zeros as `0`. Leave a cell blank only when no
+measurement exists, and record why in a separate column (next section).
 
-It might be that when you're measuring something, it's
-usually a zero, say the number of times a rabbit
-is observed in the survey. Why bother
-writing in the number zero in that column, when it's mostly zeros?
+## Problematic null values
 
-However, there's a difference between a zero and a blank cell in a spreadsheet. To the computer, a zero is actually data. You measured
-or counted it. A blank cell means that it wasn't measured and the computer will interpret it as an unknown value (otherwise known as a
-null value).
+*Where:* `2024 Sipho`, B7 (`-999`).
 
-The spreadsheets or statistical programs will likely mis-interpret blank cells that you intend to be zeros. By not entering the value of
-your observation, you are telling your computer to represent that data as unknown or missing (null). This can cause problems with
-subsequent calculations or analyses. For example, the average of a set of numbers which includes a single null value is always null
-(because the computer can't guess the value of the missing observations). Because of this, it's very important to record zeros as zeros and truly missing data as nulls.
+Many programs treat `-999` as a number. Spreadsheet `AVERAGE` does, which is
+why the North Beach mean in the `Summary` tab is negative.
 
-## Using problematic null values {#null}
+| Null value | Problem | Recommendation |
+| --- | --- | --- |
+| 0 | Indistinguishable from a true zero | Never use |
+| Blank | Hard to tell missing from overlooked, or from a space | Best option, with a reason column |
+| -999, 999 | Read as numbers by many programs; enters calculations | Avoid |
+| NA, na | Can be a real code; turns a numeric column into text in some tools | Acceptable in R |
+| N/A, NULL, None, "No data", "Missing", -, . | Inconsistent support; changes the column's type | Avoid |
 
-**Example**:  using -999, other numerical values, zero, or text to represent missing values.
-Whatever the reason, it's a problem if unknown or missing data is recorded as -999, 999, or 0.
-Many statistical programs will not recognize that these are intended to represent missing (null) values.
+*Adapted from White et al. (2013),
+[Nine simple ways to make it easier to (re)use your data](https://peerj.com/preprints/7/).*
 
-How these values are interpreted will depend on the software you use to analyze your data.
+**Fix:** a blank cell, plus a `missing_reason` column that says why
+(`bottle_broken`, `not_sampled_rough_sea`). The reason is information;
+keeping it lets you, or a model, tell a broken bottle from a rough sea.
 
-**Solutions**:
+## Censored values: below detection, too many to count
 
-A solution will depend on the final application of your data and how you intend to analyze it,
-but it is essential to use a clearly defined and CONSISTENT null indicator. Blank cells are the best choices for most applications;
-when working in R, `NA` may be an acceptable null value choice.
+*Where:* `2024 Sipho`, B10 and G7 (`<10`); G6 (`TNTC`).
 
-There are a many reasons why null values get represented differently within a dataset.
-Sometimes confusing null values are automatically recorded from the measuring device. If that's the case, there's not much you can do, but it can be addressed in data cleaning with a tool like [OpenRefine](https://www.datacarpentry.org/OpenRefine-ecology-lesson/) before analyzing or sharing. In other cases, null values are used to convey different reasons why the data is missing. This is important information to capture, but is actually using one column to capture two pieces of information. Like for [using formatting to convey information](#formatting) it would be good here to create a new column like 'data\_missing' and use that column to capture the different reasons.
+Laboratory and instrument data often hit a limit. The method cannot count
+below 10 cfu/100 mL, or the plate is "too numerous to count". Typing `<10`
+or `TNTC` puts text in a numeric column. Some programs then treat the whole
+column as text; others drop those cells silently. Replacing them with `0`,
+`5`, `10` or `2000` invents data.
 
-Whatever the reason, missing data is a problem. It is essential to use a clearly defined and consistent null indicator.
-Blanks (most applications) and NA (for R) are good choices. White et al, 2013, explain good choices for indicating null values for different software applications in their article:
-[Nine simple ways to make it easier to (re)use your data.](https://peerj.com/preprints/7/) Ideas in Ecology and Evolution.
+**Fix:** leave the count blank and set a flag column:
+`below_detection = TRUE` or `above_count_range = TRUE`. Record the limits in
+the data dictionary. How to treat censored values in analysis is a
+statistical decision; the data table's job is to record them honestly.
 
-<table align = "left" style = "width =50%; border: 1px solid black;">
-<tr>
-	<td> <b>Null Values</b></td> <br />
-	<td> <b>Problems </b> </td><br />
-	<td> <b>Compatibility </b></td><br />
-	<td> <b>Recommendation </b></td><br />
-</tr>
-<tr>
-	<td> 0 </td>
-	<td> Indistinguishable from a true zero </td>
-	<td>   </td>
-	<td> Never use </td>
-</tr>
-<tr>
-	<td> Blank </td>
-	<td> Hard to distinguish values that are missing from those overlooked on entry. Hard to distinguish blanks from spaces, which behave differently </td>
-	<td> R, Python, SQL </td>
-	<td> Best Option </td>
-</tr>	
-<tr>
-	<td> -999, 999 </td>
-	<td> Not recognized as null by many programs without user input. Can be inadvertently entered into calculations </td>
-	<td>   </td>
-	<td> Avoid </td>
-</tr>	
-<tr>
-	<td> NA, na </td>
-	<td> Can also be an abbreviation (e.g., North America), can  cause problems with data type (turn a numerical column into a text column). NA is more commonly recognized than na. </td>	
-	<td> R </td>
-	<td> Good Option </td>
-</tr>
-<tr>	
-	<td> N/A </td>
-	<td> Alternative form of NA, but often not compatible with software </td>	
-	<td>   </td>
-	<td> Avoid </td>
-</tr>
-<tr>	
-	<td> NULL </td>
-	<td> Can cause problem with data type </td>
-	<td>  </td>
-	<td> Avoid </td>
-</tr>
-<tr>
-	<td> None </td>
-	<td> Uncommon. Can cause problem with data type. </td>
-	<td> Python </td>
-	<td> Avoid </td>
-</tr>
-<tr>
-	<td> No data </td>
-	<td> Uncommon. Can cause problem with data type, Contains a space </td>
-	<td>  </td>
-	<td> Avoid </td>
-</tr>
-<tr>
-	<td> Missing </td>
-	<td> Uncommon. Can cause problem with data type. </td>
-	<td>  </td>
-	<td> Avoid </td>
-</tr>
-<tr>
-	<td> -,+,. </td>
-	<td> Uncommon. Can cause problem with data type. </td>
-	<td>  </td>
-	<td> Avoid </td>
-</tr>
-</table>
+## Inconsistent categories
 
-## Using formatting to convey information {#formatting}
+*Where:* `2025_Lerato (final) v2`, column A.
 
-**Example**: highlighting cells, rows or columns that should be excluded from an analysis, leaving blank rows to indicate separations in data.
+North Beach appears as `North Beach`, `north beach`, `North Bch` and
+`North Beach ` (with a trailing space). Umhlanga appears three ways,
+Addington three, uShaka three. People see four beaches. A computer sees
+thirteen. A machine-learning model trained on this column learns thirteen
+classes.
 
-![](fig/formatting.png){alt='formatting'}
+**Fix:** agree a fixed list of values, enforce it with a drop-down
+([episode 4](04-quality-control.md)), and record the list in the data
+dictionary. For cleaning many variants at once, OpenRefine's clustering
+feature is effective; see the
+[Data Carpentry OpenRefine lesson](https://datacarpentry.org/OpenRefine-ecology-lesson/).
 
-**Solution**: create a new field to encode which data should be excluded.
+## Formatting that carries meaning
 
-![](fig/good_formatting.png){alt='good formatting'}
+*Where:* red cells in both tabs; yellow rows 5-6 in Lerato's tab.
 
-## Using formatting to make the data sheet look pretty {#formatting-pretty}
+Red means "exceeds guideline" to Sipho. Yellow means "exclude" to Lerato,
+and to nobody else. Colour does not survive export to CSV, and no analysis
+program or AI tool reads it.
 
-**Example**: merging cells.
+**Fix:** a column for anything you would colour. Exceedance can be
+calculated from the count; exclusion needs an `exclude` column and a reason.
 
-**Solution**: If you're not careful, formatting a worksheet to be more aesthetically pleasing can compromise your computer's ability to
-see associations in the data. Merged cells will make your data unreadable by statistics software. Consider restructuring your data in
-such a way that you will not need to merge cells to organize your data.
+## Merged cells
 
-## Placing comments or units in cells {#units}
+*Where:* `2024 Sipho`, A1 and row 3.
 
-**Example**: Your data was collected, in part, by a summer student who you later found out was mis-identifying some of your species, some
-of the time. You want a way to note these data are suspect.
+Merged cells look tidy and break almost everything that reads the file.
 
-**Solution**: Most analysis software can't see Excel or LibreOffice comments, and would be confused by comments placed within your data
-cells. As described above for formatting, create another field if you need to add notes to cells. Similarly, don't include units in
-cells: ideally, all the measurements you place in one column should be in the same unit, but if for some reason they aren't, create
-another field and specify the units the cell is in.
+**Fix:** restructure so that nothing needs merging. Here, the merged beach
+heading becomes a `site` column.
 
-## Entering more than one piece of information in a cell {#info}
+## Comments and units in cells
 
-**Example**: You find one male, and one female of the same species. You enter this as 1M, 1F.
+*Where:* `2024 Sipho`, B8 (`55 cfu`), the comment on B6; Lerato column D
+(`23.0C`).
 
-**Solution**: Don't include more than one piece of information in a cell. This will limit the ways in which you can analyze your data.
-If you need both these measurements, design your data sheet to include this information. For example, include one column for number of
-individuals and a separate column for sex.
+Spreadsheet comments are invisible to other programs. Units typed into a
+cell turn a number into text.
 
-## Using problematic field names {#field-name}
+**Fix:** a `notes` column for comments. Units in the column header
+(`water_temp_c`), with one unit per column. Lerato's row 14 holds 74.1, a
+temperature in Fahrenheit among Celsius values; convert it (23.4 °C) and
+note the conversion in your processing log.
 
-Choose descriptive field names, but be careful not to include spaces, numbers, or special characters of any kind. Spaces can be
-misinterpreted by parsers that use whitespace as delimiters and some programs don't like field names that are text strings that start
-with numbers.
+## More than one value in a cell
 
-Underscores (`_`) are a good alternative to spaces. Consider writing names in camel case (like this: ExampleFileName) to improve
-readability. Remember that abbreviations that make sense at the moment may not be so obvious in 6 months, but don't overdo it with names
-that are excessively long. Including the units in the field names avoids confusion and enables others to readily interpret your fields.
+*Where:* Lerato column E (`HW+2 / calm`) and F8 (`1M swimmer, 2F swimmers`).
 
-**Examples**
-<table align = "left" style = "width =50%; border: 1px solid black;">
-<tr>
-	<td> <b>Good Name</b></td> <br />
-	<td> <b>Good Alternative </b> </td><br />
-	<td> <b>Avoid </b></td><br />
-</tr>
-<tr>
-	<td> Max_temp_C</td>
-	<td> MaxTemp </td>
-	<td> Maximum Temp (°C) </td>
-</tr>
-<tr>
-	<td> Precipitation_mm</td>
-	<td> Precipitation</td>
-	<td> precmm </td>
-</tr>	
-<tr>
-	<td> Mean_year_growth</td>
-	<td> MeanYearGrowth </td>
-	<td> Mean growth/year</td>	
-</tr>	
-<tr>
-	<td> sex </td>
-	<td> sex </td>	
-	<td> M/F </td>
-</tr>
-<tr>	
-	<td> weight </td>
-	<td> weight </td>	
-	<td> w.</td>	
-</tr>
-<tr>	
-	<td> cell_type </td>
-	<td> CellType </td>
-	<td> Cell Type </td>
-</tr>
-<tr>
-	<td> Observation_01 </td>
-	<td> first_observation</td>
-	<td> 1st Obs</td>
-</tr>
-</table>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+One cell holds tide state and sea state; another holds two counts and two
+categories. Neither can be sorted, filtered or analysed.
 
-## Using special characters in data {#special}
+**Fix:** one column per value: `tide`, `sea_state`, or a count column per
+category.
 
-**Example**: You treat your spreadsheet program as a word processor when writing notes, for example copying data directly from Word or
-other applications.
+## Calculations and repeated headers inside the data
 
-**Solution**: This is a common strategy. For example, when writing longer text in a cell, people often include line breaks, em-dashes,
-etc in their spreadsheet.  Also, when copying data in from applications such as Word, formatting and fancy non-standard characters (such
-as left- and right-aligned quotation marks) are included.  When exporting this data into a coding/statistical environment or into a
-relational database, dangerous things may occur, such as lines being cut in half and encoding errors being thrown.
+*Where:* Lerato row 10 (`Mean North Beach`) and row 19 (header repeated).
 
-General best practice is to avoid adding characters such as newlines, tabs, and vertical tabs.  In other words, treat a text cell as if
-it were a simple web form that can only contain text and spaces.
+A summary row is read as one more observation. A repeated header turns every
+column into text from that row on.
 
-## Inclusion of metadata in data table {#metadata}
+**Fix:** keep raw data free of calculations. Calculate in a separate sheet,
+or better, in a script.
 
-**Example**: You add a legend at the top or bottom of your data table explaining column meaning, units, exceptions, etc.
+## Problematic column names
 
-**Solution**: Recording data about your data ("metadata") is essential. You may be on intimate terms with your dataset while you are
-collecting and analysing it, but the chances that you will still remember that the variable "sglmemgp" means single member of group, for
-example, or the exact algorithm you used to transform a variable or create a derived one, after a few months, a year, or more are slim.
+*Where:* `Entero (cfu/100mL)`, `Temp °C`, `Site / tide`.
 
-As well, there are many reasons other people may want to examine or use your data - to understand your findings, to verify your findings,
-to review your submitted publication, to replicate your results, to design a similar study, or even to archive your data for access and
-re-use by others. While digital data by definition are machine-readable, understanding their meaning is a job for human beings. The
-importance of documenting your data during the collection and analysis phase of your research cannot be overestimated, especially if your
-research is going to be part of the scholarly record.
+Spaces, brackets, slashes and symbols cause errors in most analysis tools.
+Abbreviations that make sense today will not in six months.
 
-However, metadata should not be contained in the data file itself. Unlike a table in a paper or a supplemental file, metadata (in the
-form of legends) should not be included in a data file since this information is not data, and including it can disrupt how computer
-programs interpret your data file. Rather, metadata should be stored as a separate file in the same directory as your data file,
-preferably in plain text format with a name that clearly associates it with your data file. Because metadata files are free text format,
-they also allow you to encode comments, units, information about how null values are encoded, etc. that are important to document but can
-disrupt the formatting of your data file.
+| Good name | Good alternative | Avoid |
+| --- | --- | --- |
+| enterococci_cfu_100ml | EnterococciCfu100ml | Entero (cfu/100mL) |
+| water_temp_c | WaterTempC | Temp °C |
+| sample_date | SampleDate | Date |
+| missing_reason | MissingReason | ? |
+| site | Site | Site / tide |
 
-Additionally, file or database level metadata describes how files that make up the dataset relate to each other; what format are they are
-in; and whether they supercede or are superceded by previous files. A folder-level readme.txt file is the classic way of accounting for
-all the files and folders in a project.
+## Special characters
 
-(Text on metadata adapted from the online course Research Data [MANTRA](https://mantra.ed.ac.uk/) by EDINA and Data Library, University of Edinburgh. MANTRA is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).)
+*Where:* Lerato F12, pasted from WhatsApp, holds an em-dash and curly
+quotation marks.
+
+Text pasted from messaging apps or word processors brings invisible
+characters, line breaks and non-standard quotes. These cause encoding errors
+and split rows when the file is exported.
+
+**Fix:** treat a text cell like a simple web form: letters, numbers,
+spaces, basic punctuation. No line breaks.
+
+## Metadata inside the data table
+
+*Where:* `2024 Sipho`, A1 (title) and A15 (legend).
+
+Information about the data is essential, but inside the table it breaks the
+grid. Is row 15 an observation?
+
+**Fix:** a separate plain-text file next to the data: a README and a data
+dictionary ([episode 6](06-data-dictionary.md)).
+
+*Text on metadata adapted from Research Data
+[MANTRA](https://mantra.ed.ac.uk/), EDINA and Data Library, University of
+Edinburgh, CC-BY 4.0, via the original Data Carpentry lesson.*
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Avoid using multiple tables within one spreadsheet.
-- Avoid spreading data across multiple tabs.
-- Record zeros as zeros.
-- Use an appropriate null value to record missing data.
-- Don't use formatting to convey information or to make your spreadsheet look pretty.
-- Place comments in a separate column.
-- Record units in column headers.
-- Include only one piece of information in a cell.
-- Avoid spaces, numbers and special characters in column headers.
-- Avoid special characters in your data.
-- Record metadata in a separate plain text file.
+- Use one table per sheet and one sheet per kind of data.
+- Record zeros as zeros; leave missing values blank and record why.
+- Flag censored values in a column; never type `<10` or `TNTC` into a number column.
+- Fix category spellings with a controlled list.
+- Do not use colour, merged cells or comments to carry information.
+- Put units in headers and one value in each cell.
+- Keep calculations, legends and titles out of the data table.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
