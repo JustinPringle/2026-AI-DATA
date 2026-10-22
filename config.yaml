@@ -11,10 +11,10 @@
 carpentry: 'dc'
 
 # Overall title for pages.
-title: 'Data Organization in Spreadsheets for Ecologists'
+title: 'Data Organization in Spreadsheets for Postgrads'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: '2015-03-09'
+created: '2026-10-22'
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, lesson, The Carpentries'
@@ -27,13 +27,13 @@ life_cycle: 'stable'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/datacarpentry/spreadsheet-ecology-lesson'
+source: 'https://justinpringle.github.io/2026-AI-DATA/'
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org'
+contact: 'pringlej@ukzn.ac.za'
 
 # Navigation ------------------------------------------------
 #
