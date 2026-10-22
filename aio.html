@@ -248,7 +248,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="01-format-data.html">2. Formatting data tables in Spreadsheets</a>
+        <a href="01-format-data.html">2. Formatting data tables</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -260,7 +260,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="02-common-mistakes.html">3. Formatting problems</a>
+        <a href="02-common-mistakes.html">3. Common mistakes</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -568,7 +568,7 @@ project.</li>
 </div>
 </div>
 </div>
-</section></section><section id="aio-01-format-data"><p>Content from <a href="01-format-data.html">Formatting data tables in Spreadsheets</a></p>
+</section></section><section id="aio-01-format-data"><p>Content from <a href="01-format-data.html">Formatting data tables</a></p>
 <hr>
 <p>Last updated on 2026-10-22 |
 
@@ -584,7 +584,7 @@ project.</li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do we format data in spreadsheets for effective data use?</li>
+<li>How should I lay out data in a spreadsheet?</li>
 </ul>
 </div>
 </div>
@@ -594,171 +594,185 @@ project.</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Describe best practices for data entry and formatting in
-spreadsheets.</li>
-<li>Apply best practices to arrange variables and observations in a
-spreadsheet.</li>
+<li>Describe the rules of tidy data.</li>
+<li>Identify what stops a computer from using a messy spreadsheet.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>The most common mistake made is treating spreadsheet programs like
-lab notebooks, that is, relying on context, notes in the margin, spatial
-layout of data and fields to convey information. As humans, we can
-(usually) interpret these things, but computers don’t view information
-the same way, and unless we explain to the computer what every single
-thing means (and that can be hard!), it will not be able to see how our
-data fits together.</p>
-<p>Using the power of computers, we can manage and analyze data in much
-more effective and faster ways, but to use that power, we have to set up
-our data for the computer to be able to understand it (and computers are
-very literal).</p>
-<p>This is why it’s extremely important to set up well-formatted tables
-from the outset - before you even start entering data from your very
-first preliminary experiment. Data organization is the foundation of
-your research project. It can make it easier or harder to work with your
-data throughout your analysis, so it’s worth thinking about when you’re
-doing your data entry or setting up your experiment. You can set things
-up in different ways in spreadsheets, but some of these choices can
-limit your ability to work with the data in other programs or have the
-you-of-6-months-from-now or your collaborator work with the data.</p>
-<div id="note" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="note" class="callout-inner">
-<h3 class="callout-title">Note</h3>
-<div class="callout-content">
-<p>The best layouts/formats (as well as software and interfaces) for
-data entry and data analysis might be different. It is important to take
-this into account, and ideally automate the conversion from one to
-another.</p>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="keeping-track-of-your-analyses">Keeping track of your analyses<a class="anchor" aria-label="anchor" href="#keeping-track-of-your-analyses"></a>
-</h3>
-<p>When you’re working with spreadsheets, during data clean up or
-analyses, it’s very easy to end up with a spreadsheet that looks very
-different from the one you started with. In order to be able to
-reproduce your analyses or figure out what you did when Reviewer #3 asks
-for a different analysis, you should</p>
-<ul>
-<li>create a new file with your cleaned or analyzed data. Don’t modify
-the original dataset, or you will never know where you started!</li>
-<li>keep track of the steps you took in your clean up or analysis. You
-should track these steps as you would any step in an experiment. We
-recommend that you do this in a plain text file stored in the same
-folder as the data file.</li>
-</ul>
-<p>This might be an example of a spreadsheet setup:</p>
-<figure><img src="fig/spreadsheet-setup-updated.png" alt="spreadsheet setup" class="figure mx-auto d-block"></figure><p>Put these principles in to practice today during your Exercises.</p>
-<div id="note-1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="note-1" class="callout-inner">
-<h3 class="callout-title">Note</h3>
-<div class="callout-content">
-<p>This is out of scope for this lesson, but for information on how to
-maintain version control over your data, look at our lesson on <a href="https://swcarpentry.github.io/git-novice/" class="external-link">‘Git’</a>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="structuring-data-in-spreadsheets">Structuring data in spreadsheets<a class="anchor" aria-label="anchor" href="#structuring-data-in-spreadsheets"></a>
-</h3>
-<p>The cardinal rule of using spreadsheet programs for data is to keep
-it “tidy”:</p>
+<section><h2 class="section-heading" id="the-most-common-mistake">The most common mistake<a class="anchor" aria-label="anchor" href="#the-most-common-mistake"></a>
+</h2>
+<hr class="half-width">
+<p>The most common mistake is treating a spreadsheet like a notebook:
+relying on context, notes in the margin, colour and the position of
+cells to carry meaning. People can usually decode this. Computers
+cannot.</p>
+<p>Set up a well-formatted table from the start, before you enter the
+first result. Reorganising later costs far more, and every
+reorganisation risks introducing errors.</p>
+</section><section><h2 class="section-heading" id="three-rules">Three rules<a class="anchor" aria-label="anchor" href="#three-rules"></a>
+</h2>
+<hr class="half-width">
 <ol style="list-style-type: decimal">
-<li>Put all your variables in columns - the thing you’re measuring, like
-‘weight’ or ‘temperature’.</li>
-<li>Put each observation in its own row.</li>
-<li>Don’t combine multiple pieces of information in one cell. Sometimes
-it just seems like one thing, but think if that’s the only way you’ll
-want to be able to use or sort that data.</li>
-<li>Leave the raw data raw - don’t change it!</li>
-<li>Export the cleaned data to a text-based format like CSV
-(comma-separated values) format. This ensures that anyone can use the
-data, and is required by most data repositories.</li>
+<li>
+<strong>Each variable in its own column, each observation in its own
+row, one value in each cell.</strong> A variable is something you
+measure or record: site, date, Enterococci count, water temperature. An
+observation is one sample.</li>
+<li>
+<strong>Leave raw data raw.</strong> Copy the file before you clean
+it, and keep a plain-text log of every change you make.</li>
+<li>
+<strong>Keep explanations out of the cells.</strong> Units go in the
+column header. Notes go in a notes column. Legends and definitions go in
+a separate file (a data dictionary, see <a href="06-data-dictionary.html">episode 6</a>).</li>
 </ol>
-<p>For instance, we have data from a survey of small mammals in a desert
-ecosystem. Different people have gone to the field and entered data into
-a spreadsheet. They keep track of things like species, plot, weight, sex
-and date collected.</p>
-<p>If they were to keep track of the data like this:</p>
-<figure><img src="fig/multiple-info.png" alt="multiple-info example" class="figure mx-auto d-block"></figure><p>the problem is that species and sex are in the same field. So, if
-they wanted to look at all of one species or look at different weight
-distributions by sex, it would be hard to do this using this data setup.
-If instead we put sex and species in different columns, you can see that
-it would be much easier.</p>
-</div>
+<p>These rules are often called <em>tidy data</em>.</p>
 <div class="section level3">
-<h3 id="columns-for-variables-and-rows-for-observations">Columns for variables and rows for observations<a class="anchor" aria-label="anchor" href="#columns-for-variables-and-rows-for-observations"></a>
+<h3 id="an-example">An example<a class="anchor" aria-label="anchor" href="#an-example"></a>
 </h3>
-<p>The rule of thumb, when setting up a datasheet, is columns =
-variables, rows = observations, cells = data (values).</p>
-<p>So, instead we should have:</p>
-<figure><img src="fig/single-info.png" alt="single-info example" class="figure mx-auto d-block"></figure><div id="discussion" class="callout discussion">
+<p>Sipho recorded each beach as its own block, side by side:</p>
+<table style="width:100%;" class="table">
+<colgroup>
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+</colgroup>
+<thead><tr>
+<th>NORTH BEACH</th>
+<th></th>
+<th></th>
+<th></th>
+<th>ADDINGTON</th>
+<th></th>
+<th></th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>Entero (cfu/100mL)</td>
+<td>Temp °C</td>
+<td></td>
+<td>Date</td>
+<td>Entero (cfu/100mL)</td>
+<td>Temp °C</td>
+</tr>
+<tr>
+<td>2024-03-05</td>
+<td>308</td>
+<td>23.6</td>
+<td></td>
+<td>2024-03-05</td>
+<td>91</td>
+<td>22.5</td>
+</tr>
+<tr>
+<td>12 Mar</td>
+<td>54</td>
+<td>22.6</td>
+<td></td>
+<td>12 Mar</td>
+<td>TNTC</td>
+<td>20.8</td>
+</tr>
+</tbody>
+</table>
+<p>To a computer, the first data row holds <em>one</em> observation with
+seven values, two of them called “Date”. The beach name sits in a merged
+heading that no program will read.</p>
+<p>The tidy version puts site in a column and gives each sample its own
+row:</p>
+<table style="width:100%;" class="table">
+<colgroup>
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+</colgroup>
+<thead><tr>
+<th>sample_id</th>
+<th>site</th>
+<th>sample_date</th>
+<th>enterococci_cfu_100ml</th>
+<th>above_count_range</th>
+<th>water_temp_c</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>DBN-2024-001</td>
+<td>North Beach</td>
+<td>2024-03-05</td>
+<td>308</td>
+<td>FALSE</td>
+<td>23.6</td>
+</tr>
+<tr>
+<td>DBN-2024-002</td>
+<td>North Beach</td>
+<td>2024-03-12</td>
+<td>54</td>
+<td>FALSE</td>
+<td>22.6</td>
+</tr>
+<tr>
+<td>DBN-2024-009</td>
+<td>Addington</td>
+<td>2024-03-05</td>
+<td>91</td>
+<td>FALSE</td>
+<td>22.5</td>
+</tr>
+<tr>
+<td>DBN-2024-010</td>
+<td>Addington</td>
+<td>2024-03-12</td>
+<td></td>
+<td>TRUE</td>
+<td>20.8</td>
+</tr>
+</tbody>
+</table>
+<p>It is longer and less pretty. It is also the only one of the two that
+a script, a database or an AI tool can use without guessing.</p>
+<div id="data-entry-and-data-analysis-may-want-different-layouts" class="callout">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-<span class="callout-header">Discussion</span>
-<div id="discussion" class="callout-inner">
-<h3 class="callout-title">Discussion</h3>
+<span class="callout-header">Callout</span>
+<div id="data-entry-and-data-analysis-may-want-different-layouts" class="callout-inner">
+<h3 class="callout-title">Data entry and data analysis may want
+different layouts</h3>
 <div class="callout-content">
-<p>If not already discussed, introduce the dataset that will be used in
-this lesson, and in the other ecology lessons, the <a href="https://www.datacarpentry.org/ecology-workshop/data" class="external-link">Portal
-Project Teaching Dataset</a>.</p>
-<p>The data used in the ecology lessons are observations of a small
-mammal community in southern Arizona. This is part of a project studying
-the effects of rodents and ants on the plant community that has been
-running for almost 40 years. The rodents are sampled on a series of 24
-plots, with different experimental manipulations controlling which
-rodents are allowed to access which plots.</p>
-<p>This is a real dataset that has been used in over 100 publications.
-We’ve simplified it just a little bit for the workshop, but you can
-download the full dataset and work with it using exactly the same tools
-we’ll learn about today.</p>
+<p>A field sheet designed for fast entry on a boat may not be tidy. That
+is acceptable, provided the conversion to a tidy table is written down
+and, ideally, automated.</p>
 </div>
 </div>
 </div>
-<div id="exercise" class="callout challenge">
+<div id="exercise-spot-the-mess" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="exercise" class="callout-inner">
-<h3 class="callout-title">Exercise</h3>
+<div id="exercise-spot-the-mess" class="callout-inner">
+<h3 class="callout-title">Exercise: spot the mess</h3>
 <div class="callout-content">
-<p>We’re going to take a messy version of the survey data and describe
-how we would clean it up.</p>
-<ol style="list-style-type: decimal">
-<li>Download the data by clicking <a href="https://ndownloader.figshare.com/files/2252083" class="external-link">here</a> to get it
-from FigShare.</li>
-<li>Open up the data in a spreadsheet program.</li>
-<li>You can see that there are two tabs. Two field assistants conducted
-the surveys, one in 2013 and one in 2014, and they both kept track of
-the data in their own way in tabs <code>2013</code> and
-<code>2014</code> of the dataset, respectively. Now you’re the person in
-charge of this project and you want to be able to start analyzing the
-data.</li>
-<li>With the person next to you, identify what is wrong with this
-spreadsheet. Also discuss the steps you would need to take to clean up
-the <code>2013</code> and <code>2014</code> tabs, and to put them all
-together in one spreadsheet.</li>
-</ol>
-<p><strong>Important</strong> Do not forget our first piece of advice:
-to create a new file (or tab) for the cleaned data, never modify your
-original (raw) data.</p>
-<p>After you go through this exercise, we’ll discuss as a group what was
-wrong with this data and how you would fix it.</p>
+<p>Download <code>beach_water_quality_MESSY.xlsx</code> from the <a href="index.html#setup">Setup</a> page and open it.</p>
+<p>Sipho sampled two beaches in 2024 and Lerato sampled four in 2025.
+Each kept the data in their own way. You now own the data and want the
+mean Enterococci count per beach.</p>
+<p>With the person next to you, list everything in the workbook that
+would stop you, or an AI tool, from calculating that mean correctly. For
+each problem, write how you would fix it.</p>
+<p><strong>Do not edit the original.</strong> Copy a tab first.</p>
 </div>
 </div>
 </div>
@@ -769,44 +783,34 @@ wrong with this data and how you would fix it.</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
+<p>The workbook contains every mistake listed in <a href="02-common-mistakes.html">the next episode</a>, and a few more.
+Among them: two tables on one tab, merged headings, a title and a legend
+inside the data, five different date formats, units typed into cells,
+<code>&lt;10</code>, <code>TNTC</code> and <code>-999</code> in a
+numeric column, colour used to flag exceedances, thirteen spellings of
+four beach names, a mean calculated in the middle of the data, a
+repeated header row, and a temperature in Fahrenheit among Celsius
+values.</p>
+<p>The full answer key is in the <a href="instructor-notes.html">Instructor Notes</a>. The tidy result is
+<code>beach_water_quality_tidy.csv</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
+</h2>
+<hr class="half-width">
 <ul>
-<li>Take about 10 minutes to work on this exercise.</li>
-<li>All the mistakes in <a href="02-common-mistakes.html">02-common-mistakes</a> are present in the
-messy dataset. If the exercise is done during a workshop, ask people
-what they saw as wrong with the data. As they bring up different points,
-you can refer to <a href="02-common-mistakes.html">02-common-mistakes</a> or expand a bit on
-the point they brought up.</li>
-<li>Note that there is a problem with dates in table ‘plot 3’ in
-<code>2014</code> tab. The field assistant who collected the data for
-year 2014 initially forgot to include their data for ‘plot 3’. They came
-back in 2015 to include the missing data and entered the dates for ‘plot
-3’ in the dataset without the year. Excel automatically filled in the
-missing year as the current year (i.e. 2015) - introducing an error in
-the data without the field assistant realising. If you get a response
-from the participants that they’ve spotted and fixed the problem with
-date, you can say you’ll come back to dates again towards the end of
-lesson in episode <a href="03-dates-as-data.html">03-dates-as-data</a>.
-If participants have not spotted the problem with dates in ‘plot 3’
-table, that’s fine as you will address peculiarities of working with
-dates in spreadsheets in episode <a href="03-dates-as-data.html">03-dates-as-data</a>.</li>
+<li>Karl W. Broman and Kara H. Woo (2018). Data Organization in
+Spreadsheets. <em>The American Statistician</em>, 72(1), 2-10. <a href="https://doi.org/10.1080/00031305.2017.1375989" class="external-link">DOI:
+10.1080/00031305.2017.1375989</a>
+</li>
+<li>Hadley Wickham (2014). Tidy Data. <em>Journal of Statistical
+Software</em>, 59(10). <a href="https://doi.org/10.18637/jss.v059.i10" class="external-link">DOI:
+10.18637/jss.v059.i10</a>
+</li>
 </ul>
-</div>
-</div>
-</div>
-</div>
-<p>There are excellent references to help you work with data in
-spreadsheets. These include:</p>
-<p>Regarding R scripting;</p>
-<blockquote>
-<p>Hadley Wickham, <em>Tidy Data</em>, Vol. 59, Issue 10, Sep 2014,
-Journal of Statistical Software. <a href="https://www.jstatsoft.org/v59/i10" class="external-link">http://www.jstatsoft.org/v59/i10</a>.</p>
-</blockquote>
-<p>Appropriately Regarding Data organization in spreadsheets;</p>
-<blockquote>
-<p>Karl W. Broman &amp; Kara H. Woo (2018) Data Organization in
-Spreadsheets, The American Statistician, 72:1, 2-10, <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989" class="external-link">DOI:
-10.1080/00031305.2017.1375989</a>.</p>
-</blockquote>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -815,16 +819,15 @@ Spreadsheets, The American Statistician, 72:1, 2-10, <a href="https://www.tandfo
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Never modify your raw data. Always make a copy before making any
-changes.</li>
-<li>Keep track of all of the steps you take to clean your data in a
-plain text file.</li>
-<li>Organize your data according to tidy data principles.</li>
+<li>Put each variable in a column, each observation in a row, and one
+value in each cell.</li>
+<li>Never modify raw data; work on a copy and log your changes.</li>
+<li>Keep units in headers and explanations in a separate file.</li>
 </ul>
 </div>
 </div>
 </div>
-</div></section><section id="aio-02-common-mistakes"><p>Content from <a href="02-common-mistakes.html">Formatting problems</a></p>
+</section></section><section id="aio-02-common-mistakes"><p>Content from <a href="02-common-mistakes.html">Common mistakes</a></p>
 <hr>
 <p>Last updated on 2026-10-22 |
 
@@ -840,8 +843,8 @@ plain text file.</li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What are some common challenges with formatting data in spreadsheets
-and how can we avoid them?</li>
+<li>What are the common formatting problems, and how do I avoid
+them?</li>
 </ul>
 </div>
 </div>
@@ -851,508 +854,269 @@ and how can we avoid them?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Recognize and resolve common spreadsheet formatting problems.</li>
+<li>Recognise and fix common spreadsheet formatting problems.</li>
+<li>Explain how each problem misleads a script or an AI tool.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="common-spreadsheet-errors">Common Spreadsheet Errors<a class="anchor" aria-label="anchor" href="#common-spreadsheet-errors"></a>
-</h2>
-<hr class="half-width">
-<p>This episode is meant to be used as a reference for discussion as
-learners identify issues with the messy dataset discussed in the
-previous episode. Instructors: don’t go through this episode except to
-refer to responses to the exercise in the previous episode.</p>
-<p>There are a few potential errors to be on the lookout for in your own
-data as well as data from collaborators or the Internet. If you are
-aware of the errors and the possible negative effect on downstream data
-analysis and result interpretation, it might motivate yourself and your
-project members to try and avoid them. Making small changes to the way
-you format your data in spreadsheets can have a great impact on
-efficiency and reliability when it comes to data cleaning and
-analysis.</p>
+<p>Each problem below appears in
+<code>beach_water_quality_MESSY.xlsx</code>. The cell reference tells
+you where to look.</p>
 <ul>
-<li><a href="#tables">Using multiple tables</a></li>
-<li><a href="#tabs">Using multiple tabs</a></li>
-<li><a href="#zeros">Not filling in zeros</a></li>
-<li><a href="#null">Using problematic null values</a></li>
-<li><a href="#formatting">Using formatting to convey
-information</a></li>
-<li><a href="#formatting-pretty">Using formatting to make the data sheet
-look pretty</a></li>
-<li><a href="#units">Placing comments or units in cells</a></li>
-<li><a href="#info">Entering more than one piece of information in a
+<li><a href="#multiple-tables-on-one-sheet">Multiple tables on one
+sheet</a></li>
+<li><a href="#multiple-tabs-for-the-same-kind-of-data">Multiple tabs for
+the same kind of data</a></li>
+<li><a href="#blanks-and-zeros">Blanks and zeros</a></li>
+<li><a href="#problematic-null-values">Problematic null values</a></li>
+<li><a href="#censored-values-below-detection-too-many-to-count">Censored
+values: below detection, too many to count</a></li>
+<li><a href="#inconsistent-categories">Inconsistent categories</a></li>
+<li><a href="#formatting-that-carries-meaning">Formatting that carries
+meaning</a></li>
+<li><a href="#merged-cells">Merged cells</a></li>
+<li><a href="#comments-and-units-in-cells">Comments and units in
+cells</a></li>
+<li><a href="#more-than-one-value-in-a-cell">More than one value in a
 cell</a></li>
-<li><a href="#field-name">Using problematic field names</a></li>
-<li><a href="#special">Using special characters in data</a></li>
-<li><a href="#metadata">Inclusion of metadata in data table</a></li>
-<li><a href="03-dates-as-data.html">Date formatting</a></li>
-</ul></section><section><h2 class="section-heading" id="tables">Using multiple tables<a class="anchor" aria-label="anchor" href="#tables"></a>
+<li><a href="#calculations-and-repeated-headers-inside-the-data">Calculations
+and repeated headers inside the data</a></li>
+<li><a href="#problematic-column-names">Problematic column
+names</a></li>
+<li><a href="#special-characters">Special characters</a></li>
+<li><a href="#metadata-inside-the-data-table">Metadata inside the data
+table</a></li>
+<li><a href="03-dates-as-data.html">Dates</a></li>
+</ul>
+<section><h2 class="section-heading" id="multiple-tables-on-one-sheet">Multiple tables on one sheet<a class="anchor" aria-label="anchor" href="#multiple-tables-on-one-sheet"></a>
 </h2>
 <hr class="half-width">
-<p>A common strategy is creating multiple data tables within one
-spreadsheet. This confuses the computer, so don’t do this! When you
-create multiple tables within one spreadsheet, you’re drawing false
-associations between things for the computer, which sees each row as an
-observation. You’re also potentially using the same field name in
-multiple places, which will make it harder to clean your data up into a
-usable form. The example below depicts the problem:</p>
-<figure><img src="fig/2_datasheet_example.jpg" alt="multiple tabs" class="figure mx-auto d-block"></figure><p>In the example above, the computer will see (for example) row 4 and
-assume that all columns A-AF refer to the same sample. This row actually
-represents four distinct samples (sample 1 for each of four different
-collection dates - May 29th, June 12th, June 19th, and June 26th), as
-well as some calculated summary statistics (an average (avr) and
-standard error of measurement (SEM)) for two of those samples. Other
-rows are similarly problematic.</p>
-</section><section><h2 class="section-heading" id="tabs">Using multiple tabs<a class="anchor" aria-label="anchor" href="#tabs"></a>
+<p><em>Where:</em> <code>2024 Sipho</code>, columns A-D and F-I.</p>
+<p>A computer treats each row as one observation. Two tables side by
+side make it read a North Beach sample and an Addington sample as one
+record, with two columns of the same name.</p>
+<p><strong>Fix:</strong> one table, with a <code>site</code> column.</p>
+</section><section><h2 class="section-heading" id="multiple-tabs-for-the-same-kind-of-data">Multiple tabs for the same kind of data<a class="anchor" aria-label="anchor" href="#multiple-tabs-for-the-same-kind-of-data"></a>
 </h2>
 <hr class="half-width">
-<p>But what about workbook tabs? That seems like an easy way to organize
-data, right? Well, yes and no. When you create extra tabs, you fail to
-allow the computer to see connections in the data that are there (you
-have to introduce spreadsheet application-specific functions or
-scripting to ensure this connection). Say, for instance, you make a
-separate tab for each day you take a measurement.</p>
-<p>This isn’t good practice for two reasons:</p>
-<ol style="list-style-type: decimal">
-<li>you are more likely to accidentally add inconsistencies to your data
-if each time you take a measurement, you start recording data in a new
-tab, and</li>
-<li>even if you manage to prevent all inconsistencies from creeping in,
-you will add an extra step for yourself before you analyze the data
-because you will have to combine these data into a single datatable. You
-will have to explicitly tell the computer how to combine tabs - and if
-the tabs are inconsistently formatted, you might even have to do it
-manually.</li>
-</ol>
-<p>The next time you’re entering data, and you go to create another tab
-or table, ask yourself if you could avoid adding this tab by adding
-another column to your original spreadsheet. We used multiple tabs in
-our example of a messy data file, but now you’ve seen how you can
-reorganize your data to consolidate across tabs.</p>
-<p>Your data sheet might get very long over the course of the
-experiment. This makes it harder to enter data if you can’t see your
-headers at the top of the spreadsheet. But don’t repeat your header row.
-These can easily get mixed into the data, leading to problems down the
-road.</p>
-<p>Instead you can freeze the column headers so that they remain visible
-even when you have a spreadsheet with many rows.</p>
-<p><a href="https://support.office.com/en-ca/article/Freeze-column-headings-for-easy-scrolling-57ccce0c-cf85-4725-9579-c5d13106ca6a" class="external-link">Documentation
-on how to freeze column headers in MS Excel</a></p>
-</section><section><h2 class="section-heading" id="zeros">Not filling in zeros<a class="anchor" aria-label="anchor" href="#zeros"></a>
+<p><em>Where:</em> the <code>2024 Sipho</code> and
+<code>2025_Lerato (final) v2</code> tabs.</p>
+<p>Separate tabs invite inconsistency: here the two collectors used
+different column names, orders and units. Before any analysis someone
+must combine them, and must do it correctly.</p>
+<p><strong>Fix:</strong> one table, with <code>collector</code> and date
+columns. When a long sheet hides its header, freeze the top row (View
+&gt; Freeze Panes) rather than repeating the header.</p>
+</section><section><h2 class="section-heading" id="blanks-and-zeros">Blanks and zeros<a class="anchor" aria-label="anchor" href="#blanks-and-zeros"></a>
 </h2>
 <hr class="half-width">
-<p>It might be that when you’re measuring something, it’s usually a
-zero, say the number of times a rabbit is observed in the survey. Why
-bother writing in the number zero in that column, when it’s mostly
-zeros?</p>
-<p>However, there’s a difference between a zero and a blank cell in a
-spreadsheet. To the computer, a zero is actually data. You measured or
-counted it. A blank cell means that it wasn’t measured and the computer
-will interpret it as an unknown value (otherwise known as a null
-value).</p>
-<p>The spreadsheets or statistical programs will likely mis-interpret
-blank cells that you intend to be zeros. By not entering the value of
-your observation, you are telling your computer to represent that data
-as unknown or missing (null). This can cause problems with subsequent
-calculations or analyses. For example, the average of a set of numbers
-which includes a single null value is always null (because the computer
-can’t guess the value of the missing observations). Because of this,
-it’s very important to record zeros as zeros and truly missing data as
-nulls.</p>
-</section><section><h2 class="section-heading" id="null">Using problematic null values<a class="anchor" aria-label="anchor" href="#null"></a>
+<p><em>Where:</em> <code>2024 Sipho</code>, G9.</p>
+<p>A zero is a measurement. A blank means nothing was recorded. Is G9 a
+count of zero, a sample not taken, or a value someone forgot to type?
+Nobody can tell, and the answer changes the mean.</p>
+<p><strong>Fix:</strong> record true zeros as <code>0</code>. Leave a
+cell blank only when no measurement exists, and record why in a separate
+column (next section).</p>
+</section><section><h2 class="section-heading" id="problematic-null-values">Problematic null values<a class="anchor" aria-label="anchor" href="#problematic-null-values"></a>
 </h2>
 <hr class="half-width">
-<p><strong>Example</strong>: using -999, other numerical values, zero,
-or text to represent missing values. Whatever the reason, it’s a problem
-if unknown or missing data is recorded as -999, 999, or 0. Many
-statistical programs will not recognize that these are intended to
-represent missing (null) values.</p>
-<p>How these values are interpreted will depend on the software you use
-to analyze your data.</p>
-<p><strong>Solutions</strong>:</p>
-<p>A solution will depend on the final application of your data and how
-you intend to analyze it, but it is essential to use a clearly defined
-and CONSISTENT null indicator. Blank cells are the best choices for most
-applications; when working in R, <code>NA</code> may be an acceptable
-null value choice.</p>
-<p>There are a many reasons why null values get represented differently
-within a dataset. Sometimes confusing null values are automatically
-recorded from the measuring device. If that’s the case, there’s not much
-you can do, but it can be addressed in data cleaning with a tool like <a href="https://www.datacarpentry.org/OpenRefine-ecology-lesson/" class="external-link">OpenRefine</a>
-before analyzing or sharing. In other cases, null values are used to
-convey different reasons why the data is missing. This is important
-information to capture, but is actually using one column to capture two
-pieces of information. Like for <a href="#formatting">using formatting
-to convey information</a> it would be good here to create a new column
-like ‘data_missing’ and use that column to capture the different
-reasons.</p>
-<p>Whatever the reason, missing data is a problem. It is essential to
-use a clearly defined and consistent null indicator. Blanks (most
-applications) and NA (for R) are good choices. White et al, 2013,
-explain good choices for indicating null values for different software
-applications in their article: <a href="https://peerj.com/preprints/7/" class="external-link">Nine simple ways to make it easier
-to (re)use your data.</a> Ideas in Ecology and Evolution.</p>
-<table align="left" style="width =50%; border: 1px solid black;" class="table">
+<p><em>Where:</em> <code>2024 Sipho</code>, B7 (<code>-999</code>).</p>
+<p>Many programs treat <code>-999</code> as a number. Spreadsheet
+<code>AVERAGE</code> does, which is why the North Beach mean in the
+<code>Summary</code> tab is negative.</p>
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr>
+<th>Null value</th>
+<th>Problem</th>
+<th>Recommendation</th>
+</tr></thead>
+<tbody>
 <tr>
-<td>
-<b>Null Values</b>
-</td>
-<br><td>
-<b>Problems </b>
-</td>
-<br><td>
-<b>Compatibility </b>
-</td>
-<br><td>
-<b>Recommendation </b>
-</td>
-<br>
+<td>0</td>
+<td>Indistinguishable from a true zero</td>
+<td>Never use</td>
 </tr>
 <tr>
-<td>
-0
-</td>
-<td>
-Indistinguishable from a true zero
-</td>
-<td>
-</td>
-<td>
-Never use
-</td>
+<td>Blank</td>
+<td>Hard to tell missing from overlooked, or from a space</td>
+<td>Best option, with a reason column</td>
 </tr>
 <tr>
-<td>
-Blank
-</td>
-<td>
-Hard to distinguish values that are missing from those overlooked on
-entry. Hard to distinguish blanks from spaces, which behave differently
-</td>
-<td>
-R, Python, SQL
-</td>
-<td>
-Best Option
-</td>
+<td>-999, 999</td>
+<td>Read as numbers by many programs; enters calculations</td>
+<td>Avoid</td>
 </tr>
 <tr>
-<td>
--999, 999
-</td>
-<td>
-Not recognized as null by many programs without user input. Can be
-inadvertently entered into calculations
-</td>
-<td>
-</td>
-<td>
-Avoid
-</td>
+<td>NA, na</td>
+<td>Can be a real code; turns a numeric column into text in some
+tools</td>
+<td>Acceptable in R</td>
 </tr>
 <tr>
-<td>
-NA, na
-</td>
-<td>
-Can also be an abbreviation (e.g., North America), can cause problems
-with data type (turn a numerical column into a text column). NA is more
-commonly recognized than na.
-</td>
-<td>
-R
-</td>
-<td>
-Good Option
-</td>
+<td>N/A, NULL, None, “No data”, “Missing”, -, .</td>
+<td>Inconsistent support; changes the column’s type</td>
+<td>Avoid</td>
 </tr>
-<tr>
-<td>
-N/A
-</td>
-<td>
-Alternative form of NA, but often not compatible with software
-</td>
-<td>
-</td>
-<td>
-Avoid
-</td>
-</tr>
-<tr>
-<td>
-NULL
-</td>
-<td>
-Can cause problem with data type
-</td>
-<td>
-</td>
-<td>
-Avoid
-</td>
-</tr>
-<tr>
-<td>
-None
-</td>
-<td>
-Uncommon. Can cause problem with data type.
-</td>
-<td>
-Python
-</td>
-<td>
-Avoid
-</td>
-</tr>
-<tr>
-<td>
-No data
-</td>
-<td>
-Uncommon. Can cause problem with data type, Contains a space
-</td>
-<td>
-</td>
-<td>
-Avoid
-</td>
-</tr>
-<tr>
-<td>
-Missing
-</td>
-<td>
-Uncommon. Can cause problem with data type.
-</td>
-<td>
-</td>
-<td>
-Avoid
-</td>
-</tr>
-<tr>
-<td>
--,+,.
-</td>
-<td>
-Uncommon. Can cause problem with data type.
-</td>
-<td>
-</td>
-<td>
-Avoid
-</td>
-</tr>
-</table></section><section><h2 class="section-heading" id="formatting">Using formatting to convey information<a class="anchor" aria-label="anchor" href="#formatting"></a>
-</h2>
-<hr class="half-width">
-<p><strong>Example</strong>: highlighting cells, rows or columns that
-should be excluded from an analysis, leaving blank rows to indicate
-separations in data.</p>
-<figure><img src="fig/formatting.png" alt="formatting" class="figure mx-auto d-block"></figure><p><strong>Solution</strong>: create a new field to encode which data
-should be excluded.</p>
-<figure><img src="fig/good_formatting.png" alt="good formatting" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="formatting-pretty">Using formatting to make the data sheet look pretty<a class="anchor" aria-label="anchor" href="#formatting-pretty"></a>
-</h2>
-<hr class="half-width">
-<p><strong>Example</strong>: merging cells.</p>
-<p><strong>Solution</strong>: If you’re not careful, formatting a
-worksheet to be more aesthetically pleasing can compromise your
-computer’s ability to see associations in the data. Merged cells will
-make your data unreadable by statistics software. Consider restructuring
-your data in such a way that you will not need to merge cells to
-organize your data.</p>
-</section><section><h2 class="section-heading" id="units">Placing comments or units in cells<a class="anchor" aria-label="anchor" href="#units"></a>
-</h2>
-<hr class="half-width">
-<p><strong>Example</strong>: Your data was collected, in part, by a
-summer student who you later found out was mis-identifying some of your
-species, some of the time. You want a way to note these data are
-suspect.</p>
-<p><strong>Solution</strong>: Most analysis software can’t see Excel or
-LibreOffice comments, and would be confused by comments placed within
-your data cells. As described above for formatting, create another field
-if you need to add notes to cells. Similarly, don’t include units in
-cells: ideally, all the measurements you place in one column should be
-in the same unit, but if for some reason they aren’t, create another
-field and specify the units the cell is in.</p>
-</section><section><h2 class="section-heading" id="info">Entering more than one piece of information in a cell<a class="anchor" aria-label="anchor" href="#info"></a>
-</h2>
-<hr class="half-width">
-<p><strong>Example</strong>: You find one male, and one female of the
-same species. You enter this as 1M, 1F.</p>
-<p><strong>Solution</strong>: Don’t include more than one piece of
-information in a cell. This will limit the ways in which you can analyze
-your data. If you need both these measurements, design your data sheet
-to include this information. For example, include one column for number
-of individuals and a separate column for sex.</p>
-</section><section><h2 class="section-heading" id="field-name">Using problematic field names<a class="anchor" aria-label="anchor" href="#field-name"></a>
-</h2>
-<hr class="half-width">
-<p>Choose descriptive field names, but be careful not to include spaces,
-numbers, or special characters of any kind. Spaces can be misinterpreted
-by parsers that use whitespace as delimiters and some programs don’t
-like field names that are text strings that start with numbers.</p>
-<p>Underscores (<code>_</code>) are a good alternative to spaces.
-Consider writing names in camel case (like this: ExampleFileName) to
-improve readability. Remember that abbreviations that make sense at the
-moment may not be so obvious in 6 months, but don’t overdo it with names
-that are excessively long. Including the units in the field names avoids
-confusion and enables others to readily interpret your fields.</p>
-<strong>Examples</strong>
-<table align="left" style="width =50%; border: 1px solid black;" class="table">
-<tr>
-<td>
-<b>Good Name</b>
-</td>
-<br><td>
-<b>Good Alternative </b>
-</td>
-<br><td>
-<b>Avoid </b>
-</td>
-<br>
-</tr>
-<tr>
-<td>
-Max_temp_C
-</td>
-<td>
-MaxTemp
-</td>
-<td>
-Maximum Temp (°C)
-</td>
-</tr>
-<tr>
-<td>
-Precipitation_mm
-</td>
-<td>
-Precipitation
-</td>
-<td>
-precmm
-</td>
-</tr>
-<tr>
-<td>
-Mean_year_growth
-</td>
-<td>
-MeanYearGrowth
-</td>
-<td>
-Mean growth/year
-</td>
-</tr>
-<tr>
-<td>
-sex
-</td>
-<td>
-sex
-</td>
-<td>
-M/F
-</td>
-</tr>
-<tr>
-<td>
-weight
-</td>
-<td>
-weight
-</td>
-<td>
-w.
-</td>
-</tr>
-<tr>
-<td>
-cell_type
-</td>
-<td>
-CellType
-</td>
-<td>
-Cell Type
-</td>
-</tr>
-<tr>
-<td>
-Observation_01
-</td>
-<td>
-first_observation
-</td>
-<td>
-1st Obs
-</td>
-</tr>
+</tbody>
 </table>
-<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-</section><section><h2 class="section-heading" id="special">Using special characters in data<a class="anchor" aria-label="anchor" href="#special"></a>
+<p><em>Adapted from White et al. (2013), <a href="https://peerj.com/preprints/7/" class="external-link">Nine simple ways to make it easier
+to (re)use your data</a>.</em></p>
+<p><strong>Fix:</strong> a blank cell, plus a
+<code>missing_reason</code> column that says why
+(<code>bottle_broken</code>, <code>not_sampled_rough_sea</code>). The
+reason is information; keeping it lets you, or a model, tell a broken
+bottle from a rough sea.</p>
+</section><section><h2 class="section-heading" id="censored-values-below-detection-too-many-to-count">Censored values: below detection, too many to count<a class="anchor" aria-label="anchor" href="#censored-values-below-detection-too-many-to-count"></a>
 </h2>
 <hr class="half-width">
-<p><strong>Example</strong>: You treat your spreadsheet program as a
-word processor when writing notes, for example copying data directly
-from Word or other applications.</p>
-<p><strong>Solution</strong>: This is a common strategy. For example,
-when writing longer text in a cell, people often include line breaks,
-em-dashes, etc in their spreadsheet. Also, when copying data in from
-applications such as Word, formatting and fancy non-standard characters
-(such as left- and right-aligned quotation marks) are included. When
-exporting this data into a coding/statistical environment or into a
-relational database, dangerous things may occur, such as lines being cut
-in half and encoding errors being thrown.</p>
-<p>General best practice is to avoid adding characters such as newlines,
-tabs, and vertical tabs. In other words, treat a text cell as if it were
-a simple web form that can only contain text and spaces.</p>
-</section><section><h2 class="section-heading" id="metadata">Inclusion of metadata in data table<a class="anchor" aria-label="anchor" href="#metadata"></a>
+<p><em>Where:</em> <code>2024 Sipho</code>, B10 and G7
+(<code>&lt;10</code>); G6 (<code>TNTC</code>).</p>
+<p>Laboratory and instrument data often hit a limit. The method cannot
+count below 10 cfu/100 mL, or the plate is “too numerous to count”.
+Typing <code>&lt;10</code> or <code>TNTC</code> puts text in a numeric
+column. Some programs then treat the whole column as text; others drop
+those cells silently. Replacing them with <code>0</code>,
+<code>5</code>, <code>10</code> or <code>2000</code> invents data.</p>
+<p><strong>Fix:</strong> leave the count blank and set a flag column:
+<code>below_detection = TRUE</code> or
+<code>above_count_range = TRUE</code>. Record the limits in the data
+dictionary. How to treat censored values in analysis is a statistical
+decision; the data table’s job is to record them honestly.</p>
+</section><section><h2 class="section-heading" id="inconsistent-categories">Inconsistent categories<a class="anchor" aria-label="anchor" href="#inconsistent-categories"></a>
 </h2>
 <hr class="half-width">
-<p><strong>Example</strong>: You add a legend at the top or bottom of
-your data table explaining column meaning, units, exceptions, etc.</p>
-<p><strong>Solution</strong>: Recording data about your data
-(“metadata”) is essential. You may be on intimate terms with your
-dataset while you are collecting and analysing it, but the chances that
-you will still remember that the variable “sglmemgp” means single member
-of group, for example, or the exact algorithm you used to transform a
-variable or create a derived one, after a few months, a year, or more
-are slim.</p>
-<p>As well, there are many reasons other people may want to examine or
-use your data - to understand your findings, to verify your findings, to
-review your submitted publication, to replicate your results, to design
-a similar study, or even to archive your data for access and re-use by
-others. While digital data by definition are machine-readable,
-understanding their meaning is a job for human beings. The importance of
-documenting your data during the collection and analysis phase of your
-research cannot be overestimated, especially if your research is going
-to be part of the scholarly record.</p>
-<p>However, metadata should not be contained in the data file itself.
-Unlike a table in a paper or a supplemental file, metadata (in the form
-of legends) should not be included in a data file since this information
-is not data, and including it can disrupt how computer programs
-interpret your data file. Rather, metadata should be stored as a
-separate file in the same directory as your data file, preferably in
-plain text format with a name that clearly associates it with your data
-file. Because metadata files are free text format, they also allow you
-to encode comments, units, information about how null values are
-encoded, etc. that are important to document but can disrupt the
-formatting of your data file.</p>
-<p>Additionally, file or database level metadata describes how files
-that make up the dataset relate to each other; what format are they are
-in; and whether they supercede or are superceded by previous files. A
-folder-level readme.txt file is the classic way of accounting for all
-the files and folders in a project.</p>
-<p>(Text on metadata adapted from the online course Research Data <a href="https://mantra.ed.ac.uk/" class="external-link">MANTRA</a> by EDINA and Data Library,
-University of Edinburgh. MANTRA is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" class="external-link">Creative Commons
-Attribution 4.0 International License</a>.)</p>
+<p><em>Where:</em> <code>2025_Lerato (final) v2</code>, column A.</p>
+<p>North Beach appears as <code>North Beach</code>,
+<code>north beach</code>, <code>North Bch</code> and
+<code>North Beach</code> (with a trailing space). Umhlanga appears three
+ways, Addington three, uShaka three. People see four beaches. A computer
+sees thirteen. A machine-learning model trained on this column learns
+thirteen classes.</p>
+<p><strong>Fix:</strong> agree a fixed list of values, enforce it with a
+drop-down (<a href="04-quality-control.html">episode 4</a>), and record
+the list in the data dictionary. For cleaning many variants at once,
+OpenRefine’s clustering feature is effective; see the <a href="https://datacarpentry.org/OpenRefine-ecology-lesson/" class="external-link">Data
+Carpentry OpenRefine lesson</a>.</p>
+</section><section><h2 class="section-heading" id="formatting-that-carries-meaning">Formatting that carries meaning<a class="anchor" aria-label="anchor" href="#formatting-that-carries-meaning"></a>
+</h2>
+<hr class="half-width">
+<p><em>Where:</em> red cells in both tabs; yellow rows 5-6 in Lerato’s
+tab.</p>
+<p>Red means “exceeds guideline” to Sipho. Yellow means “exclude” to
+Lerato, and to nobody else. Colour does not survive export to CSV, and
+no analysis program or AI tool reads it.</p>
+<p><strong>Fix:</strong> a column for anything you would colour.
+Exceedance can be calculated from the count; exclusion needs an
+<code>exclude</code> column and a reason.</p>
+</section><section><h2 class="section-heading" id="merged-cells">Merged cells<a class="anchor" aria-label="anchor" href="#merged-cells"></a>
+</h2>
+<hr class="half-width">
+<p><em>Where:</em> <code>2024 Sipho</code>, A1 and row 3.</p>
+<p>Merged cells look tidy and break almost everything that reads the
+file.</p>
+<p><strong>Fix:</strong> restructure so that nothing needs merging.
+Here, the merged beach heading becomes a <code>site</code> column.</p>
+</section><section><h2 class="section-heading" id="comments-and-units-in-cells">Comments and units in cells<a class="anchor" aria-label="anchor" href="#comments-and-units-in-cells"></a>
+</h2>
+<hr class="half-width">
+<p><em>Where:</em> <code>2024 Sipho</code>, B8 (<code>55 cfu</code>),
+the comment on B6; Lerato column D (<code>23.0C</code>).</p>
+<p>Spreadsheet comments are invisible to other programs. Units typed
+into a cell turn a number into text.</p>
+<p><strong>Fix:</strong> a <code>notes</code> column for comments. Units
+in the column header (<code>water_temp_c</code>), with one unit per
+column. Lerato’s row 14 holds 74.1, a temperature in Fahrenheit among
+Celsius values; convert it (23.4 °C) and note the conversion in your
+processing log.</p>
+</section><section><h2 class="section-heading" id="more-than-one-value-in-a-cell">More than one value in a cell<a class="anchor" aria-label="anchor" href="#more-than-one-value-in-a-cell"></a>
+</h2>
+<hr class="half-width">
+<p><em>Where:</em> Lerato column E (<code>HW+2 / calm</code>) and F8
+(<code>1M swimmer, 2F swimmers</code>).</p>
+<p>One cell holds tide state and sea state; another holds two counts and
+two categories. Neither can be sorted, filtered or analysed.</p>
+<p><strong>Fix:</strong> one column per value: <code>tide</code>,
+<code>sea_state</code>, or a count column per category.</p>
+</section><section><h2 class="section-heading" id="calculations-and-repeated-headers-inside-the-data">Calculations and repeated headers inside the data<a class="anchor" aria-label="anchor" href="#calculations-and-repeated-headers-inside-the-data"></a>
+</h2>
+<hr class="half-width">
+<p><em>Where:</em> Lerato row 10 (<code>Mean North Beach</code>) and row
+19 (header repeated).</p>
+<p>A summary row is read as one more observation. A repeated header
+turns every column into text from that row on.</p>
+<p><strong>Fix:</strong> keep raw data free of calculations. Calculate
+in a separate sheet, or better, in a script.</p>
+</section><section><h2 class="section-heading" id="problematic-column-names">Problematic column names<a class="anchor" aria-label="anchor" href="#problematic-column-names"></a>
+</h2>
+<hr class="half-width">
+<p><em>Where:</em> <code>Entero (cfu/100mL)</code>,
+<code>Temp °C</code>, <code>Site / tide</code>.</p>
+<p>Spaces, brackets, slashes and symbols cause errors in most analysis
+tools. Abbreviations that make sense today will not in six months.</p>
+<table class="table">
+<thead><tr>
+<th>Good name</th>
+<th>Good alternative</th>
+<th>Avoid</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>enterococci_cfu_100ml</td>
+<td>EnterococciCfu100ml</td>
+<td>Entero (cfu/100mL)</td>
+</tr>
+<tr>
+<td>water_temp_c</td>
+<td>WaterTempC</td>
+<td>Temp °C</td>
+</tr>
+<tr>
+<td>sample_date</td>
+<td>SampleDate</td>
+<td>Date</td>
+</tr>
+<tr>
+<td>missing_reason</td>
+<td>MissingReason</td>
+<td>?</td>
+</tr>
+<tr>
+<td>site</td>
+<td>Site</td>
+<td>Site / tide</td>
+</tr>
+</tbody>
+</table></section><section><h2 class="section-heading" id="special-characters">Special characters<a class="anchor" aria-label="anchor" href="#special-characters"></a>
+</h2>
+<hr class="half-width">
+<p><em>Where:</em> Lerato F12, pasted from WhatsApp, holds an em-dash
+and curly quotation marks.</p>
+<p>Text pasted from messaging apps or word processors brings invisible
+characters, line breaks and non-standard quotes. These cause encoding
+errors and split rows when the file is exported.</p>
+<p><strong>Fix:</strong> treat a text cell like a simple web form:
+letters, numbers, spaces, basic punctuation. No line breaks.</p>
+</section><section><h2 class="section-heading" id="metadata-inside-the-data-table">Metadata inside the data table<a class="anchor" aria-label="anchor" href="#metadata-inside-the-data-table"></a>
+</h2>
+<hr class="half-width">
+<p><em>Where:</em> <code>2024 Sipho</code>, A1 (title) and A15
+(legend).</p>
+<p>Information about the data is essential, but inside the table it
+breaks the grid. Is row 15 an observation?</p>
+<p><strong>Fix:</strong> a separate plain-text file next to the data: a
+README and a data dictionary (<a href="06-data-dictionary.html">episode
+6</a>).</p>
+<p><em>Text on metadata adapted from Research Data <a href="https://mantra.ed.ac.uk/" class="external-link">MANTRA</a>, EDINA and Data Library,
+University of Edinburgh, CC-BY 4.0, via the original Data Carpentry
+lesson.</em></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1361,18 +1125,16 @@ Attribution 4.0 International License</a>.)</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Avoid using multiple tables within one spreadsheet.</li>
-<li>Avoid spreading data across multiple tabs.</li>
-<li>Record zeros as zeros.</li>
-<li>Use an appropriate null value to record missing data.</li>
-<li>Don’t use formatting to convey information or to make your
-spreadsheet look pretty.</li>
-<li>Place comments in a separate column.</li>
-<li>Record units in column headers.</li>
-<li>Include only one piece of information in a cell.</li>
-<li>Avoid spaces, numbers and special characters in column headers.</li>
-<li>Avoid special characters in your data.</li>
-<li>Record metadata in a separate plain text file.</li>
+<li>Use one table per sheet and one sheet per kind of data.</li>
+<li>Record zeros as zeros; leave missing values blank and record
+why.</li>
+<li>Flag censored values in a column; never type <code>&lt;10</code> or
+<code>TNTC</code> into a number column.</li>
+<li>Fix category spellings with a controlled list.</li>
+<li>Do not use colour, merged cells or comments to carry
+information.</li>
+<li>Put units in headers and one value in each cell.</li>
+<li>Keep calculations, legends and titles out of the data table.</li>
 </ul>
 </div>
 </div>
@@ -1393,7 +1155,8 @@ spreadsheet look pretty.</li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What are good approaches for handling dates in spreadsheets?</li>
+<li>Why do dates cause so many errors?</li>
+<li>How should I record dates and times?</li>
 </ul>
 </div>
 </div>
@@ -1403,69 +1166,110 @@ spreadsheet look pretty.</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Describe how dates are stored and formatted in spreadsheets.</li>
-<li>Describe the advantages of alternative date formatting in
-spreadsheets.</li>
-<li>Demonstrate best practices for entering dates in spreadsheets.</li>
+<li>Describe how spreadsheets store and display dates.</li>
+<li>Record dates in a form that no program can misread.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>Dates in spreadsheets can be a problem. For one thing, dates are
-stored in a single column. While this seems the most natural way to
-record dates, it actually is not best practice. A spreadsheet
-application will display the dates in a seemingly correct way (to a
-human observer) but how it actually handles and stores the dates may be
-problematic.</p>
-<p>In particular, please remember that DATE functions that are valid for
-a given spreadsheet program (be it LibreOffice Calc, Microsoft Excel,
-OpenOffice, Gnumeric, etc.) are usually guaranteed to be compatible only
-within the same family of products. Most of the images of spreadsheets
-in this lesson come from Microsoft Excel, run on a Mac or on Windows.
-Regardless of your spreadsheet, if you will later need to export the
-data and <strong><em>need to conserve the timestamps</em></strong>, you
-are better off handling them using one of the solutions discussed
-below.</p>
-<p>One of the big problems with Excel is it can <a href="https://nsaunders.wordpress.com/2012/10/22/gene-name-errors-and-excel-lessons-not-learned/" class="external-link">turn
-things that aren’t dates into dates</a>, for example gene/protein names
-or identifiers like MAR1, DEC1, OCT4 will be changed to dates, and you
-cannot retreive the original name or identifier (except manually). So if
-you avoid the date format overall, it’s easier to work with these types
-of data. When you must work with dates, here is how to do it
-efficiently.</p>
-<div id="exercise" class="callout challenge">
+<section><h2 class="section-heading" id="what-day-is-04022024">What day is 04/02/2024?<a class="anchor" aria-label="anchor" href="#what-day-is-04022024"></a>
+</h2>
+<hr class="half-width">
+<p>Cell A9 of Sipho’s tab reads <code>04/02/2024</code>. In South Africa
+and most of the world that is 4 February. In the United States it is 2
+April. The sampling schedule says weekly from 5 March, so it must be 2
+April, but the cell does not say so, and neither a script nor an AI tool
+will check the schedule.</p>
+<p>Column A of the same tab holds five formats for one kind of
+value:</p>
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr>
+<th>Cell</th>
+<th>As typed</th>
+<th>Problem</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>A5</td>
+<td>a real spreadsheet date</td>
+<td>Fine inside Excel; shown differently on other computers</td>
+</tr>
+<tr>
+<td>A6</td>
+<td><code>12 Mar</code></td>
+<td>No year; Excel silently adds the <em>current</em> year</td>
+</tr>
+<tr>
+<td>A7</td>
+<td><code>2024/03/19</code></td>
+<td>Text, not a date</td>
+</tr>
+<tr>
+<td>A8</td>
+<td><code>26-03-2024</code></td>
+<td>Text, day first</td>
+</tr>
+<tr>
+<td>A9</td>
+<td><code>04/02/2024</code></td>
+<td>Text, month first: ambiguous</td>
+</tr>
+</tbody>
+</table></section><section><h2 class="section-heading" id="how-spreadsheets-store-dates">How spreadsheets store dates<a class="anchor" aria-label="anchor" href="#how-spreadsheets-store-dates"></a>
+</h2>
+<hr class="half-width">
+<p>Excel stores a date as a number: the count of days since 31 December
+1899 (so 2 July 2014 is 41822). What you see depends on the computer’s
+regional settings, not on the data. Three consequences follow:</p>
+<ul>
+<li>The same file can show different dates on two computers.</li>
+<li>Excel on older Macs used a 1904 date system; dates moved between
+systems can shift by about four years.</li>
+<li>Excel converts things that are not dates into dates. Gene names such
+as MAR1 and sample codes such as <code>12-3</code> become dates, and the
+original text cannot be recovered.</li>
+</ul>
+<figure><img src="fig/5_excel_dates_1.jpg" alt="Many date formats in Excel, each displaying the same stored number differently" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="record-dates-unambiguously">Record dates unambiguously<a class="anchor" aria-label="anchor" href="#record-dates-unambiguously"></a>
+</h2>
+<hr class="half-width">
+<p>Use one of these, and say which in your data dictionary:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>ISO 8601: <code>YYYY-MM-DD</code></strong>, for example
+<code>2024-04-02</code>. It sorts correctly, every analysis tool reads
+it, and it is unambiguous worldwide. This is the default for this
+lesson.</li>
+<li>
+<strong>Separate columns</strong> for year, month and day.</li>
+<li>
+<strong>Year and day of year</strong> (<code>2024</code>,
+<code>93</code>), useful for seasonal analysis.</li>
+</ol>
+<p>For date and time together, use <code>YYYY-MM-DDThh:mm</code>, for
+example <code>2024-04-02T09:15</code>, and state the time zone (SAST,
+UTC+2) in the data dictionary.</p>
+<p>To stop Excel converting a typed ISO date into its own format, format
+the column as <strong>Text</strong> before you enter data, or type the
+dates in a CSV file.</p>
+<div id="exercise-what-happens-on-export" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="exercise" class="callout-inner">
-<h3 class="callout-title">Exercise</h3>
+<div id="exercise-what-happens-on-export" class="callout-inner">
+<h3 class="callout-title">Exercise: what happens on export?</h3>
 <div class="callout-content">
-<p>Challenge: pulling month, day and year out of dates</p>
-<ul>
-<li>Let’s create a tab called <code>dates</code> in our data spreadsheet
-and copy the ‘plot 3’ table from the <code>2014</code> tab (that
-contains the problematic dates).</li>
-<li>Let’s extract month, day and year from the dates in the
-<code>Date collected</code> column into new columns. For this we can use
-the following built-in Excel functions:</li>
-</ul>
-<p><code>YEAR()</code></p>
-<p><code>MONTH()</code></p>
-<p><code>DAY()</code></p>
-<p>(Make sure the new columns are formatted as a number and not as a
-date.)</p>
-<p>You can see that even though we expected the year to be 2014, the
-year is actually 2015. What happened here is that the field assistant
-who collected the data for year 2014 initially forgot to include their
-data for ‘plot 3’ in this dataset. They came back in 2015 to add the
-missing data into the dataset and entered the dates for ‘plot 3’ without
-the year. Excel automatically interpreted the year as 2015 - the year
-the data was entered into the spreadsheet and not the year the data was
-collected. Thereby, the spreadsheet program introduced an error in the
-dataset without the field assistant realising.</p>
+<p>Copy Sipho’s North Beach block to a new tab. Save that tab as
+<code>CSV UTF-8</code> and open the CSV in a plain text editor (Notepad,
+TextEdit). Then open the CSV again in Excel.</p>
+<p>How do the dates in cells A5 and A6 change at each step?</p>
 </div>
 </div>
 </div>
@@ -1476,240 +1280,15 @@ dataset without the field assistant realising.</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p><img src="fig/solution_exercise_1_dates.png" class="figure"> {alt=‘dates, exersize
-1’ .output}</p>
+<p>The real date in A5 is written out in whatever format your computer’s
+regional settings use. The text <code>12 Mar</code> may be turned into a
+date in the current year when the CSV is reopened. Each round trip
+through Excel can change the data. ISO dates stored as text survive
+unchanged.</p>
 </div>
 </div>
 </div>
 </div>
-<div id="exercise-1" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="exercise-1" class="callout-inner">
-<h3 class="callout-title">Exercise</h3>
-<div class="callout-content">
-<p>Challenge: pulling hour, minute and second out of the current
-time</p>
-<p>Current time and date are best retrieved using the functions
-<code>NOW()</code>, which returns the current date and time, and
-<code>TODAY()</code>, which returns the current date. The results will
-be formatted according to your computer’s settings.</p>
-<ol style="list-style-type: decimal">
-<li>Extract the year, month and day from the current date and time
-string returned by the <code>NOW()</code> function.</li>
-<li>Calculate the current time using <code>NOW()-TODAY()</code>.</li>
-<li>Extract the hour, minute and second from the current time using
-functions <code>HOUR()</code>, <code>MINUTE()</code> and
-<code>SECOND()</code>.</li>
-<li>Press <code>F9</code> to force the spreadsheet to recalculate the
-<code>NOW()</code> function, and check that it has been updated.</li>
-</ol>
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<ol style="list-style-type: decimal">
-<li>To get the year, type <code>=YEAR(NOW())</code> into any cell in
-your spreadsheet. To get the month, type <code>=MONTH(NOW())</code>. To
-get the day, type <code>=DAY(NOW())</code>.</li>
-<li>Typing <code>=NOW()-TODAY()</code> will result in a decimal value
-that is not easily human parsable to a clock-based time. You will need
-to use the strategies in the third part of this challenge to convert
-this decimal value to readable time.</li>
-<li>To extract the hour, type <code>=HOUR(NOW()-TODAY())</code> and
-similarly for minute and second.</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<section><h2 class="section-heading" id="preferred-date-format">Preferred date format<a class="anchor" aria-label="anchor" href="#preferred-date-format"></a>
-</h2>
-<hr class="half-width">
-<p>It is much safer to store dates with <a href="#day">YEAR, MONTH,
-DAY</a> in separate columns or as <a href="#doy">YEAR and
-DAY-OF-YEAR</a> in separate columns.</p>
-<p><strong>Note</strong>: Excel is unable to parse dates from before
-1899-12-31, and will thus leave these untouched. If you’re mixing
-historic data from before and after this date, Excel will translate only
-the post-1900 dates into its internal format, thus resulting in mixed
-data. If you’re working with historic data, be extremely careful with
-your dates!</p>
-<p>Excel also entertains a second date system, the 1904 date system, as
-the default in Excel for Macintosh. This system will assign a different
-serial number than the <a href="https://support.microsoft.com/en-us/excel/date-systems-in-excel" class="external-link">1900
-date system</a>. Because of this, <a href="https://uc3.cdlib.org/2014/04/09/abandon-all-hope-ye-who-enter-dates-in-excel/" class="external-link">dates
-must be checked for accuracy when exporting data from Excel</a> (look
-for dates that are ~4 years off).</p>
-</section><section><h2 class="section-heading" id="date-formats-in-spreadsheets">Date formats in spreadsheets<a class="anchor" aria-label="anchor" href="#date-formats-in-spreadsheets"></a>
-</h2>
-<hr class="half-width">
-<p>Spreadsheet programs have numerous “useful features” which allow them
-to handle dates in a variety of ways.</p>
-<figure><img src="fig/5_excel_dates_1.jpg" alt="Many formats, many ambiguities" class="figure mx-auto d-block"></figure><p>But these “features” often allow ambiguity to creep into your data.
-Ideally, data should be as unambiguous as possible.</p>
-<div class="section level3">
-<h3 id="dates-stored-as-integers">Dates stored as integers<a class="anchor" aria-label="anchor" href="#dates-stored-as-integers"></a>
-</h3>
-<p>The first thing you need to know is that Excel stores dates as
-numbers - see the last column in the above figure. Essentially, it
-counts the days from a default of December 31, 1899, and thus stores
-July 2, 2014 as the serial number 41822.</p>
-<p>(But wait. That’s the default on my version of Excel. We’ll get into
-how this can introduce problems down the line later in this lesson.
-)</p>
-<p>This serial number thing can actually be useful in some
-circumstances. By using the above functions we can easily add days,
-months or years to a given date. Say you had a sampling plan where you
-needed to sample every thirty seven days. In another cell, you could
-type:</p>
-<pre><code>=B2+37</code></pre>
-<p>And it would return</p>
-<pre><code><span><span class="fl">8</span><span class="op">-</span><span class="va">Aug</span></span></code></pre>
-<p>because it understands the date as a number <code>41822</code>, and
-<code>41822 + 37 = 41859</code> which Excel interprets as August 8,
-2014. It retains the format (for the most part) of the cell that is
-being operated upon, (unless you did some sort of formatting to the cell
-before, and then all bets are off). Month and year rollovers are
-internally tracked and applied.</p>
-<p><strong>Note</strong> Adding years and months and days is slightly
-trickier because we need to make sure that we are adding the amount to
-the correct entity.</p>
-<ul>
-<li>First we extract the single entities (day, month or year)</li>
-<li>We can then add values to do that</li>
-<li>Finally the complete date string is reconstructed using the
-<code>DATE()</code> function.</li>
-</ul>
-<p>As for dates, times are handled in a similar way; seconds can be
-directly added but to add hour and minutes we need to make sure that we
-are adding the quantities to the correct entities.</p>
-<p>Which brings us to the many different ways Excel provides in how it
-displays dates. If you refer to the figure above, you’ll see that there
-are many ways that ambiguity creeps into your data depending on the
-format you chose when you enter your data, and if you’re not fully aware
-of which format you’re using, you can end up actually entering your data
-in a way that Excel will badly misinterpret and you will end up with
-errors in your data that will be extremely difficult to track down and
-troubleshoot.</p>
-<div id="exercise-2" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="exercise-2" class="callout-inner">
-<h3 class="callout-title">Exercise</h3>
-<div class="callout-content">
-<p>What happens to the dates in the <code>dates</code> tab of our
-workbook if we save this sheet in Excel (in <code>csv</code> format) and
-then open the file in a plain text editor (like TextEdit or Notepad)?
-What happens to the dates if we then open the <code>csv</code> file in
-Excel?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
-</button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
-<div class="accordion-body">
-<ul>
-<li>Click to the <code>dates</code> tab of the workbook and double-click
-on any of the values in the <code>Date collected</code> column. Notice
-that the dates display with the year 2015.</li>
-<li>Select <code>File -&gt; Save As</code> in Excel and in the drop down
-menu for file format select
-<code>CSV UTF-8 (Comma delimited) (.csv)</code>. Click
-<code>Save</code>.</li>
-<li>You will see a pop-up that says “This workbook cannot be saved in
-the selected file format because it contains multiple sheets.” Choose
-<code>Save Active Sheet</code>.</li>
-<li>Navigate to the file in your finder application. Right click and
-select <code>Open With</code>. Choose a plain text editor application
-and view the file. Notice that the dates display as month/day without
-any year information.</li>
-<li>Now right click on the file again and open with Excel. Notice that
-the dates display with the current year, not 2015.<br>
-As you can see, exporting data from Excel and then importing it back
-into Excel fundamentally changed the data once again!</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<p><strong>Note</strong><br>
-You will notice that when exporting into a text-based format (such as
-CSV), Excel will export its internal date integer instead of a useful
-value (that is, the dates will be represented as integer numbers). This
-can potentially lead to problems if you use other software to manipulate
-the file.</p>
-</div>
-<div class="section level3">
-<h3 id="advantages-of-alternative-date-formatting">Advantages of Alternative Date Formatting<a class="anchor" aria-label="anchor" href="#advantages-of-alternative-date-formatting"></a>
-</h3>
-</div>
-<div class="section level3">
-<h3 id="day">Storing dates as YEAR, MONTH, DAY<a class="anchor" aria-label="anchor" href="#day"></a>
-</h3>
-<p>Storing dates in YEAR, MONTH, DAY format helps remove this ambiguity.
-Let’s look at this issue a bit closer.</p>
-<p>For instance this is a spreadsheet representing insect counts that
-were taken every few days over the summer, and things went something
-like this:</p>
-<figure><img src="fig/6_excel_dates_2.jpg" alt="So, so ambiguous, it's even confusing Excel" class="figure mx-auto d-block"></figure><p>If Excel was to be believed, this person had been collecting bugs
-<strong>in the future</strong>. Now, we have no doubt this person is
-highly capable, but I believe time travel was beyond even their
-grasp.</p>
-<p>Entering dates in one cell is helpful but due to the fact that the
-spreadsheet programs may interpret and save the data in different ways
-(doing that somewhat behind the scenes), there is a better practice.</p>
-<p>In dealing with dates in spreadsheets, separate date data into
-separate fields (day, month, year), which will eliminate any chance of
-ambiguity.</p>
-</div>
-<div class="section level3">
-<h3 id="doy">Storing dates as YEAR, DAY-OF-YEAR<a class="anchor" aria-label="anchor" href="#doy"></a>
-</h3>
-<p>There is also another option. You can also store dates as year and
-day of year (DOY). Why? Because depending on your question, this might
-be what’s useful to you, and there is practically no possibility for
-ambiguity creeping in.</p>
-<p>Statistical models often incorporate year as a factor, or a
-categorical variable, rather than a numeric variable, to account for
-year-to-year variation, and DOY can be used to measure the passage of
-time within a year.</p>
-<p>So, can you convert all your dates into DOY format? Well, in Excel,
-here’s a useful guide:</p>
-<figure><img src="fig/7_excel_dates_3.jpg" alt="Kill that ambiguity before it bites you!" class="figure mx-auto d-block"></figure>
-</div>
-<div class="section level3">
-<h3 id="str">Storing dates as a single string<a class="anchor" aria-label="anchor" href="#str"></a>
-</h3>
-<p>Another alternative could be to convert the date string into a single
-string using the <code>YYYYMMDD</code> format. For example the date
-<code>March 24, 2015</code> would become <code>20150324</code>. This
-option also works for datetimes using the <code>YYYYMMDDhhmmss</code>
-format. So the datetime <code>March 24, 2015 17:25:35</code> would
-become <code>20150324172535</code>, where:</p>
-<p>YYYY: the full year, i.e. 2015<br>
-MM: the month, i.e. 03<br>
-DD: the day of month, i.e. 24<br>
-hh: hour of day, i.e. 17<br>
-mm: minutes, i.e. 25<br>
-ss: seconds, i.e. 35</p>
-<p>Such strings will be correctly sorted in ascending or descending
-order, and by knowing the format they can then be correctly processed by
-the receiving software.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1718,10 +1297,13 @@ the receiving software.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Treating dates as multiple pieces of data rather than one makes them
-easier to handle.</li>
+<li>Spreadsheets store dates as numbers and display them according to
+local settings.</li>
+<li>Record dates as ISO 8601 text, <code>YYYY-MM-DD</code>, or as
+separate year, month and day columns.</li>
+<li>Check every date after moving data between programs or
+computers.</li>
 </ul>
-</div>
 </div>
 </div>
 </div>
@@ -1741,8 +1323,8 @@ easier to handle.</li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How can we carry out basic quality control and quality assurance in
-spreadsheets?</li>
+<li>How do I stop bad data getting in, and find the bad data already
+there?</li>
 </ul>
 </div>
 </div>
@@ -1752,189 +1334,88 @@ spreadsheets?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Apply quality control techniques to identify errors in spreadsheets
-and limit incorrect data entry.</li>
+<li>Use data validation to prevent invalid entries.</li>
+<li>Use sorting and conditional formatting to find errors.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>When you have a well-structured data table, you can use several
-simple techniques within your spreadsheet to ensure the data you enter
-is free of errors. These approaches include techniques that are
-implemented prior to entering data (quality assurance) and techniques
-that are used after entering data to check for errors (quality
-control).</p>
-<section><h2 class="section-heading" id="quality-assurance">Quality Assurance<a class="anchor" aria-label="anchor" href="#quality-assurance"></a>
+<p>Quality <strong>assurance</strong> stops bad data being entered.
+Quality <strong>control</strong> finds errors after entry. Prevention is
+cheaper: thirteen spellings of four beaches take minutes to clean and
+seconds to prevent.</p>
+<section><h2 class="section-heading" id="quality-assurance-data-validation">Quality assurance: data validation<a class="anchor" aria-label="anchor" href="#quality-assurance-data-validation"></a>
 </h2>
 <hr class="half-width">
-<p>Quality assurance stops bad data from ever being entered by checking
-to see if values are valid during data entry. For example, if research
-is being conducted at sites A, B, and C, then the value V (which is
-right next to B on the keyboard) should never be entered. Likewise if
-one of the kinds of data being collected is a count, only integers
-greater than or equal to zero should be allowed.</p>
-<p>To control the kind of data entered into a spreadsheet we use Data
-Validation (Excel) or Validity (Libre Office Calc), to set the values
-that can be entered in each data column.</p>
-<p>1. Select the cells or column you want to validate</p>
-<p>2. On the <code>Data</code> tab, Open <code>Data Tools</code> then
-select <code>Data Validation</code></p>
-<figure><img src="fig/data_validation.png" alt="Image of Data Validation button on Data tab" class="figure mx-auto d-block"></figure><p>3. In the <code>Allow</code> box select the kind of data that should
-be in the column. Options include whole numbers, decimals, lists of
-items, dates, and other values.</p>
-<figure><img src="fig/data_validation_window.png" alt="Image of Data Validation window" class="figure mx-auto d-block"></figure><p>4. After selecting an item enter any additional details. For example,
-if you’ve chosen a list of values, enter a comma-delimited or semi-colon
-list of allowable values in the <code>Source</code> box.</p>
-<p>Let’s try this out by setting the plot column in our spreadsheet to
-only allow plot values that are integers between 1 and 24.</p>
+<p>Data validation (Excel) or Validity (LibreOffice Calc) restricts what
+a column accepts.</p>
+<p>Set the <code>site</code> column to accept only the four beaches:</p>
 <ol style="list-style-type: decimal">
-<li>Select the <code>plot_id</code> column</li>
-<li>On the <code>Data</code> tab select
-<code>Data Validation</code>
-</li>
-<li>In the <code>Allow</code> box select <code>Whole number</code>
-</li>
-<li>Set the minimum and maximum values to 1 and 24.</li>
+<li>Select the <code>site</code> column.</li>
+<li>
+<strong>Data &gt; Data Validation</strong> (Excel) or <strong>Data
+&gt; Validity</strong> (Calc).</li>
+<li>In <strong>Allow</strong>, choose <strong>List</strong>.</li>
+<li>In <strong>Source</strong>, type
+<code>North Beach,Addington,uShaka,Umhlanga Main</code>.</li>
+<li>Try typing <code>Umhlanga Rocks</code>. The spreadsheet refuses
+it.</li>
 </ol>
-<figure><img src="fig/plot_validation.png" alt="Image of Data Validation window for validating plot values" class="figure mx-auto d-block"></figure><p>Now let’s try entering a new value in the plot column that isn’t a
-valid plot. The spreadsheet stops us from entering the wrong value and
-asks us if we would like to try again.</p>
-<figure><img src="fig/invalid_value.png" alt="Image of error when trying to enter invalid data" class="figure mx-auto d-block"></figure><p>You can also customize the resulting message to be more informative
-by entering your own message in the <code>Input Message</code> tab</p>
-<figure><img src="fig/input_message.png" alt="Image of Input Message tab" class="figure mx-auto d-block"></figure><p>or allow invalid data to result in a warning rather than an error by
-modifying the <code>Style</code> option on the <code>Error Alert</code>
-tab.</p>
-<figure><img src="fig/error_alert.png" alt="Image of Error Alert tab" class="figure mx-auto d-block"></figure><p>Quality assurance can make data entry easier as well as more robust.
-For example, if you use a list of options to restrict data entry, the
-spreadsheet will provide you with a drop-downlist of the available
-items. So, instead of trying to remember how to spell <em>Dipodomys
-spectabilis</em>, you can select the right option from the list.</p>
-<figure><img src="fig/drop_down_list2.png" alt="Image of drop-down menu" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="quality-control">Quality Control<a class="anchor" aria-label="anchor" href="#quality-control"></a>
+<figure><img src="fig/data_validation_window.png" alt="Data Validation window in Excel" class="figure mx-auto d-block"></figure><p>A list also gives a drop-down, so nobody needs to remember the
+spelling. Use the same tool for numbers: Enterococci counts must be
+whole numbers of zero or more; water temperature in Durban should fall
+between, say, 10 and 35 °C. A Fahrenheit value such as 74.1 is then
+rejected at entry.</p>
+<p>On the <strong>Error Alert</strong> tab you can change a hard stop
+into a warning, for values that are unusual but possible.</p>
+<figure><img src="fig/error_alert.png" alt="Error Alert tab of the Data Validation window" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="quality-control-finding-errors">Quality control: finding errors<a class="anchor" aria-label="anchor" href="#quality-control-finding-errors"></a>
 </h2>
 <hr class="half-width">
-<p>Tip: <em>Before doing any quality control operations, save your
-original file with the formulas and a name indicating it is the original
-data. Create a separate file with appropriate naming and versioning, and
-ensure your data is stored as values and not as formulas. Because
-formulas refer to other cells, and you may be moving cells around, you
-may compromise the integrity of your data if you do not take this
-step!</em></p>
-<p>readMe (README) files: As you start manipulating your data files,
-create a readMe document / text file to keep track of your files and
-document your manipulations so that they may be easily understood and
-replicated, either by your future self or by an independent researcher.
-Your readMe file should document all of the files in your data set
-(including documentation), describe their content and format, and lay
-out the organizing principles of folders and subfolders. For each of the
-separate files listed, it is a good idea to document the manipulations
-or analyses that were carried out on those data. <a href="https://data.research.cornell.edu/content/readme" class="external-link">Cornell
-University’s Research Data Management Service Group</a> provides
-detailed guidelines for how to write a good readMe file, along with an
-adaptable template.</p>
+<p><strong>Before you start, save the original file and work on a
+copy.</strong> Make sure the copy holds values, not formulas, so that
+moving cells cannot change results.</p>
 <div class="section level3">
-<h3 id="sorting">Sorting<a class="anchor" aria-label="anchor" href="#sorting"></a>
+<h3 id="sort-each-column">Sort each column<a class="anchor" aria-label="anchor" href="#sort-each-column"></a>
 </h3>
-<p>Bad values often sort to the bottom or top of the column. For
-example, if your data should be numeric, then alphabetical and null data
-will group at the ends of the sorted data. Sort your data by each field,
-one at a time. Scan through each column, but pay the most attention to
-the top and the bottom of a column. If your dataset is well-structured
-and does not contain formulas, sorting should never affect the integrity
-of your dataset.</p>
-<p><strong>Remember</strong> to expand your sort in order to prevent
-data corruption. Expanding your sort ensures that all the data in one
-row move together instead of only sorting a single column in isolation.
-Sorting by only a single column will scramble your data - a single row
-will no longer represent an individual observation.</p>
-<div id="exercise" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="exercise" class="callout-inner">
-<h3 class="callout-title">Exercise</h3>
-<div class="callout-content">
-<p>We’ve combined all of the tables from the messy data into a single
-table in a single tab. Download this semi-cleaned data file to your
-computer: <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/blob/gh-pages/data/survey_sorting_exercise.xlsx?raw=true" class="external-link">survey_sorting_exercise</a></p>
-<p>Once downloaded, sort the <code>Weight_grams</code> column in your
-spreadsheet program from <code>Largest to Smallest</code>.</p>
-<p>What do you notice?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<p>Click the Sort button on the data tab in Excel. A pop-up will appear.
-Make sure you select <code>Expand the selection</code>.</p>
-<figure><img src="fig/sorting_button.png" alt="alt=‘quality_control0, exercise1’ .output" class="figure mx-auto d-block"><div class="figcaption">alt=‘quality_control0, exercise1’ .output</div>
-</figure><p>The following window will display, choose the column you want to sort
-as well as the sort order.</p>
-<figure><img src="fig/sorting_example.png" alt="alt=‘quality_control1, exercise1’ .output" class="figure mx-auto d-block"><div class="figcaption">alt=‘quality_control1, exercise1’ .output</div>
-</figure><p><strong>Note</strong> how the odd values sort to the top and bottom
-of the tabular data. The cells containing no data values sort to the
-bottom of the tabular data, while the cells where the letter “g” was
-included can be found towards the top. This is a powerful way to check
-your data for outliers and odd values.</p>
-<figure><img src="fig/sorting_solution_1.png" alt="alt=‘quality_control2, exercise1’ .output" class="figure mx-auto d-block"><div class="figcaption">alt=‘quality_control2, exercise1’ .output</div>
-</figure><p><img src="fig/sorting_solution_2.png" alt="alt=‘quality_control3, exercise1’ .output" class="figure">
-{alt=‘quality_control3, exercise1’ .output}</p>
-</div>
-</div>
-</div>
-</div>
+<p>Bad values collect at the top or bottom of a sorted column. Sort the
+count column from largest to smallest: text such as <code>55 cfu</code>,
+<code>&lt;10</code> and <code>TNTC</code> gathers at one end, blanks at
+the other, and <code>-999</code> at the bottom of the numbers.</p>
+<figure><img src="fig/sorting_button.png" alt="Sort button on the Data tab in Excel" class="figure mx-auto d-block"></figure><p>When Excel asks, choose <strong>Expand the selection</strong>.
+Sorting one column on its own scrambles your rows: each value moves away
+from the sample it belongs to.</p>
 </div>
 <div class="section level3">
-<h3 id="conditional-formatting">Conditional formatting<a class="anchor" aria-label="anchor" href="#conditional-formatting"></a>
+<h3 id="conditional-formatting-with-care">Conditional formatting, with care<a class="anchor" aria-label="anchor" href="#conditional-formatting-with-care"></a>
 </h3>
-<p>Conditional formatting basically can do something like color code
-your values by some criteria or lowest to highest. This makes it easy to
-scan your data for outliers.</p>
-<p>Conditional formatting should be used with caution, but it can be a
-great way to flag inconsistent values when entering data.</p>
-<div id="exercise-1" class="callout challenge">
+<p>A colour scale on the count column (Home &gt; Conditional Formatting
+&gt; Color Scales) shows outliers at a glance, and leaves text cells
+uncoloured. Use it to <em>find</em> problems while checking. Never use
+colour to <em>record</em> information.</p>
+</div>
+<div class="section level3">
+<h3 id="count-the-categories">Count the categories<a class="anchor" aria-label="anchor" href="#count-the-categories"></a>
+</h3>
+<p>Select the <code>site</code> column and use <strong>Data &gt;
+Filter</strong>. The filter drop-down lists every distinct value in the
+column. Four beaches should give four entries; Lerato’s tab gives
+thirteen.</p>
+<div id="keep-a-log" class="callout">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-<span class="callout-header">Challenge</span>
-<div id="exercise-1" class="callout-inner">
-<h3 class="callout-title">Exercise</h3>
+<span class="callout-header">Callout</span>
+<div id="keep-a-log" class="callout-inner">
+<h3 class="callout-title">Keep a log</h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal">
-<li>Make sure the Weight_grams column is highlighted.</li>
-<li>In the main Excel menu bar, click <code>Home</code> &gt;
-<code>Conditional Formatting...</code> choose a formatting rule.</li>
-<li>Apply any <code>2-Color Scale</code> formatting rule.</li>
-<li>Now we can scan through and different colors will stand out. Do you
-notice any strange values?</li>
-</ol>
+<p>As you clean, write each step in a plain-text file kept with the
+data: what you changed, why, and when. If an AI tool did the cleaning,
+record the tool, the date and the prompt. See <a href="07-project-organisation.html">episode 7</a>.</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-<p>Cells that contain non-numerical values are not colored. This
-includes both the cells where the letter “g” was included and the empty
-cells. <img src="fig/conditional_formating.png" alt="alt=‘quality_control4, exercise2’ .output" class="figure"></p>
-</div>
-</div>
-</div>
-</div>
-<p>It is nice to be able to do these scans in spreadsheets, but we also
-can do these checks in a programming language like R, or in OpenRefine
-or SQL.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1943,13 +1424,11 @@ or SQL.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Always copy your original spreadsheet file and work with a copy so
-you don’t affect the raw data.</li>
-<li>Use data validation to prevent accidentally entering invalid
-data.</li>
-<li>Use sorting to check for invalid data.</li>
-<li>Use conditional formatting (cautiously) to check for invalid
-data.</li>
+<li>Always work on a copy of the raw data.</li>
+<li>Use data validation to prevent invalid entries and inconsistent
+categories.</li>
+<li>Sort, filter and colour-scale columns to find errors.</li>
+<li>Sort whole rows, never a single column.</li>
 </ul>
 </div>
 </div>
@@ -1971,8 +1450,7 @@ data.</li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How can we export data from spreadsheets in a way that is useful for
-downstream applications?</li>
+<li>In what format should I keep and share data?</li>
 </ul>
 </div>
 </div>
@@ -1982,155 +1460,74 @@ downstream applications?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Store spreadsheet data in universal file formats.</li>
-<li>Export data from a spreadsheet to a CSV file.</li>
+<li>Store data in open, plain-text formats.</li>
+<li>Export a spreadsheet to CSV safely.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>Storing the data you’re going to work with for your analyses in Excel
-default file format (<code>*.xls</code> or <code>*.xlsx</code> -
-depending on the Excel version) isn’t a good idea. Why?</p>
-<ul>
-<li><p>Because it is a proprietary format, and it is possible that in
-the future, technology won’t exist (or will become sufficiently rare) to
-make it inconvenient, if not impossible, to open the file.</p></li>
-<li><p>Other spreadsheet software may not be able to open files saved in
-a proprietary Excel format.</p></li>
-<li><p>Different versions of Excel may handle data differently, leading
-to inconsistencies.</p></li>
-<li><p>Finally, more journals and grant agencies are requiring you to
-deposit your data in a data repository, and most of them don’t accept
-Excel format. It needs to be in one of the formats discussed
-below.</p></li>
-<li><p>The above points also apply to other formats such as open data
-formats used by LibreOffice / Open Office. These formats are not static
-and do not get parsed the same way by different software
-packages.</p></li>
-</ul>
-<p>As an example of inconsistencies in data storage, do you remember how
-we talked about how Excel stores dates earlier? It turns out that there
-are multiple defaults for different versions of the software, and you
-can switch between them all. So, say you’re compiling Excel-stored data
-from multiple sources. There are dates in each file - Excel interprets
-them as their own internally consistent serial numbers. When you combine
-the data, Excel will take the serial number from the place you’re
-importing it from, and interpret it using the rule set for the version
-of Excel you’re using. Essentially, you could be adding errors to your
-data, and it wouldn’t necessarily be flagged by any data cleaning
-methods if your ranges overlap.</p>
-<p>Storing data in a universal, open, and static format will help deal
-with this problem. Try tab-delimited (tab separated values or TSV) or
-comma-delimited (comma separated values or CSV). CSV files are plain
-text files where the columns are separated by commas, hence ‘comma
-separated values’ or CSV. The advantage of a CSV file over an
-Excel/SPSS/etc. file is that we can open and read a CSV file using just
-about any software, including plain text editors like TextEdit or
-NotePad. Data in a CSV file can also be easily imported into other
-formats and environments, such as SQLite and R. We’re not tied to a
-certain version of a certain expensive program when we work with CSV
-files, so it’s a good format to work with for maximum portability and
-endurance. Most spreadsheet programs can save to delimited text formats
-like CSV easily, although they may give you a warning during the file
-export.</p>
-<p>To save a file you have opened in Excel in CSV format:</p>
-<ol style="list-style-type: decimal">
-<li>From the top menu select ‘File’ and ‘Save as’.</li>
-<li>In the ‘Format’ field, from the list, select ‘Comma Separated
-Values’ (<code>*.csv</code>).</li>
-<li>Double check the file name and the location where you want to save
-it and hit ‘Save’.</li>
-</ol>
-<p>An important note for backwards compatibility: you can open CSV files
-in Excel!</p>
-<figure><img src="fig/excel-to-csv.png" alt="Saving an Excel file to CSV" class="figure mx-auto d-block"></figure><section><h2 class="section-heading" id="a-note-on-cross-platform-operability">A Note on Cross-platform Operability<a class="anchor" aria-label="anchor" href="#a-note-on-cross-platform-operability"></a>
+<section><h2 class="section-heading" id="why-not-keep-data-as--xlsx">Why not keep data as .xlsx?<a class="anchor" aria-label="anchor" href="#why-not-keep-data-as--xlsx"></a>
 </h2>
 <hr class="half-width">
-<p>By default, most coding and statistical environments expect
-UNIX-style line endings (ASCII <code>LF</code> character) as
-representing line breaks. However, Windows uses an alternate line ending
-signifier (ASCII <code>CR LF</code> characters) by default for legacy
-compatibility with Teletype-based systems.</p>
-<p>As such, when exporting to CSV using Excel, your data in text format
-will look like this:</p>
-<blockquote>
-<p>data1,data2<cr><lf>1,2<cr><lf>4,5<cr><lf></lf></cr></lf></cr></lf></cr></p>
-</blockquote>
-<p>When opening your CSV file in Excel again, it will parse it as
-follows:</p>
-<figure><img width="307" alt="screen shot 2017-03-31 at 7 15 07 pm" src="https://cloud.githubusercontent.com/assets/13110354/24560663/db4a5786-1643-11e7-931a-ca2c72336878.png" class="figure mx-auto d-block"></figure><p>However, if you open your CSV file on a different system that does
-not parse the <code>CR</code> character it will interpret your CSV file
-differently:</p>
-<p>Your data in text format then look like this:</p>
-<blockquote>
-<p>data1<br> data2<cr><br> 1<br> 2<cr><br> …</cr></cr></p>
-</blockquote>
-<p>You will then see a weird character or possibly the string
-<code>CR</code> or <code>\r</code>:</p>
-<figure><img width="308" alt="screen shot 2017-03-31 at 7 26 42 pm" src="https://cloud.githubusercontent.com/assets/13110354/24561066/a990327c-1645-11e7-90b5-35a44e90f8d9.png" class="figure mx-auto d-block"></figure><p>thus causing terrible things to happen to your data. For example,
-<code>2\r</code> is not a valid integer, and thus will throw an error
-(if you’re lucky) when you attempt to operate on it in R or Python. Note
-that this happens on Excel for OSX as well as Windows, due to legacy
-Windows compatibility.</p>
-<p>There are a handful of solutions for enforcing uniform UNIX-style
-line endings on your exported CSV files:</p>
-<ol style="list-style-type: decimal">
-<li><p>When exporting from Excel, save as a “Windows comma separated
-(.csv)” file</p></li>
-<li><p>If you store your data file under version control using Git, edit
-the <code>.git/config</code> file in your repository to automatically
-translate <code>\r\n</code> line endings into <code>\n</code>. Add the
-following to the file (<a href="https://nicercode.github.io/blog/2013-04-30-excel-and-line-endings" class="external-link">see
-the detailed tutorial</a>):</p></li>
-</ol>
-<pre><code> [filter "cr"]
- 	clean = LC_CTYPE=C awk '{printf(\"%s\\n\", $0)}' | LC_CTYPE=C tr '\\r' '\\n'
- 	smudge = tr '\\n' '\\r'` </code></pre>
-<p>and then create a file <code>.gitattributes</code> that contains the
-line:</p>
-<pre><code> *.csv filter=cr</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Use <a href="https://dos2unix.sourceforge.net/" class="external-link">dos2unix</a>
-(available on OSX, *nix, and Cygwin) on local files to standardize line
-endings.</li>
-</ol>
-<div class="section level4">
-<h4 id="a-note-on-r-and--xlsx">A note on R and <code>.xlsx</code>
-<a class="anchor" aria-label="anchor" href="#a-note-on-r-and--xlsx"></a>
-</h4>
-<p>There are R packages that can read <code>.xls</code> or
-<code>.xlsx</code> files (as well as Google spreadsheets). It is even
-possible to access different worksheets in the <code>.xlsx</code>
-documents.</p>
-<p><strong>But</strong></p>
 <ul>
-<li>some of these only work on Windows</li>
-<li>this equates to replacing a (simple but manual) export to
-<code>csv</code> with additional complexity/dependencies in the data
-analysis R code</li>
-<li>data formatting best practice still apply</li>
-<li>Is there really a good reason why <code>csv</code> (or similar) is
-not adequate?</li>
-</ul>
+<li>It is a proprietary format; other programs, and future versions, may
+read it differently.</li>
+<li>It hides things that are not data: colour, comments, formulas,
+merged cells, several tabs.</li>
+<li>Most data repositories, many journals and many funders require open
+formats.</li>
+<li>Dates stored in Excel’s internal numbers can shift when files move
+between versions and systems (<a href="03-dates-as-data.html">episode
+3</a>).</li>
+</ul></section><section><h2 class="section-heading" id="use-csv-or-tsv">Use CSV (or TSV)<a class="anchor" aria-label="anchor" href="#use-csv-or-tsv"></a>
+</h2>
+<hr class="half-width">
+<p>A CSV (comma-separated values) file is plain text: one row per line,
+columns separated by commas. Any program can open it, including a text
+editor, Python, R, a database and every AI tool. It holds one table, no
+colour, no formulas and no comments. That is the point: it keeps only
+the data.</p>
+<p>To export from Excel: <strong>File &gt; Save As</strong>, choose
+<strong>CSV UTF-8 (Comma delimited) (.csv)</strong>. Excel warns that
+only the active sheet is saved and that some features will be lost. Both
+warnings are expected.</p>
+<p>UTF-8 keeps characters such as <code>°</code>, <code>é</code> and
+isiZulu names intact.</p>
+<p>You can still open a CSV in Excel. Keep the tidy CSV as your master
+copy and treat any .xlsx as a working view.</p>
+<div id="commas-inside-data-and-the-decimal-comma" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level4">
-<h4 id="caveats-on-commas">Caveats on commas<a class="anchor" aria-label="anchor" href="#caveats-on-commas"></a>
-</h4>
-<p>In some datasets, the data values themselves may include commas (,).
-This is particularly true in countries that use commas as decimal
-separators. In that case, the software which you use (including Excel)
-will most likely incorrectly display the data in columns. This is
-because the commas which are a part of the data values will be
-interpreted as delimiters.</p>
-<p>If you are working with data that contains commas, you likely will
-need to use another delimiter when working in a spreadsheet. In this
-case, consider using tabs as your delimiter and working with TSV files.
-TSV files can be exported from spreadsheet programs in the same way as
-CSV files. For more of a discussion on data formats and potential issues
-with commas within datasets see <a href="https://www.datacarpentry.org/spreadsheet-ecology-lesson/discuss" class="external-link">the
-discussion page</a>.</p>
+<span class="callout-header">Callout</span>
+<div id="commas-inside-data-and-the-decimal-comma" class="callout-inner">
+<h3 class="callout-title">Commas inside data, and the decimal comma</h3>
+<div class="callout-content">
+<p>If values contain commas (notes, addresses), make sure they are
+quoted, or use tab-separated values (TSV). Some computers use a comma as
+the decimal separator, so <code>22,5</code> may mean 22.5. Check your
+regional settings, and state the decimal separator in the data
+dictionary. A full stop is the safe choice for shared data.</p>
+</div>
+</div>
+</div>
+<div id="line-endings" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="line-endings" class="callout-inner">
+<h3 class="callout-title">Line endings</h3>
+<div class="callout-content">
+<p>Windows ends lines with two hidden characters (CR LF); Linux and
+macOS use one (LF). Most modern tools handle both. If a script reports
+values such as <code>23.6\r</code>, convert the line endings with your
+text editor or a tool such as <code>dos2unix</code>.</p>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -2139,13 +1536,13 @@ discussion page</a>.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Data stored in common spreadsheet formats will often not be read
-correctly into data analysis software, introducing errors into your
-data.</li>
-<li>Exporting data from spreadsheets to formats like CSV or TSV puts it
-in a format that can be used consistently by most programs.</li>
+<li>Keep master data in open, plain-text formats such as CSV or TSV,
+encoded as UTF-8.</li>
+<li>CSV stores only the data: one table, no formatting, no
+formulas.</li>
+<li>State the delimiter, decimal separator and encoding in the data
+dictionary.</li>
 </ul>
-</div>
 </div>
 </div>
 </div>

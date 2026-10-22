@@ -209,7 +209,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="01-format-data.html">2. Formatting data tables in Spreadsheets</a>
+        <a href="01-format-data.html">2. Formatting data tables</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -218,7 +218,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="02-common-mistakes.html">3. Formatting problems</a>
+        <a href="02-common-mistakes.html">3. Common mistakes</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -316,68 +316,61 @@
     </nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Schedule</h1>
       
 
-<p>Good data organization is the foundation of any research project.
-Most researchers have data in spreadsheets, so it’s the place that many
-research projects start.</p>
-<p>We organize data in spreadsheets in the ways that we as humans want
-to work with the data, but computers require that data be organized in
-particular ways. In order to use tools that make computation more
-efficient, such as programming languages like R or Python, we need to
-structure our data the way that computers need the data. Since this is
-where most research projects start, this is where we want to start
-too!</p>
-<p>In this lesson, you will learn:</p>
-<ul><li>Good data entry practices - formatting data tables in
-spreadsheets</li>
-<li>How to avoid common formatting mistakes</li>
-<li>Approaches for handling dates in spreadsheets</li>
-<li>Basic quality control and data manipulation in spreadsheets</li>
-<li>Exporting data from spreadsheets</li>
-</ul><p>In this lesson, however, you will <em>not</em> learn about data
-analysis with spreadsheets. Much of your time as a researcher will be
-spent in the initial ‘data wrangling’ stage, where you need to organize
-the data to perform a proper analysis later. It’s not the most fun, but
-it is necessary. In this lesson you will learn how to think about data
-organization and some practices for more effective data wrangling. With
-this approach you can better format current data and plan new data
-collection so less data wrangling is needed.</p>
-<div id="getting-started" class="callout prereq">
+<p>Good data organisation is the foundation of any research or
+administrative project. Most of us keep data in spreadsheets, laid out
+the way people like to read them. Computers need data laid out
+differently. So do AI tools, which read data as literally as any
+program, and then report their answers with confidence.</p>
+<p>This lesson teaches how to organise data so that people, programs and
+AI tools all read it the way you intend. It uses one synthetic dataset
+throughout: Enterococci counts at four Durban beaches, recorded by two
+field assistants in two very different, very messy spreadsheets.</p>
+<p>In this lesson you will learn to:</p>
+<ul><li>lay out data tables that computers can use;</li>
+<li>recognise and fix the common spreadsheet mistakes;</li>
+<li>record dates unambiguously;</li>
+<li>prevent and find errors with data validation, sorting and
+filtering;</li>
+<li>export data to open formats;</li>
+<li>write a data dictionary, and use it as context for AI tools;</li>
+<li>organise project folders, name files and protect raw data;</li>
+<li>decide what data may be given to an AI tool, and keep AI-assisted
+work reproducible.</li>
+</ul><p>You will <em>not</em> learn statistics, plotting or programming in
+this lesson.</p>
+<div id="prerequisites" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
 <span class="callout-header">Prerequisite</span>
-<div id="getting-started" class="callout-inner">
-<h3 class="callout-title">Getting Started</h3>
+<div id="prerequisites" class="callout-inner">
+<h3 class="callout-title">Prerequisites</h3>
 <div class="callout-content">
-<p>Data Carpentry’s teaching is hands-on, so participants are encouraged
-to use their own computers to insure the proper setup of tools for an
-efficient workflow. <br><strong>These lessons assume no prior knowledge
-of the skills or tools.</strong></p>
-<p>To get started, follow the directions in the “<a href="index.html#setup">Setup</a>” tab to download data to your computer and
-follow any installation instructions.</p>
-<div class="section level4">
-<h4 id="prerequisites">Prerequisites<a class="anchor" aria-label="anchor" href="#prerequisites"></a></h4>
-<p>This lesson requires a working copy of spreadsheet software, such as
-Microsoft Excel or LibreOffice or OpenOffice.org (see more details in
-“<a href="index.html#setup">Setup</a>”). <br>To most effectively use these
-materials, please make sure to install everything <em>before</em>
-working through this lesson.</p>
+<p>A computer with a spreadsheet program (Excel, LibreOffice Calc or
+Google Sheets). No programming experience is needed. Download the data
+before you start; see <a href="index.html#setup">Setup</a>.</p>
 </div>
 </div>
 </div>
-</div>
-<div id="for-instructors" class="callout prereq">
+<div id="acknowledgement" class="callout">
 <div class="callout-square">
-<i class="callout-icon" data-feather="check"></i>
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-<span class="callout-header">Prerequisite</span>
-<div id="for-instructors" class="callout-inner">
-<h3 class="callout-title">For Instructors</h3>
+<span class="callout-header">Callout</span>
+<div id="acknowledgement" class="callout-inner">
+<h3 class="callout-title">Acknowledgement</h3>
 <div class="callout-content">
-<p>If you are teaching this lesson in a workshop, please see the <a href="instructor-notes.html">Instructor notes</a>.</p>
+<p>This lesson is adapted from The Carpentries’ Data Carpentry lessons
+<a href="https://datacarpentry.org/spreadsheet-ecology-lesson/" class="external-link">Data
+Organization in Spreadsheets for Ecologists</a> and <a href="https://datacarpentry.org/organization-genomics/" class="external-link">Project
+Organization and Management for Genomics</a>, used under <a href="LICENSE.html">CC-BY 4.0</a>. It was adapted for the <em>AI in
+Higher Education</em> workshop at the University of KwaZulu-Natal,
+November 2026.</p>
 </div>
 </div>
 </div>
+<p>For instructors: see the <a href="instructor-notes.html">Instructor
+Notes</a> for the one-hour plan and the answer key.</p>
 
 
       <section id="schedule"><table class="table table schedule table-striped" role="presentation"><tbody><tr><td></td><td><a href="#setup">Setup Instructions</a></td><td> Download files required for the lesson</td>
@@ -395,53 +388,50 @@ organization?
 <span class="visually-hidden">Duration: </span>00h 18m
 </td>
 <td>
- 2. <a href="01-format-data.html">Formatting data tables in
-Spreadsheets</a>
+ 2. <a href="01-format-data.html">Formatting data tables</a>
 </td>
 <td>
-How do we format data in spreadsheets for effective data use?
+How should I lay out data in a spreadsheet?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 53m
+<span class="visually-hidden">Duration: </span>00h 35m
 </td>
 <td>
- 3. <a href="02-common-mistakes.html">Formatting problems</a>
+ 3. <a href="02-common-mistakes.html">Common mistakes</a>
 </td>
 <td>
-What are some common challenges with formatting data in spreadsheets and
-how can we avoid them?
+What are the common formatting problems, and how do I avoid them?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 13m
+<span class="visually-hidden">Duration: </span>00h 35m
 </td>
 <td>
  4. <a href="03-dates-as-data.html">Dates as data</a>
 </td>
 <td>
-What are good approaches for handling dates in spreadsheets?
+Why do dates cause so many errors?<br>How should I record dates and
+times?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 26m
+<span class="visually-hidden">Duration: </span>00h 39m
 </td>
 <td>
  5. <a href="04-quality-control.html">Quality control</a>
 </td>
 <td>
-How can we carry out basic quality control and quality assurance in
-spreadsheets?
+How do I stop bad data getting in, and find the bad data already there?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 46m
+<span class="visually-hidden">Duration: </span>00h 42m
 </td>
 <td>
  6. <a href="05-exporting-data.html">Exporting data</a>
 </td>
 <td>
-How can we export data from spreadsheets in a way that is useful for
-downstream applications?
+In what format should I keep and share data?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 56m
+<span class="visually-hidden">Duration: </span>00h 45m
 </td>
 <td>
 Finish

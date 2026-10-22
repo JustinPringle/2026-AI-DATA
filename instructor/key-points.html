@@ -250,7 +250,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="01-format-data.html">2. Formatting data tables in Spreadsheets</a>
+        <a href="01-format-data.html">2. Formatting data tables</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -262,7 +262,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="02-common-mistakes.html">3. Formatting problems</a>
+        <a href="02-common-mistakes.html">3. Common mistakes</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -388,52 +388,52 @@
 <ul>
 <li>Good data organization is the foundation of any research
 project.</li>
-</ul></section><section id="01-format-data"><h2 class="section-heading"><a href="01-format-data.html">Formatting data tables in Spreadsheets</a></h2>
+</ul></section><section id="01-format-data"><h2 class="section-heading"><a href="01-format-data.html">Formatting data tables</a></h2>
 <hr class="half-width">
 <ul>
-<li>Never modify your raw data. Always make a copy before making any
-changes.</li>
-<li>Keep track of all of the steps you take to clean your data in a
-plain text file.</li>
-<li>Organize your data according to tidy data principles.</li>
-</ul></section><section id="02-common-mistakes"><h2 class="section-heading"><a href="02-common-mistakes.html">Formatting problems</a></h2>
+<li>Put each variable in a column, each observation in a row, and one
+value in each cell.</li>
+<li>Never modify raw data; work on a copy and log your changes.</li>
+<li>Keep units in headers and explanations in a separate file.</li>
+</ul></section><section id="02-common-mistakes"><h2 class="section-heading"><a href="02-common-mistakes.html">Common mistakes</a></h2>
 <hr class="half-width">
 <ul>
-<li>Avoid using multiple tables within one spreadsheet.</li>
-<li>Avoid spreading data across multiple tabs.</li>
-<li>Record zeros as zeros.</li>
-<li>Use an appropriate null value to record missing data.</li>
-<li>Don’t use formatting to convey information or to make your
-spreadsheet look pretty.</li>
-<li>Place comments in a separate column.</li>
-<li>Record units in column headers.</li>
-<li>Include only one piece of information in a cell.</li>
-<li>Avoid spaces, numbers and special characters in column headers.</li>
-<li>Avoid special characters in your data.</li>
-<li>Record metadata in a separate plain text file.</li>
+<li>Use one table per sheet and one sheet per kind of data.</li>
+<li>Record zeros as zeros; leave missing values blank and record
+why.</li>
+<li>Flag censored values in a column; never type <code>&lt;10</code> or
+<code>TNTC</code> into a number column.</li>
+<li>Fix category spellings with a controlled list.</li>
+<li>Do not use colour, merged cells or comments to carry
+information.</li>
+<li>Put units in headers and one value in each cell.</li>
+<li>Keep calculations, legends and titles out of the data table.</li>
 </ul></section><section id="03-dates-as-data"><h2 class="section-heading"><a href="03-dates-as-data.html">Dates as data</a></h2>
 <hr class="half-width">
 <ul>
-<li>Treating dates as multiple pieces of data rather than one makes them
-easier to handle.</li>
+<li>Spreadsheets store dates as numbers and display them according to
+local settings.</li>
+<li>Record dates as ISO 8601 text, <code>YYYY-MM-DD</code>, or as
+separate year, month and day columns.</li>
+<li>Check every date after moving data between programs or
+computers.</li>
 </ul></section><section id="04-quality-control"><h2 class="section-heading"><a href="04-quality-control.html">Quality control</a></h2>
 <hr class="half-width">
 <ul>
-<li>Always copy your original spreadsheet file and work with a copy so
-you don’t affect the raw data.</li>
-<li>Use data validation to prevent accidentally entering invalid
-data.</li>
-<li>Use sorting to check for invalid data.</li>
-<li>Use conditional formatting (cautiously) to check for invalid
-data.</li>
+<li>Always work on a copy of the raw data.</li>
+<li>Use data validation to prevent invalid entries and inconsistent
+categories.</li>
+<li>Sort, filter and colour-scale columns to find errors.</li>
+<li>Sort whole rows, never a single column.</li>
 </ul></section><section id="05-exporting-data"><h2 class="section-heading"><a href="05-exporting-data.html">Exporting data</a></h2>
 <hr class="half-width">
 <ul>
-<li>Data stored in common spreadsheet formats will often not be read
-correctly into data analysis software, introducing errors into your
-data.</li>
-<li>Exporting data from spreadsheets to formats like CSV or TSV puts it
-in a format that can be used consistently by most programs.</li>
+<li>Keep master data in open, plain-text formats such as CSV or TSV,
+encoded as UTF-8.</li>
+<li>CSV stores only the data: one table, no formatting, no
+formulas.</li>
+<li>State the delimiter, decimal separator and encoding in the data
+dictionary.</li>
 </ul></section>
 </div>
     </main>

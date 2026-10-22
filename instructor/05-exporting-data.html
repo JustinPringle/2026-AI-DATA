@@ -114,7 +114,7 @@
     <a id="search-button-nav" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress data">
-    <div class="progress-bar data" role="progressbar" style="width: 91%" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">91%</div>
+    <div class="progress-bar data" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">93%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -208,7 +208,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="01-format-data.html">2. Formatting data tables in Spreadsheets</a>
+        <a href="01-format-data.html">2. Formatting data tables</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -217,7 +217,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="02-common-mistakes.html">3. Formatting problems</a>
+        <a href="02-common-mistakes.html">3. Common mistakes</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -254,7 +254,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#a-note-on-cross-platform-operability">A Note on Cross-platform Operability</a></li>
+        <ul><li><a href="#why-not-keep-data-as-.xlsx">Why not keep data as .xlsx?</a></li>
+<li><a href="#use-csv-or-tsv">Use CSV (or TSV)</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -339,7 +340,7 @@
 
 
 
-        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 10 minutes</p>
+        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 3 minutes</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -354,8 +355,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>How can we export data from spreadsheets in a way that is useful for
-downstream applications?</li>
+<ul><li>In what format should I keep and share data?</li>
 </ul></div>
 </div>
 </div>
@@ -363,140 +363,68 @@ downstream applications?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Store spreadsheet data in universal file formats.</li>
-<li>Export data from a spreadsheet to a CSV file.</li>
+<ul><li>Store data in open, plain-text formats.</li>
+<li>Export a spreadsheet to CSV safely.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>Storing the data you’re going to work with for your analyses in Excel
-default file format (<code>*.xls</code> or <code>*.xlsx</code> -
-depending on the Excel version) isn’t a good idea. Why?</p>
-<ul><li><p>Because it is a proprietary format, and it is possible that in
-the future, technology won’t exist (or will become sufficiently rare) to
-make it inconvenient, if not impossible, to open the file.</p></li>
-<li><p>Other spreadsheet software may not be able to open files saved in
-a proprietary Excel format.</p></li>
-<li><p>Different versions of Excel may handle data differently, leading
-to inconsistencies.</p></li>
-<li><p>Finally, more journals and grant agencies are requiring you to
-deposit your data in a data repository, and most of them don’t accept
-Excel format. It needs to be in one of the formats discussed
-below.</p></li>
-<li><p>The above points also apply to other formats such as open data
-formats used by LibreOffice / Open Office. These formats are not static
-and do not get parsed the same way by different software
-packages.</p></li>
-</ul><p>As an example of inconsistencies in data storage, do you remember how
-we talked about how Excel stores dates earlier? It turns out that there
-are multiple defaults for different versions of the software, and you
-can switch between them all. So, say you’re compiling Excel-stored data
-from multiple sources. There are dates in each file - Excel interprets
-them as their own internally consistent serial numbers. When you combine
-the data, Excel will take the serial number from the place you’re
-importing it from, and interpret it using the rule set for the version
-of Excel you’re using. Essentially, you could be adding errors to your
-data, and it wouldn’t necessarily be flagged by any data cleaning
-methods if your ranges overlap.</p>
-<p>Storing data in a universal, open, and static format will help deal
-with this problem. Try tab-delimited (tab separated values or TSV) or
-comma-delimited (comma separated values or CSV). CSV files are plain
-text files where the columns are separated by commas, hence ‘comma
-separated values’ or CSV. The advantage of a CSV file over an
-Excel/SPSS/etc. file is that we can open and read a CSV file using just
-about any software, including plain text editors like TextEdit or
-NotePad. Data in a CSV file can also be easily imported into other
-formats and environments, such as SQLite and R. We’re not tied to a
-certain version of a certain expensive program when we work with CSV
-files, so it’s a good format to work with for maximum portability and
-endurance. Most spreadsheet programs can save to delimited text formats
-like CSV easily, although they may give you a warning during the file
-export.</p>
-<p>To save a file you have opened in Excel in CSV format:</p>
-<ol style="list-style-type: decimal"><li>From the top menu select ‘File’ and ‘Save as’.</li>
-<li>In the ‘Format’ field, from the list, select ‘Comma Separated
-Values’ (<code>*.csv</code>).</li>
-<li>Double check the file name and the location where you want to save
-it and hit ‘Save’.</li>
-</ol><p>An important note for backwards compatibility: you can open CSV files
-in Excel!</p>
-<figure><img src="../fig/excel-to-csv.png" alt="Saving an Excel file to CSV" class="figure mx-auto d-block"></figure><section><h2 class="section-heading" id="a-note-on-cross-platform-operability">A Note on Cross-platform Operability<a class="anchor" aria-label="anchor" href="#a-note-on-cross-platform-operability"></a></h2>
-<hr class="half-width"><p>By default, most coding and statistical environments expect
-UNIX-style line endings (ASCII <code>LF</code> character) as
-representing line breaks. However, Windows uses an alternate line ending
-signifier (ASCII <code>CR LF</code> characters) by default for legacy
-compatibility with Teletype-based systems.</p>
-<p>As such, when exporting to CSV using Excel, your data in text format
-will look like this:</p>
-<blockquote>
-<p>data1,data2<cr><lf>1,2<cr><lf>4,5<cr><lf></lf></cr></lf></cr></lf></cr></p>
-</blockquote>
-<p>When opening your CSV file in Excel again, it will parse it as
-follows:</p>
-<figure><img width="307" alt="screen shot 2017-03-31 at 7 15 07 pm" src="https://cloud.githubusercontent.com/assets/13110354/24560663/db4a5786-1643-11e7-931a-ca2c72336878.png" class="figure mx-auto d-block"></figure><p>However, if you open your CSV file on a different system that does
-not parse the <code>CR</code> character it will interpret your CSV file
-differently:</p>
-<p>Your data in text format then look like this:</p>
-<blockquote>
-<p>data1<br> data2<cr><br> 1<br> 2<cr><br> …</cr></cr></p>
-</blockquote>
-<p>You will then see a weird character or possibly the string
-<code>CR</code> or <code>\r</code>:</p>
-<figure><img width="308" alt="screen shot 2017-03-31 at 7 26 42 pm" src="https://cloud.githubusercontent.com/assets/13110354/24561066/a990327c-1645-11e7-90b5-35a44e90f8d9.png" class="figure mx-auto d-block"></figure><p>thus causing terrible things to happen to your data. For example,
-<code>2\r</code> is not a valid integer, and thus will throw an error
-(if you’re lucky) when you attempt to operate on it in R or Python. Note
-that this happens on Excel for OSX as well as Windows, due to legacy
-Windows compatibility.</p>
-<p>There are a handful of solutions for enforcing uniform UNIX-style
-line endings on your exported CSV files:</p>
-<ol style="list-style-type: decimal"><li><p>When exporting from Excel, save as a “Windows comma separated
-(.csv)” file</p></li>
-<li><p>If you store your data file under version control using Git, edit
-the <code>.git/config</code> file in your repository to automatically
-translate <code>\r\n</code> line endings into <code>\n</code>. Add the
-following to the file (<a href="https://nicercode.github.io/blog/2013-04-30-excel-and-line-endings" class="external-link">see
-the detailed tutorial</a>):</p></li>
-</ol><pre><code> [filter "cr"]
- 	clean = LC_CTYPE=C awk '{printf(\"%s\\n\", $0)}' | LC_CTYPE=C tr '\\r' '\\n'
- 	smudge = tr '\\n' '\\r'` </code></pre>
-<p>and then create a file <code>.gitattributes</code> that contains the
-line:</p>
-<pre><code> *.csv filter=cr</code></pre>
-<ol start="3" style="list-style-type: decimal"><li>Use <a href="https://dos2unix.sourceforge.net/" class="external-link">dos2unix</a>
-(available on OSX, *nix, and Cygwin) on local files to standardize line
-endings.</li>
-</ol><div class="section level4">
-<h4 id="a-note-on-r-and--xlsx">A note on R and <code>.xlsx</code>
-<a class="anchor" aria-label="anchor" href="#a-note-on-r-and--xlsx"></a></h4>
-<p>There are R packages that can read <code>.xls</code> or
-<code>.xlsx</code> files (as well as Google spreadsheets). It is even
-possible to access different worksheets in the <code>.xlsx</code>
-documents.</p>
-<p><strong>But</strong></p>
-<ul><li>some of these only work on Windows</li>
-<li>this equates to replacing a (simple but manual) export to
-<code>csv</code> with additional complexity/dependencies in the data
-analysis R code</li>
-<li>data formatting best practice still apply</li>
-<li>Is there really a good reason why <code>csv</code> (or similar) is
-not adequate?</li>
-</ul></div>
-<div class="section level4">
-<h4 id="caveats-on-commas">Caveats on commas<a class="anchor" aria-label="anchor" href="#caveats-on-commas"></a></h4>
-<p>In some datasets, the data values themselves may include commas (,).
-This is particularly true in countries that use commas as decimal
-separators. In that case, the software which you use (including Excel)
-will most likely incorrectly display the data in columns. This is
-because the commas which are a part of the data values will be
-interpreted as delimiters.</p>
-<p>If you are working with data that contains commas, you likely will
-need to use another delimiter when working in a spreadsheet. In this
-case, consider using tabs as your delimiter and working with TSV files.
-TSV files can be exported from spreadsheet programs in the same way as
-CSV files. For more of a discussion on data formats and potential issues
-with commas within datasets see <a href="https://www.datacarpentry.org/spreadsheet-ecology-lesson/discuss" class="external-link">the
-discussion page</a>.</p>
+<section><h2 class="section-heading" id="why-not-keep-data-as--xlsx">Why not keep data as .xlsx?<a class="anchor" aria-label="anchor" href="#why-not-keep-data-as--xlsx"></a></h2>
+<hr class="half-width"><ul><li>It is a proprietary format; other programs, and future versions, may
+read it differently.</li>
+<li>It hides things that are not data: colour, comments, formulas,
+merged cells, several tabs.</li>
+<li>Most data repositories, many journals and many funders require open
+formats.</li>
+<li>Dates stored in Excel’s internal numbers can shift when files move
+between versions and systems (<a href="03-dates-as-data.html">episode
+3</a>).</li>
+</ul></section><section><h2 class="section-heading" id="use-csv-or-tsv">Use CSV (or TSV)<a class="anchor" aria-label="anchor" href="#use-csv-or-tsv"></a></h2>
+<hr class="half-width"><p>A CSV (comma-separated values) file is plain text: one row per line,
+columns separated by commas. Any program can open it, including a text
+editor, Python, R, a database and every AI tool. It holds one table, no
+colour, no formulas and no comments. That is the point: it keeps only
+the data.</p>
+<p>To export from Excel: <strong>File &gt; Save As</strong>, choose
+<strong>CSV UTF-8 (Comma delimited) (.csv)</strong>. Excel warns that
+only the active sheet is saved and that some features will be lost. Both
+warnings are expected.</p>
+<p>UTF-8 keeps characters such as <code>°</code>, <code>é</code> and
+isiZulu names intact.</p>
+<p>You can still open a CSV in Excel. Keep the tidy CSV as your master
+copy and treat any .xlsx as a working view.</p>
+<div id="commas-inside-data-and-the-decimal-comma" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="commas-inside-data-and-the-decimal-comma" class="callout-inner">
+<h3 class="callout-title">Commas inside data, and the decimal comma</h3>
+<div class="callout-content">
+<p>If values contain commas (notes, addresses), make sure they are
+quoted, or use tab-separated values (TSV). Some computers use a comma as
+the decimal separator, so <code>22,5</code> may mean 22.5. Check your
+regional settings, and state the decimal separator in the data
+dictionary. A full stop is the safe choice for shared data.</p>
+</div>
+</div>
+</div>
+<div id="line-endings" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="line-endings" class="callout-inner">
+<h3 class="callout-title">Line endings</h3>
+<div class="callout-content">
+<p>Windows ends lines with two hidden characters (CR LF); Linux and
+macOS use one (LF). Most modern tools handle both. If a script reports
+values such as <code>23.6\r</code>, convert the line endings with your
+text editor or a tool such as <code>dos2unix</code>.</p>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -504,13 +432,13 @@ discussion page</a>.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Data stored in common spreadsheet formats will often not be read
-correctly into data analysis software, introducing errors into your
-data.</li>
-<li>Exporting data from spreadsheets to formats like CSV or TSV puts it
-in a format that can be used consistently by most programs.</li>
+<ul><li>Keep master data in open, plain-text formats such as CSV or TSV,
+encoded as UTF-8.</li>
+<li>CSV stores only the data: one table, no formatting, no
+formulas.</li>
+<li>State the delimiter, decimal separator and encoding in the data
+dictionary.</li>
 </ul></div>
-</div>
 </div>
 </div>
 </section></div> <!-- / div.lesson-content -->

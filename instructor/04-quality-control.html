@@ -114,7 +114,7 @@
     <a id="search-button-nav" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress data">
-    <div class="progress-bar data" role="progressbar" style="width: 74%" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">74%</div>
+    <div class="progress-bar data" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">87%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -208,7 +208,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="01-format-data.html">2. Formatting data tables in Spreadsheets</a>
+        <a href="01-format-data.html">2. Formatting data tables</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -217,7 +217,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="02-common-mistakes.html">3. Formatting problems</a>
+        <a href="02-common-mistakes.html">3. Common mistakes</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -245,8 +245,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#quality-assurance">Quality Assurance</a></li>
-<li><a href="#quality-control">Quality Control</a></li>
+        <ul><li><a href="#quality-assurance-data-validation">Quality assurance: data validation</a></li>
+<li><a href="#quality-control-finding-errors">Quality control: finding errors</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -340,7 +340,7 @@
 
 
 
-        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
+        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 3 minutes</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -355,8 +355,8 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>How can we carry out basic quality control and quality assurance in
-spreadsheets?</li>
+<ul><li>How do I stop bad data getting in, and find the bad data already
+there?</li>
 </ul></div>
 </div>
 </div>
@@ -364,178 +364,78 @@ spreadsheets?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Apply quality control techniques to identify errors in spreadsheets
-and limit incorrect data entry.</li>
+<ul><li>Use data validation to prevent invalid entries.</li>
+<li>Use sorting and conditional formatting to find errors.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>When you have a well-structured data table, you can use several
-simple techniques within your spreadsheet to ensure the data you enter
-is free of errors. These approaches include techniques that are
-implemented prior to entering data (quality assurance) and techniques
-that are used after entering data to check for errors (quality
-control).</p>
-<section><h2 class="section-heading" id="quality-assurance">Quality Assurance<a class="anchor" aria-label="anchor" href="#quality-assurance"></a></h2>
-<hr class="half-width"><p>Quality assurance stops bad data from ever being entered by checking
-to see if values are valid during data entry. For example, if research
-is being conducted at sites A, B, and C, then the value V (which is
-right next to B on the keyboard) should never be entered. Likewise if
-one of the kinds of data being collected is a count, only integers
-greater than or equal to zero should be allowed.</p>
-<p>To control the kind of data entered into a spreadsheet we use Data
-Validation (Excel) or Validity (Libre Office Calc), to set the values
-that can be entered in each data column.</p>
-<p>1. Select the cells or column you want to validate</p>
-<p>2. On the <code>Data</code> tab, Open <code>Data Tools</code> then
-select <code>Data Validation</code></p>
-<figure><img src="../fig/data_validation.png" alt="Image of Data Validation button on Data tab" class="figure mx-auto d-block"></figure><p>3. In the <code>Allow</code> box select the kind of data that should
-be in the column. Options include whole numbers, decimals, lists of
-items, dates, and other values.</p>
-<figure><img src="../fig/data_validation_window.png" alt="Image of Data Validation window" class="figure mx-auto d-block"></figure><p>4. After selecting an item enter any additional details. For example,
-if you’ve chosen a list of values, enter a comma-delimited or semi-colon
-list of allowable values in the <code>Source</code> box.</p>
-<p>Let’s try this out by setting the plot column in our spreadsheet to
-only allow plot values that are integers between 1 and 24.</p>
-<ol style="list-style-type: decimal"><li>Select the <code>plot_id</code> column</li>
-<li>On the <code>Data</code> tab select
-<code>Data Validation</code>
-</li>
-<li>In the <code>Allow</code> box select <code>Whole number</code>
-</li>
-<li>Set the minimum and maximum values to 1 and 24.</li>
-</ol><figure><img src="../fig/plot_validation.png" alt="Image of Data Validation window for validating plot values" class="figure mx-auto d-block"></figure><p>Now let’s try entering a new value in the plot column that isn’t a
-valid plot. The spreadsheet stops us from entering the wrong value and
-asks us if we would like to try again.</p>
-<figure><img src="../fig/invalid_value.png" alt="Image of error when trying to enter invalid data" class="figure mx-auto d-block"></figure><p>You can also customize the resulting message to be more informative
-by entering your own message in the <code>Input Message</code> tab</p>
-<figure><img src="../fig/input_message.png" alt="Image of Input Message tab" class="figure mx-auto d-block"></figure><p>or allow invalid data to result in a warning rather than an error by
-modifying the <code>Style</code> option on the <code>Error Alert</code>
-tab.</p>
-<figure><img src="../fig/error_alert.png" alt="Image of Error Alert tab" class="figure mx-auto d-block"></figure><p>Quality assurance can make data entry easier as well as more robust.
-For example, if you use a list of options to restrict data entry, the
-spreadsheet will provide you with a drop-downlist of the available
-items. So, instead of trying to remember how to spell <em>Dipodomys
-spectabilis</em>, you can select the right option from the list.</p>
-<figure><img src="../fig/drop_down_list2.png" alt="Image of drop-down menu" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="quality-control">Quality Control<a class="anchor" aria-label="anchor" href="#quality-control"></a></h2>
-<hr class="half-width"><p>Tip: <em>Before doing any quality control operations, save your
-original file with the formulas and a name indicating it is the original
-data. Create a separate file with appropriate naming and versioning, and
-ensure your data is stored as values and not as formulas. Because
-formulas refer to other cells, and you may be moving cells around, you
-may compromise the integrity of your data if you do not take this
-step!</em></p>
-<p>readMe (README) files: As you start manipulating your data files,
-create a readMe document / text file to keep track of your files and
-document your manipulations so that they may be easily understood and
-replicated, either by your future self or by an independent researcher.
-Your readMe file should document all of the files in your data set
-(including documentation), describe their content and format, and lay
-out the organizing principles of folders and subfolders. For each of the
-separate files listed, it is a good idea to document the manipulations
-or analyses that were carried out on those data. <a href="https://data.research.cornell.edu/content/readme" class="external-link">Cornell
-University’s Research Data Management Service Group</a> provides
-detailed guidelines for how to write a good readMe file, along with an
-adaptable template.</p>
+<p>Quality <strong>assurance</strong> stops bad data being entered.
+Quality <strong>control</strong> finds errors after entry. Prevention is
+cheaper: thirteen spellings of four beaches take minutes to clean and
+seconds to prevent.</p>
+<section><h2 class="section-heading" id="quality-assurance-data-validation">Quality assurance: data validation<a class="anchor" aria-label="anchor" href="#quality-assurance-data-validation"></a></h2>
+<hr class="half-width"><p>Data validation (Excel) or Validity (LibreOffice Calc) restricts what
+a column accepts.</p>
+<p>Set the <code>site</code> column to accept only the four beaches:</p>
+<ol style="list-style-type: decimal"><li>Select the <code>site</code> column.</li>
+<li>
+<strong>Data &gt; Data Validation</strong> (Excel) or <strong>Data
+&gt; Validity</strong> (Calc).</li>
+<li>In <strong>Allow</strong>, choose <strong>List</strong>.</li>
+<li>In <strong>Source</strong>, type
+<code>North Beach,Addington,uShaka,Umhlanga Main</code>.</li>
+<li>Try typing <code>Umhlanga Rocks</code>. The spreadsheet refuses
+it.</li>
+</ol><figure><img src="../fig/data_validation_window.png" alt="Data Validation window in Excel" class="figure mx-auto d-block"></figure><p>A list also gives a drop-down, so nobody needs to remember the
+spelling. Use the same tool for numbers: Enterococci counts must be
+whole numbers of zero or more; water temperature in Durban should fall
+between, say, 10 and 35 °C. A Fahrenheit value such as 74.1 is then
+rejected at entry.</p>
+<p>On the <strong>Error Alert</strong> tab you can change a hard stop
+into a warning, for values that are unusual but possible.</p>
+<figure><img src="../fig/error_alert.png" alt="Error Alert tab of the Data Validation window" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="quality-control-finding-errors">Quality control: finding errors<a class="anchor" aria-label="anchor" href="#quality-control-finding-errors"></a></h2>
+<hr class="half-width"><p><strong>Before you start, save the original file and work on a
+copy.</strong> Make sure the copy holds values, not formulas, so that
+moving cells cannot change results.</p>
 <div class="section level3">
-<h3 id="sorting">Sorting<a class="anchor" aria-label="anchor" href="#sorting"></a></h3>
-<p>Bad values often sort to the bottom or top of the column. For
-example, if your data should be numeric, then alphabetical and null data
-will group at the ends of the sorted data. Sort your data by each field,
-one at a time. Scan through each column, but pay the most attention to
-the top and the bottom of a column. If your dataset is well-structured
-and does not contain formulas, sorting should never affect the integrity
-of your dataset.</p>
-<p><strong>Remember</strong> to expand your sort in order to prevent
-data corruption. Expanding your sort ensures that all the data in one
-row move together instead of only sorting a single column in isolation.
-Sorting by only a single column will scramble your data - a single row
-will no longer represent an individual observation.</p>
-<div id="exercise" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Challenge</span>
-<div id="exercise" class="callout-inner">
-<h3 class="callout-title">Exercise</h3>
-<div class="callout-content">
-<p>We’ve combined all of the tables from the messy data into a single
-table in a single tab. Download this semi-cleaned data file to your
-computer: <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/blob/gh-pages/data/survey_sorting_exercise.xlsx?raw=true" class="external-link">survey_sorting_exercise</a></p>
-<p>Once downloaded, sort the <code>Weight_grams</code> column in your
-spreadsheet program from <code>Largest to Smallest</code>.</p>
-<p>What do you notice?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<p>Click the Sort button on the data tab in Excel. A pop-up will appear.
-Make sure you select <code>Expand the selection</code>.</p>
-<figure><img src="../fig/sorting_button.png" alt="alt=‘quality_control0, exercise1’ .output" class="figure mx-auto d-block"><div class="figcaption">alt=‘quality_control0, exercise1’ .output</div>
-</figure><p>The following window will display, choose the column you want to sort
-as well as the sort order.</p>
-<figure><img src="../fig/sorting_example.png" alt="alt=‘quality_control1, exercise1’ .output" class="figure mx-auto d-block"><div class="figcaption">alt=‘quality_control1, exercise1’ .output</div>
-</figure><p><strong>Note</strong> how the odd values sort to the top and bottom
-of the tabular data. The cells containing no data values sort to the
-bottom of the tabular data, while the cells where the letter “g” was
-included can be found towards the top. This is a powerful way to check
-your data for outliers and odd values.</p>
-<figure><img src="../fig/sorting_solution_1.png" alt="alt=‘quality_control2, exercise1’ .output" class="figure mx-auto d-block"><div class="figcaption">alt=‘quality_control2, exercise1’ .output</div>
-</figure><p><img src="../fig/sorting_solution_2.png" alt="alt=‘quality_control3, exercise1’ .output" class="figure">
-{alt=‘quality_control3, exercise1’ .output}</p>
-</div>
-</div>
-</div>
-</div>
+<h3 id="sort-each-column">Sort each column<a class="anchor" aria-label="anchor" href="#sort-each-column"></a></h3>
+<p>Bad values collect at the top or bottom of a sorted column. Sort the
+count column from largest to smallest: text such as <code>55 cfu</code>,
+<code>&lt;10</code> and <code>TNTC</code> gathers at one end, blanks at
+the other, and <code>-999</code> at the bottom of the numbers.</p>
+<figure><img src="../fig/sorting_button.png" alt="Sort button on the Data tab in Excel" class="figure mx-auto d-block"></figure><p>When Excel asks, choose <strong>Expand the selection</strong>.
+Sorting one column on its own scrambles your rows: each value moves away
+from the sample it belongs to.</p>
 </div>
 <div class="section level3">
-<h3 id="conditional-formatting">Conditional formatting<a class="anchor" aria-label="anchor" href="#conditional-formatting"></a></h3>
-<p>Conditional formatting basically can do something like color code
-your values by some criteria or lowest to highest. This makes it easy to
-scan your data for outliers.</p>
-<p>Conditional formatting should be used with caution, but it can be a
-great way to flag inconsistent values when entering data.</p>
-<div id="exercise-1" class="callout challenge">
+<h3 id="conditional-formatting-with-care">Conditional formatting, with care<a class="anchor" aria-label="anchor" href="#conditional-formatting-with-care"></a></h3>
+<p>A colour scale on the count column (Home &gt; Conditional Formatting
+&gt; Color Scales) shows outliers at a glance, and leaves text cells
+uncoloured. Use it to <em>find</em> problems while checking. Never use
+colour to <em>record</em> information.</p>
+</div>
+<div class="section level3">
+<h3 id="count-the-categories">Count the categories<a class="anchor" aria-label="anchor" href="#count-the-categories"></a></h3>
+<p>Select the <code>site</code> column and use <strong>Data &gt;
+Filter</strong>. The filter drop-down lists every distinct value in the
+column. Four beaches should give four entries; Lerato’s tab gives
+thirteen.</p>
+<div id="keep-a-log" class="callout">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-<span class="callout-header">Challenge</span>
-<div id="exercise-1" class="callout-inner">
-<h3 class="callout-title">Exercise</h3>
+<span class="callout-header">Callout</span>
+<div id="keep-a-log" class="callout-inner">
+<h3 class="callout-title">Keep a log</h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li>Make sure the Weight_grams column is highlighted.</li>
-<li>In the main Excel menu bar, click <code>Home</code> &gt;
-<code>Conditional Formatting...</code> choose a formatting rule.</li>
-<li>Apply any <code>2-Color Scale</code> formatting rule.</li>
-<li>Now we can scan through and different colors will stand out. Do you
-notice any strange values?</li>
-</ol></div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-<p>Cells that contain non-numerical values are not colored. This
-includes both the cells where the letter “g” was included and the empty
-cells. <img src="../fig/conditional_formating.png" alt="alt=‘quality_control4, exercise2’ .output" class="figure"></p>
+<p>As you clean, write each step in a plain-text file kept with the
+data: what you changed, why, and when. If an AI tool did the cleaning,
+record the tool, the date and the prompt. See <a href="07-project-organisation.html">episode 7</a>.</p>
 </div>
 </div>
 </div>
-</div>
-<p>It is nice to be able to do these scans in spreadsheets, but we also
-can do these checks in a programming language like R, or in OpenRefine
-or SQL.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -543,13 +443,11 @@ or SQL.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>Always copy your original spreadsheet file and work with a copy so
-you don’t affect the raw data.</li>
-<li>Use data validation to prevent accidentally entering invalid
-data.</li>
-<li>Use sorting to check for invalid data.</li>
-<li>Use conditional formatting (cautiously) to check for invalid
-data.</li>
+<ul><li>Always work on a copy of the raw data.</li>
+<li>Use data validation to prevent invalid entries and inconsistent
+categories.</li>
+<li>Sort, filter and colour-scale columns to find errors.</li>
+<li>Sort whole rows, never a single column.</li>
 </ul></div>
 </div>
 </div>
