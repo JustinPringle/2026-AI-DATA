@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Data Organization in Spreadsheets for Postgrads: All in One View</title>
+<title>Organising Data for AI: Spreadsheets, Projects and AI Tools: All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="assets/themetoggle.js"></script><link rel="stylesheet" type="text/css" href="assets/styles.css">
 <script src="assets/scripts.js" type="text/javascript"></script><!-- mathjax --><!-- NOTE: https://docs.mathjax.org/en/latest/output/mathml.html#mathml-support --><!-- Changes from V2 to V4: https://mathjax.github.io/MathJax-demos-web/convert-configuration/convert-configuration.html
@@ -94,7 +94,7 @@
       <img class="small-logo" alt="Data Carpentry" src="assets/images/data-logo-sm.svg"></a>
     </div>
     <div class="lesson-title-md">
-      Data Organization in Spreadsheets for Postgrads
+      Organising Data for AI: Spreadsheets, Projects and AI Tools
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -105,7 +105,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Data Organization in Spreadsheets for Postgrads
+            Organising Data for AI: Spreadsheets, Projects and AI Tools
           </span>
         </li>
         <li class="nav-item">
@@ -297,6 +297,42 @@
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
         <a href="05-exporting-data.html">6. Exporting data</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="06-data-dictionary.html">7. Data dictionaries, and AI as a reader</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush9">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading9">
+        <a href="07-project-organisation.html">8. Organising a project</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush10">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading10">
+        <a href="08-ai-and-your-data.html">9. AI tools and your data</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -781,7 +817,7 @@ each problem, write how you would fix it.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The workbook contains every mistake listed in <a href="02-common-mistakes.html">the next episode</a>, and a few more.
 Among them: two tables on one tab, merged headings, a title and a legend
@@ -1278,7 +1314,7 @@ TextEdit). Then open the CSV again in Excel.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The real date in A5 is written out in whatever format your computer’s
 regional settings use. The text <code>12 Mar</code> may be turned into a
@@ -1546,6 +1582,619 @@ dictionary.</li>
 </div>
 </div>
 </div>
+</section></section><section id="aio-06-data-dictionary"><p>Content from <a href="06-data-dictionary.html">Data dictionaries, and AI as a reader</a></p>
+<hr>
+<p>Last updated on 2026-10-22 |
+
+        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/06-data-dictionary.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What should I record about my data, and where?</li>
+<li>How do I help an AI tool understand my data?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Explain the minus-26 mean, and get the correct answer from tidy
+data.</li>
+<li>Write a data dictionary for a tidy table.</li>
+<li>Use the data dictionary as context when asking an AI tool about your
+data.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="back-to-minus-26">Back to minus 26<a class="anchor" aria-label="anchor" href="#back-to-minus-26"></a>
+</h2>
+<hr class="half-width">
+<p>Sipho entered these values for North Beach in 2024:</p>
+<p><code>308, 54, -999, 55 cfu, 114, &lt;10, 252, 115</code></p>
+<p>Spreadsheet <code>AVERAGE</code> keeps the six cells that are
+numbers, including <code>-999</code>, and silently skips the two that
+are text:</p>
+<p>(308 + 54 − 999 + 114 + 252 + 115) / 6 = <strong>−26.0</strong></p>
+<p>The tidy file records the same field sheet as six measured counts
+(308, 54, 55, 114, 252, 115), one sample below detection, and one
+missing because the bottle broke. The mean of the measured counts is
+<strong>149.7</strong> (n = 6).</p>
+<p>Both numbers came from the same field sheet. Only one survives a
+thesis examiner. An AI assistant given the messy sheet will happily
+report the other.</p>
+<div id="see-it-in-python-optional" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="see-it-in-python-optional" class="callout-inner">
+<h3 class="callout-title">See it in Python (optional)</h3>
+<div class="callout-content">
+<p><code>demo_messy_vs_tidy.py</code> in the lesson data reads both
+files and prints both means. Run it from the folder holding the
+data:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">python</span> demo_messy_vs_tidy.py</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Messy mean : -26.0 &lt;- '-999' counted as data; '55 cfu' and '&lt;10' silently dropped
+Tidy mean  : 149.7 (n = 6 measured; 1 below detection; 1 missing with a stated reason)</code></pre>
+</div>
+<p>The messy code is what an AI assistant typically writes when asked
+for a quick mean: read the column, convert to numbers, average. It runs
+without an error. That is the danger.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="metadata-data-about-your-data">Metadata: data about your data<a class="anchor" aria-label="anchor" href="#metadata-data-about-your-data"></a>
+</h2>
+<hr class="half-width">
+<p>A tidy table holds the values. It does not say what
+<code>below_detection</code> means, what the detection limit was, or
+which site names are allowed. That information is
+<strong>metadata</strong>, and it belongs in plain-text files kept
+beside the data, never inside the table.</p>
+<p>Two files cover most needs:</p>
+<ul>
+<li>a <strong>data dictionary</strong>: one row per column, saying what
+each column means;</li>
+<li>a <strong>README</strong>: what the dataset is, who made it, how it
+is organised, and what may be done with it (<a href="07-project-organisation.html">episode 7</a>).</li>
+</ul>
+<p>Many fields have metadata standards. The <a href="https://www.dcc.ac.uk/resources/metadata-standards/list" class="external-link">Digital
+Curation Centre</a> keeps a list. Where none exists, ask: <em>what would
+a stranger need to use this data without talking to me?</em></p>
+</section><section><h2 class="section-heading" id="a-data-dictionary">A data dictionary<a class="anchor" aria-label="anchor" href="#a-data-dictionary"></a>
+</h2>
+<hr class="half-width">
+<p>Here is part of
+<code>beach_water_quality_data_dictionary.csv</code>:</p>
+<table class="table">
+<colgroup>
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+</colgroup>
+<thead><tr>
+<th>column</th>
+<th>description</th>
+<th>type</th>
+<th>units_or_format</th>
+<th>allowed_values_or_notes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>site</td>
+<td>Beach sampling site</td>
+<td>category</td>
+<td></td>
+<td>North Beach, Addington, uShaka, Umhlanga Main</td>
+</tr>
+<tr>
+<td>sample_date</td>
+<td>Date the sample was collected</td>
+<td>date</td>
+<td>YYYY-MM-DD</td>
+<td></td>
+</tr>
+<tr>
+<td>enterococci_cfu_100ml</td>
+<td>Enterococci count</td>
+<td>number</td>
+<td>cfu per 100 mL</td>
+<td>Blank when not measured, below detection or above range</td>
+</tr>
+<tr>
+<td>below_detection</td>
+<td>Count below detection limit</td>
+<td>boolean</td>
+<td></td>
+<td>TRUE means &lt; 10 cfu/100 mL; count left blank</td>
+</tr>
+<tr>
+<td>missing_reason</td>
+<td>Why no measurement exists</td>
+<td>category</td>
+<td></td>
+<td>blank, bottle_broken, not_sampled_rough_sea</td>
+</tr>
+</tbody>
+</table>
+<div id="exercise-write-the-dictionary" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-write-the-dictionary" class="callout-inner">
+<h3 class="callout-title">Exercise: write the dictionary</h3>
+<div class="callout-content">
+<p>Without looking at the file, write dictionary entries for these
+columns of <code>beach_water_quality_tidy.csv</code>:
+<code>sample_id</code>, <code>collector</code>,
+<code>above_count_range</code>, <code>water_temp_c</code> and
+<code>notes</code>.</p>
+<p>For each, give: what it means, its type, its units or format, and its
+allowed values.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>Compare yours with
+<code>beach_water_quality_data_dictionary.csv</code>. Typical gaps: the
+upper count limit for <code>above_count_range</code> (2000 cfu/100 mL),
+the unit for temperature, and the rule that <code>sample_id</code> is
+never reused.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="the-data-dictionary-is-the-prompt">The data dictionary is the prompt<a class="anchor" aria-label="anchor" href="#the-data-dictionary-is-the-prompt"></a>
+</h2>
+<hr class="half-width">
+<p>An AI tool knows nothing about your project. Given only a CSV, it
+guesses what <code>below_detection</code> means and what to do with
+blank counts. Given the CSV <em>and</em> the dictionary, it can follow
+your definitions, and you can check that it did.</p>
+<p>A prompt that works:</p>
+<pre class="text"><code>Attached: beach_water_quality_tidy.csv and its data dictionary.
+Using only rows where enterococci_cfu_100ml is not blank, give the mean
+count per site per year, with n. Report separately how many samples per
+site were below detection, above the count range, or missing, and why.
+Show the code you used.</code></pre>
+<p>Note the last line. Asking for the code lets you check the
+calculation, rather than trusting a number.</p>
+<div id="exercise-messy-versus-tidy-demonstration" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-messy-versus-tidy-demonstration" class="callout-inner">
+<h3 class="callout-title">Exercise: messy versus tidy
+(demonstration)</h3>
+<div class="callout-content">
+<p>If an approved AI tool is available, ask it for the mean count at
+North Beach in 2024 twice: once giving it
+<code>beach_water_quality_MESSY.xlsx</code>, and once giving it the tidy
+CSV with the data dictionary.</p>
+<p>Which answer would you put in a thesis or a report? What did you need
+to check before trusting either?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Discussion </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Answers vary between tools and between runs. With the messy file,
+look for whether the tool noticed <code>-999</code>,
+<code>&lt;10</code>, <code>TNTC</code>, the <code>55 cfu</code> cell and
+the two-table layout, or quietly worked around them. With the tidy file
+and dictionary, the answer should be 149.7 with n = 6, and the code
+should be easy to check.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Calculations on messy data can be confidently wrong, in a
+spreadsheet or by an AI tool.</li>
+<li>Keep metadata in plain-text files beside the data: a data dictionary
+and a README.</li>
+<li>Give an AI tool the data dictionary with the data, and ask for the
+code it used.</li>
+</ul>
+</div>
+</div>
+</div>
+</section></section><section id="aio-07-project-organisation"><p>Content from <a href="07-project-organisation.html">Organising a project</a></p>
+<hr>
+<p>Last updated on 2026-10-22 |
+
+        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/07-project-organisation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How should I organise the files of a project?</li>
+<li>Where should I keep raw data, and how should I back it up?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Lay out a project folder that separates raw data, processed data and
+outputs.</li>
+<li>Name files so they sort, and so people and programs can read
+them.</li>
+<li>Plan storage and backups for raw data.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>A tidy table is one file. A thesis, a funded project or an office
+process produces hundreds. The same principle applies at the level of
+folders: organise so that someone else, including you in two years, can
+find things without asking.</p>
+<section><h2 class="section-heading" id="a-folder-skeleton">A folder skeleton<a class="anchor" aria-label="anchor" href="#a-folder-skeleton"></a>
+</h2>
+<hr class="half-width">
+<pre class="text"><code>beach-water-quality/
+  README.txt            what, who, conventions, rules for sharing and AI use
+  data/
+    raw/                original files exactly as received; read-only
+    processed/          tidy files made from raw
+  docs/                 data dictionary, protocols, permits, ethics approval
+  scripts/              code that turns raw into processed, and processed into results
+  outputs/              figures, tables, model results; can be regenerated</code></pre>
+<p>The rule that matters most: <strong>files flow one way</strong>, from
+<code>raw</code> to <code>processed</code> to <code>outputs</code>.
+Nothing is ever written back into <code>raw</code>.</p>
+</section><section><h2 class="section-heading" id="leave-raw-data-raw">Leave raw data raw<a class="anchor" aria-label="anchor" href="#leave-raw-data-raw"></a>
+</h2>
+<hr class="half-width">
+<p>Raw data are the foundation. Every result must trace back to
+them.</p>
+<ul>
+<li>Make the <code>raw</code> folder read-only (right-click &gt;
+Properties &gt; Read-only on Windows; Get Info &gt; Sharing &amp;
+Permissions on macOS).</li>
+<li>Never open a raw file and save over it. Excel may change dates, drop
+leading zeros or convert codes even if you edit nothing.</li>
+<li>When raw data arrive from an instrument, a lab or a collaborator,
+record where they came from and when in the README.</li>
+</ul></section><section><h2 class="section-heading" id="name-files-for-people-and-programs">Name files for people and programs<a class="anchor" aria-label="anchor" href="#name-files-for-people-and-programs"></a>
+</h2>
+<hr class="half-width">
+<p>A good file name says what the file holds, sorts correctly, and
+contains no characters that break software.</p>
+<table class="table">
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead><tr>
+<th>Avoid</th>
+<th>Prefer</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>Data final FINAL v2 (Lerato).xlsx</code></td>
+<td><code>2025-03-04_beach-wq_enterococci_raw.xlsx</code></td>
+</tr>
+<tr>
+<td><code>results new.csv</code></td>
+<td><code>2025-05-12_beach-wq_enterococci_tidy_v03.csv</code></td>
+</tr>
+<tr>
+<td><code>Fig 3.png</code></td>
+<td><code>fig03_enterococci-by-site.png</code></td>
+</tr>
+</tbody>
+</table>
+<p>Rules:</p>
+<ol style="list-style-type: decimal">
+<li>Start with the date as <code>YYYY-MM-DD</code>, so files sort in
+time order.</li>
+<li>Use hyphens within a part and underscores between parts; no
+spaces.</li>
+<li>Number versions with leading zeros: <code>v01</code>,
+<code>v02</code>, …, <code>v10</code>.</li>
+<li>Never use “final”. There is always another version.</li>
+</ol>
+<p>For files that change often, such as scripts, version control (Git)
+beats version numbers in names. See the Software Carpentry lesson <a href="https://swcarpentry.github.io/git-novice/" class="external-link">Version Control with
+Git</a>.</p>
+</section><section><h2 class="section-heading" id="give-every-sample-a-unique-identifier">Give every sample a unique identifier<a class="anchor" aria-label="anchor" href="#give-every-sample-a-unique-identifier"></a>
+</h2>
+<hr class="half-width">
+<p><code>DBN-2024-003</code> identifies one sample for ever. “North
+Beach, 19 March” does not: a second sample on the same day, or a
+re-test, breaks it. Assign the identifier when the sample is collected,
+write it on the bottle, and use it in every file that refers to the
+sample. It is the key that joins your field sheet to the lab
+results.</p>
+</section><section><h2 class="section-heading" id="store-and-back-up">Store and back up<a class="anchor" aria-label="anchor" href="#store-and-back-up"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>Keep data where you <strong>and your supervisor or manager</strong>
+can reach them. Data held only on a student’s laptop leave with the
+student.</li>
+<li>Keep <strong>at least two backups in different physical
+places</strong>, for example the institutional network or cloud storage
+plus an external drive kept at home.</li>
+<li>Check that backups can be restored. A backup never tested is a
+hope.</li>
+<li>Large data (camera footage, PIV images, model output) need a plan
+before collection starts: how much space, where, and for how long. Ask
+your institution’s research data or IT service what is provided.</li>
+</ul>
+<div id="exercise-your-own-project" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-your-own-project" class="callout-inner">
+<h3 class="callout-title">Exercise: your own project</h3>
+<div class="callout-content">
+<p>Sketch the folder skeleton for a project of your own. Where do your
+raw data live today? How many copies exist, and where? Who else can
+reach them?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Discussion
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>Common answers: raw data mixed with processed files; one copy, on a
+laptop; nobody else has access. Each is one change away from being
+fixed. Write that change on your sticky note.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="write-a-readme">Write a README<a class="anchor" aria-label="anchor" href="#write-a-readme"></a>
+</h2>
+<hr class="half-width">
+<p><code>README_TEMPLATE.txt</code> in the lesson data gives a skeleton:
+what the data are, the folder layout, the files, conventions for dates,
+missing values and units, a processing log, rules for access and AI use,
+and how to cite the data. Fill it in at the start of a project and
+update it as you go.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Separate raw data, processed data, scripts and outputs; files flow
+one way.</li>
+<li>Make raw data read-only and record their origin.</li>
+<li>Name files with ISO dates, no spaces and numbered versions.</li>
+<li>Give every sample a unique identifier.</li>
+<li>Keep at least two backups in different places, and test them.</li>
+</ul>
+</div>
+</div>
+</div>
+</section></section><section id="aio-08-ai-and-your-data"><p>Content from <a href="08-ai-and-your-data.html">AI tools and your data</a></p>
+<hr>
+<p>Last updated on 2026-10-22 |
+
+        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/08-ai-and-your-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What data may I give to an AI tool?</li>
+<li>How do I keep AI-assisted work reproducible?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Decide whether a given dataset may be given to an AI tool.</li>
+<li>Record AI-assisted processing so that it can be checked and
+repeated.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="what-may-leave-the-building">What may leave the building<a class="anchor" aria-label="anchor" href="#what-may-leave-the-building"></a>
+</h2>
+<hr class="half-width">
+<p>Uploading a file to an AI tool sends it to a third party. Depending
+on the tool and your account, the provider may store it, and some
+consumer services may use it to improve their models. Before you upload,
+ask three questions:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Does it contain personal information?</strong> Names,
+student or staff numbers, ID numbers, contact details, health
+information or marks are personal information under South Africa’s
+Protection of Personal Information Act (POPIA). Processing them needs a
+lawful basis and adequate safeguards.</li>
+<li>
+<strong>Is it bound by an agreement?</strong> Funders, industry
+partners, permit conditions and data-sharing agreements may restrict
+where data go.</li>
+<li>
+<strong>Is it unpublished or confidential?</strong> Unpublished
+results, examination material and intellectual property deserve the same
+care you would give an email to a stranger.</li>
+</ol>
+<p>If any answer is yes, use only a tool your institution has approved
+for that kind of data, or remove the sensitive parts first.</p>
+<div id="your-institutions-rules" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="your-institutions-rules" class="callout-inner">
+<h3 class="callout-title">Your institution’s rules</h3>
+<div class="callout-content">
+<p>[ADD: link to your institution’s guideline on generative AI and its
+list of approved tools.]</p>
+<p>[ADD: name or office of the POPIA information officer to contact with
+questions.]</p>
+</div>
+</div>
+</div>
+<div id="exercise-may-it-go-into-a-public-ai-chatbot" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="exercise-may-it-go-into-a-public-ai-chatbot" class="callout-inner">
+<h3 class="callout-title">Exercise: may it go into a public AI
+chatbot?</h3>
+<div class="callout-content">
+<p>For each case, decide: yes, no, or only with conditions.</p>
+<ol style="list-style-type: decimal">
+<li>The synthetic beach dataset from this lesson.</li>
+<li>Your unpublished thesis data, collected under a funder
+agreement.</li>
+<li>A class list with student numbers and marks, which you want “tidied
+up”.</li>
+<li>Interview transcripts in which participants are named.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>
+<strong>Yes.</strong> It is synthetic and openly licensed.</li>
+<li>
+<strong>Only with conditions.</strong> Check the agreement, and use
+an institution-approved tool.</li>
+<li>
+<strong>No,</strong> not as it stands. It is personal information
+under POPIA. Remove names and numbers first, or use an approved
+tool.</li>
+<li>
+<strong>No,</strong> unless the participants consented to it and
+your ethics approval allows it. Anonymise first.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="keep-ai-assisted-work-reproducible">Keep AI-assisted work reproducible<a class="anchor" aria-label="anchor" href="#keep-ai-assisted-work-reproducible"></a>
+</h2>
+<hr class="half-width">
+<p>If an AI tool cleaned, transformed or analysed your data, treat it
+like any other instrument and log its settings. Add a line to the
+processing log in your README:</p>
+<pre class="text"><code>2025-05-12  JP  Harmonised site names (13 variants -&gt; 4) with an AI assistant
+                [tool name and version]; prompt saved as docs/prompts/2025-05-12_sites.txt;
+                output checked against a Data &gt; Filter list of distinct values.</code></pre>
+<p>Better still, ask the tool for code, check the code, and save and run
+the code yourself. A saved script repeats exactly; a chat conversation
+does not.</p>
+</section><section><h2 class="section-heading" id="organisation-is-what-makes-ai-useful">Organisation is what makes AI useful<a class="anchor" aria-label="anchor" href="#organisation-is-what-makes-ai-useful"></a>
+</h2>
+<hr class="half-width">
+<p>The habits in this lesson do two jobs. They protect your data from
+the mistakes of people, spreadsheets and AI tools. They also make your
+data ready for the analysis, modelling and machine learning you may want
+to do next: a tidy table with a data dictionary is close to
+training-ready; a messy workbook is months of cleaning away.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>Before uploading, check for personal information, agreements and
+confidentiality.</li>
+<li>Use institution-approved tools for sensitive data, or remove the
+sensitive parts first.</li>
+<li>Log AI-assisted processing like any instrument: tool, date, prompt,
+and how you checked the result.</li>
+<li>Prefer code you can save and re-run over answers in a chat.</li>
+</ul>
+</div>
+</div>
+</div>
 </section></section>
 </div>
     </main>
@@ -1590,7 +2239,7 @@ dictionary.</li>
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "software, data, lesson, The Carpentries",
+  "keywords": "data organisation, spreadsheets, tidy data, metadata, AI, higher education, The Carpentries",
   "name": "All in One View",
   "creativeWorkStatus": "active",
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/aio.html",
