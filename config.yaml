@@ -11,13 +11,13 @@
 carpentry: 'dc'
 
 # Overall title for pages.
-title: 'Data Organization in Spreadsheets for Postgrads'
+title: 'Organising Data for AI: Spreadsheets, Projects and AI Tools'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2026-10-22'
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries'
+keywords: 'data organisation, spreadsheets, tidy data, metadata, AI, higher education, The Carpentries'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
@@ -65,6 +65,9 @@ episodes:
 - 03-dates-as-data.md
 - 04-quality-control.md
 - 05-exporting-data.md
+- 06-data-dictionary.md
+- 07-project-organisation.md
+- 08-ai-and-your-data.md
 
 # Information for Learners
 learners: 
