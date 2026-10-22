@@ -2,64 +2,51 @@
 site: sandpaper::sandpaper_site
 ---
 
+Good data organisation is the foundation of any research or administrative
+project. Most of us keep data in spreadsheets, laid out the way people like
+to read them. Computers need data laid out differently. So do AI tools,
+which read data as literally as any program, and then report their answers
+with confidence.
 
+This lesson teaches how to organise data so that people, programs and AI
+tools all read it the way you intend. It uses one synthetic dataset
+throughout: Enterococci counts at four Durban beaches, recorded by two
+field assistants in two very different, very messy spreadsheets.
 
-Good data organization is the foundation of any research project. Most
-researchers have data in spreadsheets, so it's the place that many research
-projects start.
+In this lesson you will learn to:
 
-We organize data in spreadsheets in the ways that we as humans want to work with the data,
-but computers require that data be organized in particular ways. In order
-to use tools that make computation more efficient, such as programming
-languages like R or Python, we need to structure our data the way that
-computers need the data. Since this is where most research projects start,
-this is where we want to start too!
+- lay out data tables that computers can use;
+- recognise and fix the common spreadsheet mistakes;
+- record dates unambiguously;
+- prevent and find errors with data validation, sorting and filtering;
+- export data to open formats;
+- write a data dictionary, and use it as context for AI tools;
+- organise project folders, name files and protect raw data;
+- decide what data may be given to an AI tool, and keep AI-assisted work reproducible.
 
-In this lesson, you will learn:
-
-- Good data entry practices - formatting data tables in spreadsheets
-- How to avoid common formatting mistakes
-- Approaches for handling dates in spreadsheets
-- Basic quality control and data manipulation in spreadsheets
-- Exporting data from spreadsheets
-
-In this lesson, however, you will *not* learn about data analysis with spreadsheets.
-Much of your time as a researcher will be spent in the initial 'data wrangling'
-stage, where you need to organize the data to perform a proper analysis later.
-It's not the most fun, but it is necessary. In this lesson you will
-learn how to think about data organization and some practices for more
-effective data wrangling. With this approach you can better format current data
-and plan new data collection so less data wrangling is needed.
+You will *not* learn statistics, plotting or programming in this lesson.
 
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 
-## Getting Started
+## Prerequisites
 
-Data Carpentry's teaching is hands-on, so participants are encouraged to use
-their own computers to insure the proper setup of tools for an efficient
-workflow. <br>**These lessons assume no prior knowledge of the skills or tools.**
-
-To get started, follow the directions in the "[Setup](learners/setup.md)" tab to
-download data to your computer and follow any installation instructions.
-
-#### Prerequisites
-
-This lesson requires a working copy of spreadsheet software, such as Microsoft
-Excel or LibreOffice or OpenOffice.org (see more details in "[Setup](learners/setup.md)").
-<br>To most effectively use these materials, please make sure to install
-everything *before* working through this lesson.
-
+A computer with a spreadsheet program (Excel, LibreOffice Calc or Google
+Sheets). No programming experience is needed. Download the data before you
+start; see [Setup](learners/setup.md).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::::::::  prereq
+::::::::::::::::::::::::::::::::::::::::: callout
 
-## For Instructors
+## Acknowledgement
 
-If you are teaching this lesson in a workshop, please see the
-[Instructor notes](instructors/instructor-notes.md).
-
+This lesson is adapted from The Carpentries' Data Carpentry lessons
+[Data Organization in Spreadsheets for Ecologists](https://datacarpentry.org/spreadsheet-ecology-lesson/)
+and [Project Organization and Management for Genomics](https://datacarpentry.org/organization-genomics/),
+used under [CC-BY 4.0](LICENSE.md). It was adapted for the *AI in Higher
+Education* workshop at the University of KwaZulu-Natal, November 2026.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
+For instructors: see the [Instructor Notes](instructors/instructor-notes.md)
+for the one-hour plan and the answer key.

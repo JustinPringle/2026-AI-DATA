@@ -1,0 +1,11 @@
+column,description,type,units_or_format,allowed_values_or_notes
+sample_id,"Unique sample identifier, DBN-<year>-<sequence>",text,,Never reused
+site,Beach sampling site,category,,North Beach | Addington | uShaka | Umhlanga Main
+sample_date,Date the water sample was collected,date,ISO 8601 YYYY-MM-DD,
+collector,Field assistant who collected the sample,category,,First name only (synthetic)
+enterococci_cfu_100ml,Enterococci count,number,cfu per 100 mL,"Blank when not measured, below detection, or above countable range (see flags)"
+below_detection,Count below method detection limit,boolean,,TRUE means < 10 cfu/100 mL; value column left blank
+above_count_range,Plate too numerous to count,boolean,,TRUE means > 2000 cfu/100 mL; value column left blank
+water_temp_c,Surface water temperature,number,degrees Celsius,
+missing_reason,Why no measurement exists,category,,blank | bottle_broken | not_sampled_rough_sea
+notes,Free-text field note,text,,"Plain text, no line breaks"
