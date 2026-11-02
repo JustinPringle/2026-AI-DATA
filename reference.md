@@ -4,49 +4,44 @@ title: 'Glossary'
 
 ## Glossary
 
-[cleaned data  ]{#cleaned-data}
-:   data that has been manipulated post-collection to remove errors or inaccuracies, introduce desired formatting changes, or otherwise prepare the data for analysis
+[censored value]{#censored-value}
+:   a measurement known only to lie beyond a limit of the method, such as a count below the detection limit (`<10`) or too numerous to count (`TNTC`); record it with a flag column, not as text in a number column
 
-[conditional formatting  ]{#conditional-formatting}
-:   formatting that is applied to a specific cell or range of cells depending on a set of criteria
+[CSV (comma-separated values)]{#csv}
+:   a plain-text file format holding one table, one row per line, with values separated by commas
 
-[CSV (comma separated values) format  ]{#csv-comma-separated-values-format}
-:   a plain text file format in which values are separated by commas
+[data dictionary]{#data-dictionary}
+:   a file with one row per column of a data table, giving each column's meaning, type, units or format, and allowed values
 
-[factor  ]{#factor}
-:   a variable that takes on a limited number of possible values (i.e. categorical data)
+[data validation]{#data-validation}
+:   a spreadsheet feature that restricts what a cell accepts, such as a list of allowed site names or a range of numbers
 
-[metadata  ]{#metadata}
-:   data which describes other data
+[ISO 8601]{#iso-8601}
+:   the international standard for writing dates and times, `YYYY-MM-DD` and `YYYY-MM-DDThh:mm`
 
-[null value  ]{#null-value}
-:   a value used to record observations missing from a dataset
+[metadata]{#metadata}
+:   data that describe other data: what was measured, how, when, by whom, and what each column means
 
-[observation  ]{#observation}
-:   a single measurement or record of the object being recorded (e.g. the weight of a particular mouse)
+[null value]{#null-value}
+:   a value used to record that no observation exists; best left as a blank cell, with the reason in a separate column
 
-[plain text]{#plain-text}
-:   unformatted text
+[observation]{#observation}
+:   a single record of the thing being studied, such as one water sample
 
-[quality assurance  ]{#quality-assurance}
-:   any process which checks data for validity during entry
+[POPIA]{#popia}
+:   South Africa's Protection of Personal Information Act (Act 4 of 2013), which governs how personal information may be processed, including uploading it to third-party services
 
-[quality control  ]{#quality-control}
-:   any process which removes problematic data from a dataset
+[processing log]{#processing-log}
+:   a plain-text record of every change made to raw data to produce processed data: date, person, step, and, for AI-assisted steps, the tool, prompt and check
 
-[raw data  ]{#raw-data}
-:   data that has not been manipulated and represents actual recorded values
+[raw data]{#raw-data}
+:   data exactly as collected or received, kept read-only and never edited
 
-[rich text  ]{#rich-text}
-:  formatted text (e.g. text that appears bolded, colored or italicized)
+[tidy data]{#tidy-data}
+:   a table with each variable in its own column, each observation in its own row, and one value in each cell
 
-[string  ]{#string}
-:   a collection of characters (e.g. "thisisastring")
+[UTF-8]{#utf-8}
+:   a text encoding that represents every character, including `°`, accents and isiZulu names; choose **CSV UTF-8** when exporting from Excel
 
-[TSV (tab separated values) format  ]{#tsv-tab-separated-values-format}
-:   a plain text file format in which values are separated by tabs
-
-[variable  ]{#variable}
-:   a category of data being collected on the object being recorded (e.g. a mouse's weight)
-
-
+[variable]{#variable}
+:   something measured or recorded for each observation, such as site, sample date or water temperature

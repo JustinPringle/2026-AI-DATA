@@ -1,7 +1,7 @@
 ---
 title: Exporting data
-teaching: 3
-exercises: 0
+teaching: 1
+exercises: 2
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives

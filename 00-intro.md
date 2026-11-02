@@ -1,155 +1,73 @@
 ---
 title: Introduction
-teaching: 15
+teaching: 2
 exercises: 3
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Describe best practices for organizing data so computers can make the best use of data sets.
+- Explain why the layout of data decides what a program, or an AI tool, does with it.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What are basic principles for using spreadsheets for good data organization?
+- Why does data organisation matter when I use AI tools?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Good data organization is the foundation of your research
-project. Most researchers have data or do data entry in
-spreadsheets. Spreadsheet programs are very useful graphical
-interfaces for designing data tables and handling very basic data
-quality control functions.
+## One field sheet, two answers
 
-### Spreadsheet outline
+Sipho sampled North Beach eight times in 2024 and typed the Enterococci
+counts into a spreadsheet. Ask the spreadsheet for the mean and it says
+**−26.0**. A count of bacteria cannot be negative. The correct mean of the
+same field sheet is **149.7**.
 
-After this lesson, you will be able to:
+Nothing crashed and nothing warned. The spreadsheet did exactly what the
+layout told it to do. An AI tool given the same sheet reads it just as
+literally, and reports its answer with more confidence.
 
-- Implement best practices in data table formatting
-- Identify and address common formatting mistakes
-- Understand approaches for handling dates in spreadsheets
-- Utilize basic quality control features and data manipulation practices
-- Effectively export data from spreadsheet programs
+This session is about closing that gap: organising data so that people,
+programs and AI tools all read it the way you intend.
 
-*Overall good data practices*
+## How the session runs
 
-Spreadsheets are good for data entry. Therefore we have a lot of data
-in spreadsheets.
-Much of your time as a researcher will be spent in this 'data wrangling' stage.
-It's not the most fun, but it's necessary. We'll teach you how to think
-about data organization and some practices for more effective data wrangling. Not only
-will this save time and effort, it also paves the way for more equitable and inclusive
-science. Making our work more accessible provides wider avenues for collaboration
-and improvement!
+The whole session is one exercise, done in pairs, on one synthetic dataset:
+Enterococci counts at four Durban beaches, recorded by two field assistants
+in two very different, very messy spreadsheets. The presenter gives a prompt;
+you carry it out; the presenter draws out the principle from what you found.
+The prompts are on the [Session prompts](../learners/prompts.md) page.
 
-### What this lesson will not teach you
+- **Topic 1 · The table a machine can read.** Tidy data, missing and
+  censored values, categories, dates and export.
+  ([Episodes 1-5](01-format-data.md))
+- **Topic 2 · Giving the model its context.** The data dictionary, asking a
+  chat model about messy and tidy data, project folders, and what data may go
+  to which tool. ([Episodes 6-8](06-data-dictionary.md))
 
-- How to do *statistics* in a spreadsheet
-- How to do *plotting* in a spreadsheet
-- How to *write code* in spreadsheet programs
+Each topic ends with a check against a key.
 
-If you're looking to do this, a good reference is
-[Excel Cookbook](https://www.amazon.com/Excel-Cookbook-Recipes-Mastering-Microsoft/dp/1098143329/), published by O'Reilly.
+::::::::::::::::::::::::::::::::::::::::: callout
 
-***
+## Following Prof Rawatlal's session
 
-### Why aren't we teaching data analysis in spreadsheets
-
-- Data analysis in spreadsheets usually requires a lot of manual
-  work. If you want to change a parameter or run an analysis with a
-  new dataset, you usually have to redo everything by hand. (We do
-  know that you can create macros, but see the next point.)
-
-- It is also difficult to track or reproduce statistical or plotting
-  analyses done in spreadsheet programs when you want to go back to
-  your work or someone asks for details of your analysis.
-
-### Spreadsheet programs
-
-Many spreadsheet programs are available. Since most participants utilize Excel as their primary spreadsheet program, this lesson will make use of Excel examples.
-
-Free spreadsheet programs that can also be used are LibreOffice Calc, and even Google Sheets.
-
-Commands may differ a bit between programs, but the general idea
-is the same.
-
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## Exercise
-
-- How many people have used spreadsheets in their research?
-- How many people have accidentally done something that made them
-  frustrated or sad?
-  
+This session comes after *Working with generative AI on a postgraduate
+project*. Several of his practices return here, applied to data: raw data
+never edited, standing instructions for the model, a log line for AI-assisted
+work, which data may go to which model, and testing against a known answer.
+Watch for them.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Spreadsheets encompass a lot of the things we need
-to be able to do as researchers. We can use them for:
+## What this session will not teach
 
-- Data entry
-- Organizing data
-- Subsetting and sorting data
-- Statistics
-- Plotting
-
-We do a lot of different operations in spreadsheets. What kind of operations do you do in spreadsheets? Which ones do you think spreadsheets are good for?
-
-## Problems with Spreadsheets
-
-Spreadsheets are good for data entry, but in reality we tend to
-use spreadsheet programs for much more than data entry. We use them
-to create data tables for publications, to generate summary
-statistics, and make figures.
-
-Generating tables for publications in a spreadsheet is not
-optimal - often, when formatting a data table for publication, we're
-reporting key summary statistics in a way that is not really meant to
-be read as data, and often involves special formatting
-(merging cells, creating borders, making it pretty). Cutting and pasting from a spreadsheet
-to a document software (like Word) can have unpredictable results.
-We advise you to create tables within these document software
-using the document's own table editing software.
-
-The latter two applications, generating statistics and figures, should
-be used with caution: because of the graphical, drag and drop nature of
-spreadsheet programs, it can be very difficult, if not impossible, to
-replicate your steps (much less retrace anyone else's), particularly if your
-stats or figures require you to do more complex calculations. Furthermore,
-in doing calculations in a spreadsheet, it's easy to accidentally apply a
-slightly different formula to multiple adjacent cells. When using a
-command-line based statistics program like R or SAS, it's practically
-impossible to apply a calculation to one observation in your
-dataset but not another unless you're doing it on purpose.
-
-### Using Spreadsheets for Data Entry and Cleaning
-
-However, there are circumstances where you might want to use a spreadsheet
-program to produce "quick and dirty" calculations or figures, and data
-cleaning will help you use some of these features. Data cleaning also
-puts your data in a better format prior to importation into a
-statistical analysis program. We will show you how to use some features of
-spreadsheet programs to check your data quality along the way and produce
-preliminary summary statistics.
-
-In this lesson, we will assume that you are most likely using Excel as
-your primary spreadsheet program - there are others (gnumeric, Calc
-from OpenOffice), and their functionality is similar, but Excel seems
-to be the program most used by biologists and ecologists.
-
-In this lesson we're going to talk about:
-
-1. [Formatting data tables in spreadsheets](01-format-data.md)
-2. [Formatting problems](02-common-mistakes.md)
-3. [Dates as data](03-dates-as-data.md)
-4. [Quality control](04-quality-control.md)
-5. [Exporting data](05-exporting-data.md)
+Statistics, plotting or programming. Spreadsheets are good for entering and
+checking data; for analysis, a script is easier to check and to repeat. See
+[Going further](../learners/discuss.md).
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Good data organization is the foundation of any research project.
+- Programs and AI tools read data literally; the layout decides the answer.
+- A wrong answer from messy data arrives without a warning.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

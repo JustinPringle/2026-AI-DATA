@@ -1,7 +1,7 @@
 ---
 title: Organising a project
-teaching: 5
-exercises: 3
+teaching: 1
+exercises: 2
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -37,7 +37,8 @@ beach-water-quality/
   outputs/              figures, tables, model results; can be regenerated
 ```
 
-The rule that matters most: **files flow one way**, from `raw` to
+This is the research repository from Prof Rawatlal's session, seen from the
+data's side. The rule that matters most: **files flow one way**, from `raw` to
 `processed` to `outputs`. Nothing is ever written back into `raw`.
 
 ## Leave raw data raw

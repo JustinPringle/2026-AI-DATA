@@ -48,5 +48,8 @@ Education* workshop at the University of KwaZulu-Natal, November 2026.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+The session runs as one exercise in pairs; the prompts are on the
+[Session prompts](learners/prompts.md) page.
+
 For instructors: see the [Instructor Notes](instructors/instructor-notes.md)
 for the one-hour plan and the answer key.

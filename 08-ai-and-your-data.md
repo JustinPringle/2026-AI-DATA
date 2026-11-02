@@ -1,7 +1,7 @@
 ---
 title: AI tools and your data
-teaching: 3
-exercises: 2
+teaching: 1
+exercises: 3
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -43,8 +43,10 @@ that kind of data, or remove the sensitive parts first.
 
 ## Your institution's rules
 
-[ADD: link to your institution's guideline on generative AI and its list of
-approved tools.]
+UKZN's *Principles and Guidelines on the Use of Generative AI in Academic
+Writing* and related resources are collected in the Library's guide
+[All things AI @ UKZN](https://libguides.ukzn.ac.za/c.php?g=1505779).
+[ADD: link to UKZN's list of approved AI tools, if one is published.]
 
 [ADD: name or office of the POPIA information officer to contact with
 questions.]
@@ -79,6 +81,10 @@ For each case, decide: yes, no, or only with conditions.
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Keep AI-assisted work reproducible
+
+Prof Rawatlal's session asked for a log line for each piece of work done
+with a model. For data, the log line goes in the processing log of the
+README, beside every other change made to the raw data.
 
 If an AI tool cleaned, transformed or analysed your data, treat it like any
 other instrument and log its settings. Add a line to the processing log in

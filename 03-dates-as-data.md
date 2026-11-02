@@ -1,7 +1,7 @@
 ---
 title: Dates as data
-teaching: 4
-exercises: 0
+teaching: 1
+exercises: 4
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -34,6 +34,11 @@ Column A of the same tab holds five formats for one kind of value:
 | A7 | `2024/03/19` | Text, not a date |
 | A8 | `26-03-2024` | Text, day first |
 | A9 | `04/02/2024` | Text, month first: ambiguous |
+
+Lerato's tab is worse. Six of her dates are written month first, in the
+United States order: B5 `03/25/2025` is plainly 25 March, but B11
+`03/04/2025` is 4 March, not 3 April. Read with South African settings, it
+silently becomes the wrong date.
 
 ## How spreadsheets store dates
 
