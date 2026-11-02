@@ -36,6 +36,7 @@ reference tells you where to look.
 - [Formatting that carries meaning](#formatting-that-carries-meaning)
 - [Merged cells](#merged-cells)
 - [Comments and units in cells](#comments-and-units-in-cells)
+- [Numbers stored as text](#numbers-stored-as-text)
 - [More than one value in a cell](#more-than-one-value-in-a-cell)
 - [Calculations and repeated headers inside the data](#calculations-and-repeated-headers-inside-the-data)
 - [Problematic column names](#problematic-column-names)
@@ -161,6 +162,18 @@ cell turn a number into text.
 (`water_temp_c`), with one unit per column. Lerato's row 14 holds 74.1, a
 temperature in Fahrenheit among Celsius values; convert it (23.4 °C) and
 note the conversion in your processing log.
+
+## Numbers stored as text
+
+*Where:* `2024 Sipho`, temperatures in C6, C7, C9, C10, C12 and H6, H7, H9,
+H10, H12.
+
+These cells look like numbers but hold text, often because they were pasted
+from another program. Excel marks them with a small green triangle and
+aligns them left. `AVERAGE` skips them; a script may refuse the whole column.
+
+**Fix:** convert the column to numbers (select it, then the warning icon >
+**Convert to Number**), and check the count of values before and after.
 
 ## More than one value in a cell
 

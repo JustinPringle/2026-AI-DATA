@@ -1,7 +1,7 @@
 ---
 title: Quality control
-teaching: 3
-exercises: 0
+teaching: 1
+exercises: 4
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives

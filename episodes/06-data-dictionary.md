@@ -1,7 +1,7 @@
 ---
 title: Data dictionaries, and AI as a reader
 teaching: 3
-exercises: 7
+exercises: 22
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
@@ -133,6 +133,19 @@ Show the code you used.
 
 Note the last line. Asking for the code lets you check the calculation,
 rather than trusting a number.
+
+::::::::::::::::::::::::::::::::::::::::: callout
+
+## Prof Rawatlal's session, applied to data
+
+The data dictionary does for your data what a standing instruction file does
+for a project: the model reads it every time, and you can check its work
+against it. Asking for the code moves a repeated, checkable task out of the
+conversation and into a tool you can re-run. And the tidy North Beach mean,
+149.7 with n = 6, is a *known answer*: test any model's output against it
+before you trust the rest.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::: challenge
 

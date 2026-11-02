@@ -1,9 +1,27 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3269869.svg)](https://doi.org/10.5281/zenodo.3269869)
-[![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://slack-invite.carpentries.org/)
-[![Slack Status](https://img.shields.io/badge/Slack_Channel-dc--ecology--data--org-E01563.svg)](https://carpentries.slack.com/messages/C9WJAN3CH)
+# Organising Data for AI: Spreadsheets, Projects and AI Tools
 
-# Data Carpentry Core Curriculum
+A one-hour, hands-on lesson on organising research data so that people,
+programs and AI tools read it as intended. It closes the *Using AI in
+Postgraduate Studies* workshop at the University of KwaZulu-Natal
+(10 and 23 November 2026).
 
-This repository contains core material for the 2-day data carpentry workshop. Please see our [contribution guidelines](CONTRIBUTING.md) before contributing updates, bug fixes, or other corrections.
+- **Lesson site:** <https://justinpringle.github.io/2026-AI-DATA>
+- **Learner prompts:** `learners/prompts.md`
+- **Run sheet and answer keys:** `instructors/instructor-notes.md`
+- **Data:** `episodes/data/`, published at
+  <https://justinpringle.github.io/2026-AI-DATA/data/>.
+  `build_data.py` regenerates every data file from one seed.
 
+The lesson uses one synthetic dataset: Enterococci counts at four Durban
+beaches, recorded in a deliberately messy workbook and in a tidy CSV with a
+data dictionary.
 
+## Acknowledgement
+
+Adapted from The Carpentries' Data Carpentry lessons
+[Data Organization in Spreadsheets for Ecologists](https://datacarpentry.org/spreadsheet-ecology-lesson/)
+and [Project Organization and Management for Genomics](https://datacarpentry.org/organization-genomics/),
+under [CC-BY 4.0](LICENSE.md). Built with
+[The Carpentries Workbench](https://carpentries.github.io/workbench/).
+
+Contact: Prof Justin Pringle, <pringlej@ukzn.ac.za>

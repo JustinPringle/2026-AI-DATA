@@ -1,7 +1,7 @@
 ---
 title: Formatting data tables
-teaching: 5
-exercises: 12
+teaching: 2
+exercises: 8
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives

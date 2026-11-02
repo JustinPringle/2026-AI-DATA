@@ -27,7 +27,7 @@ life_cycle: 'stable'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://justinpringle.github.io/2026-AI-DATA/'
+source: 'https://github.com/JustinPringle/2026-AI-DATA'
 
 # Default branch of your lesson
 branch: 'main'
@@ -48,6 +48,10 @@ contact: 'pringlej@ukzn.ac.za'
 # - first-steps.md
 #
 # learners:
+- setup.md
+- prompts.md
+- reference.md
+- discuss.md
 # - setup.md
 #
 # instructors:
@@ -70,7 +74,11 @@ episodes:
 - 08-ai-and-your-data.md
 
 # Information for Learners
-learners: 
+learners:
+- setup.md
+- prompts.md
+- reference.md
+- discuss.md
 
 # Information for Instructors
 instructors: 
@@ -84,6 +92,6 @@ profiles:
 # sandpaper and varnish versions) should live
 
 
-url: 'https://datacarpentry.github.io/spreadsheet-ecology-lesson'
+url: 'https://justinpringle.github.io/2026-AI-DATA'
 analytics: carpentries
 lang: en
