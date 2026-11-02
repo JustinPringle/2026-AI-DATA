@@ -122,8 +122,9 @@
             More <i data-feather="chevron-down"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-<li><a class="dropdown-item" href="discuss.html">Discussion</a></li>
+<li><a class="dropdown-item" href="prompts.html">Session prompts</a></li>
 <li><a class="dropdown-item" href="reference.html">Glossary</a></li>
+<li><a class="dropdown-item" href="discuss.html">Going further</a></li>
           </ul>
 </li>
       </ul>
@@ -384,8 +385,9 @@
                 <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul>
-<li><a href="discuss.html">Discussion</a></li>
+<li><a href="prompts.html">Session prompts</a></li>
 <li><a href="reference.html">Glossary</a></li>
+<li><a href="discuss.html">Going further</a></li>
                     </ul>
 </div>
                 </div>
@@ -416,164 +418,472 @@
         <h1>Instructor Notes</h1>
         
 
-<section><h2 class="section-heading" id="instructor-notes">Instructor notes<a class="anchor" aria-label="anchor" href="#instructor-notes"></a>
-</h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="lesson-motivation-and-learning-objectives">Lesson motivation and learning objectives<a class="anchor" aria-label="anchor" href="#lesson-motivation-and-learning-objectives"></a>
+<section><h2 class="section-heading" id="the-session-in-one-sentence">The session in one sentence<a class="anchor" aria-label="anchor" href="#the-session-in-one-sentence"></a>
 </h2>
 <hr class="half-width">
-<p>The purpose of this lesson is <em>not</em> to teach how to do data
-analysis in spreadsheets, but to teach good data organization and how to
-do some data cleaning and quality control in a spreadsheet program.</p>
-</section><section><h2 class="section-heading" id="lesson-design">Lesson design<a class="anchor" aria-label="anchor" href="#lesson-design"></a>
+<p>One hour, run as a single exercise: the presenter gives a prompt,
+pairs carry it out on the beach water quality workbook, and the
+presenter draws the principle from what they find. Learners have the
+prompts on the <a href="prompts.html">Session prompts</a> page; this
+page holds the run sheet, the debrief points and the answer keys.</p>
+</section><section><h2 class="section-heading" id="place-in-the-workshop">Place in the workshop<a class="anchor" aria-label="anchor" href="#place-in-the-workshop"></a>
 </h2>
 <hr class="half-width">
-<div class="section level4">
-<h4 id="introduction">
-<a href="00-intro.html">Introduction</a><a class="anchor" aria-label="anchor" href="#introduction"></a>
-</h4>
-<ul>
-<li>Introduce that we’re teaching data organization, and that we’re
-using spreadsheets, because most people do data entry in spreadsheets or
-have data in spreadsheets.</li>
-<li>Emphasize that we are teaching good practice in data organization
-and that this is the foundation of their research practice. Without
-organized and clean data, it will be difficult for them to apply the
-things we’re teaching in the rest of the workshop to their data.</li>
-<li>Much of their lives as a researcher will be spent on this ‘data
-wrangling’ stage, but some of it can be prevented with good strategies
-for data collection up front.</li>
-<li>Tell that we’re not teaching data analysis or plotting in
-spreadsheets, because it’s very manual and also not reproducible. That’s
-why we’re teaching SQL, R, Python!</li>
-<li>Now let’s talk about spreadsheets, and when we say spreadsheets, we
-mean any program that does spreadsheets like Excel, LibreOffice,
-OpenOffice. Most learners are probably using Excel.</li>
-<li>Ask the audience any things they’ve accidentally done in
-spreadsheets. Talk about an example of your own, like that you
-accidentally sorted only a single column and not the rest of the data in
-the spreadsheet. What are the pain points!?</li>
-<li>As people answer highlight some of these issues with
-spreadsheets</li>
-</ul>
-</div>
-<div class="section level4">
-<h4 id="formatting-data">
-<a href="01-format-data.html">Formatting data</a><a class="anchor" aria-label="anchor" href="#formatting-data"></a>
-</h4>
-<ul>
-<li>Go through the point about keeping track of your steps and keeping
-raw data raw</li>
-<li>Go through the cardinal rule of spreadsheets about columns, rows and
-cells</li>
-<li>Hand them a messy data file and have them pair up and work together
-to clean up the data. <em>Give them 15 minutes to do this.</em>
-</li>
-<li>Ask for what people did to clean the data. As they bring up
-different points you can refer to them in the 02-common-mistakes.md
-file, or expand a bit on the point they brought up. If you are just
-teaching the lesson, it would be good to familiarize yourself with the
-set of mistakes in 02-common-mistakes. All these mistakes are present in
-the messy dataset.</li>
-<li>If you get a response where they’ve fixed the date, you can pause
-and go to the 03-dates-as-data.md lesson. Or you can say you’ll come
-back to dates at the end. There’s an exercise in that file about how to
-change the date into three columns using Excel’s built in MONTH, DAY,
-YEAR functions. Have them run through that exercise.</li>
-</ul>
-</div>
-<div class="section level4">
-<h4 id="common-formatting-problems">
-<a href="02-common-mistakes.html">Common formatting
-problems</a><a class="anchor" aria-label="anchor" href="#common-formatting-problems"></a>
-</h4>
+<p>This is the last session of the <em>Using AI in Postgraduate
+Studies</em> workshop. It follows Prof Randhir Rawatlal’s session,
+<em>Working with generative AI on a postgraduate project</em>, and
+deliberately repeats his practices on a dataset, so learners meet each
+one a second time in use. Name the link aloud each time it comes up. The
+<strong>RR</strong> column below gives the minute in his session
+plan.</p>
+<table class="table">
+<colgroup>
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
+</colgroup>
+<thead><tr>
+<th>Here</th>
+<th>RR</th>
+<th>His point</th>
+<th>How it returns here</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Step 1</td>
+<td>0-5</td>
+<td>Raw data never edited</td>
+<td>Copy the tab before touching it</td>
+</tr>
+<tr>
+<td>Step 3</td>
+<td>45-50</td>
+<td>Flag faulty data</td>
+<td>Flag columns for <code>&lt;10</code>, <code>TNTC</code>; a reason
+column for blanks</td>
+</tr>
+<tr>
+<td>Check 1</td>
+<td>40-45</td>
+<td>Test on cases with known answers</td>
+<td>The −26.0 fails a sanity check; 149.7 is the known answer for Topic
+2</td>
+</tr>
+<tr>
+<td>Step 5</td>
+<td>5-10</td>
+<td>Standing instructions read every session</td>
+<td>The data dictionary is the data’s standing instructions</td>
+</tr>
+<tr>
+<td>Step 7</td>
+<td>30-34</td>
+<td>Repeated, checkable work goes to a tool</td>
+<td>Ask for the code, not just the number</td>
+</tr>
+<tr>
+<td>Step 8</td>
+<td>0-5, 10-13</td>
+<td>Repository; log line; which model may read which file</td>
+<td>
+<code>raw</code>/<code>processed</code> folders; a log line for Step
+7; four POPIA cases</td>
+</tr>
+</tbody>
+</table>
+<p>If the order of sessions changes, change “as Prof Rawatlal showed” to
+“as Prof Rawatlal will show” and keep the links.</p>
+</section><section><h2 class="section-heading" id="before-the-session">Before the session<a class="anchor" aria-label="anchor" href="#before-the-session"></a>
+</h2>
+<hr class="half-width">
 <ul>
 <li>
-<strong>Don’t go through this chapter</strong> except to refer to as
-responses to the exercise in the previous chapter.</li>
-</ul>
-</div>
-<div class="section level4">
-<h4 id="dates-as-data">
-<a href="03-dates-as-data.html">Dates as data</a><a class="anchor" aria-label="anchor" href="#dates-as-data"></a>
-</h4>
-<ul>
-<li>Do the exercise and make the point about dates either in response to
-a learner bringing up date as an issue during the responses, or at the
-end of the response time.</li>
-</ul>
-</div>
-<div class="section level4">
-<h4 id="quality-control">
-<a href="04-quality-control.html">Quality control</a><a class="anchor" aria-label="anchor" href="#quality-control"></a>
-</h4>
-<p><em>This lesson is optional</em></p>
-<p>The challenge with this lesson is that the instructor’s version of
-the spreadsheet software is going to look different than about half the
-room’s. It makes it challenging to show where you can find menu options
-and navigate through.</p>
-<p>Instead discuss the concepts of quality control, and how things like
-sorting can help you find outliers in your data.</p>
-</div>
-<div class="section level4">
-<h4 id="exporting-data">
-<a href="05-exporting-data.html">Exporting data</a><a class="anchor" aria-label="anchor" href="#exporting-data"></a>
-</h4>
-<ul>
-<li>Have the students export their cleaned data as CSV. Reiterate again
-the need for data in this format for the other tools we’ll be
-using.</li>
-</ul>
-</div>
-<div class="section level4">
-<h4 id="concluding-points">Concluding points<a class="anchor" aria-label="anchor" href="#concluding-points"></a>
-</h4>
-<ul>
-<li>Now your data is organized so that a computer can read and
-understand it. This let’s you use the full power of the computer for
-your analyses as we’ll see in the rest of the workshop.</li>
-<li>While your data is now neatly organized, it still might have errors
-or missing data or other problems. It’s like you put all your data in
-the right drawers, but the drawers might still be messy. The next lesson
-is going to teach you OpenRefine which is great for data cleaning and
-for some of the quality control that we touched on in this lesson. It
-also has the advantage that it automatically keeps track of the steps
-you take.</li>
-</ul>
-</div>
-</section><section><h2 class="section-heading" id="technical-tips-and-tricks">Technical tips and tricks<a class="anchor" aria-label="anchor" href="#technical-tips-and-tricks"></a>
+<strong>Data.</strong> Check that the links on the <a href="index.html#setup">Setup</a> page download. Put the zip on the LAN share,
+or on the desktop of each LAN machine, as a fallback.</li>
+<li>
+<strong>LAN.</strong> Confirm that the LAN machines have Excel or
+LibreOffice, a browser, and access to chatgpt.com, claude.ai and
+gemini.google.com.</li>
+<li>
+<strong>Chat models.</strong> The demonstrators test Steps 6 and 7
+on a free account with each of ChatGPT, Claude and Gemini the day
+before, note any upload limits, and keep screenshots of the answers for
+the projector.</li>
+<li>
+<strong>Projector.</strong> The presenter’s machine has the
+workbook, the tidy CSV and a logged-in chat model open in separate
+windows, at large font size.</li>
+<li>
+<strong>Print.</strong> A few copies of both data tabs of the messy
+workbook, for pairs without a device, and the prompt sheet.</li>
+<li>
+<strong>Sticky notes.</strong> Two colours: one for “stuck”, one for
+the closing commitment.</li>
+</ul></section><section><h2 class="section-heading" id="demonstrators">Demonstrators<a class="anchor" aria-label="anchor" href="#demonstrators"></a>
 </h2>
 <hr class="half-width">
-<p>Provide information on setting up your environment for learners to
-view your live coding (increasing text size, changing text color, etc),
-as well as general recommendations for working with coding tools to best
-suit the learning environment.</p>
-</section><section><h2 class="section-heading" id="common-problems">Common problems<a class="anchor" aria-label="anchor" href="#common-problems"></a>
+<p>Two demonstrators circulate, one on each side of the room (or one in
+the LAN if it is used). Brief them on:</p>
+<ul>
+<li>Excel on Windows and macOS, LibreOffice and Google Sheets menus for
+<strong>Move or Copy</strong>, <strong>Sort</strong>,
+<strong>Filter</strong>, <strong>Save As CSV UTF-8</strong> and
+<strong>Data Validation</strong>.</li>
+<li>Sorting a whole block, never one column (“Expand the
+selection”).</li>
+<li>Attaching a file in each chat model, and pasting CSV text when
+uploads fail.</li>
+<li>Not giving answers during Steps 2 and 5; ask “what would a program
+see here?” instead.</li>
+</ul></section><section><h2 class="section-heading" id="run-sheet">Run sheet<a class="anchor" aria-label="anchor" href="#run-sheet"></a>
 </h2>
 <hr class="half-width">
-<div class="section level4">
-<h4 id="excel-looks-and-acts-different-on-different-operating-systems">Excel looks and acts different on different operating systems<a class="anchor" aria-label="anchor" href="#excel-looks-and-acts-different-on-different-operating-systems"></a>
-</h4>
-<p>The main challenge with this lesson is that Excel looks very
-different and how you do things is even different between Mac and PC,
-and between different versions of Excel. So, the presenter’s environment
-will only be the same as some of the learners.</p>
-<p>We need better notes and screenshots of how things work on both Mac
-and PC. But we likely won’t be able to cover all the different versions
-of Excel.</p>
-<p>If you have a helper who has experience with the other OS than you,
-it would be good to prep them to help with this lesson and tell how
-people to do things in the other OS.</p>
+<div class="section level3">
+<h3 id="topic-1-the-table-a-machine-can-read">Topic 1 · The table a machine can read<a class="anchor" aria-label="anchor" href="#topic-1-the-table-a-machine-can-read"></a>
+</h3>
+<p><strong>0-5 · Step 1, find the mean.</strong> Prompt: “Copy a tab,
+then use AVERAGE for North Beach 2024.” Expected: −26.0. Ask: “Would you
+put this in a thesis? A count of bacteria cannot be negative.” Point out
+that they copied the tab first: raw data are never edited (RR 0-5). Do
+not explain the −26 yet.</p>
+<p><strong>5-10 · Step 2, what stops a computer?</strong> Prompt: “List
+everything that would stop a program, or a model, reading this sheet.”
+Take four or five answers. From them, state the three rules: each
+variable in a column, each observation in a row, one value in each cell.
+Use Sipho’s two side-by-side blocks as the example (<a href="01-format-data.html">episode 1</a>).</p>
+<p><strong>10-15 · Step 3, sort and filter.</strong> Prompt: “Sort the
+counts largest to smallest; filter the site column.” Expected: text
+(<code>55 cfu</code>, <code>&lt;10</code>) sorts above the numbers,
+<code>-999</code> sits at the bottom of them, blanks at the very end.
+Lerato’s filter shows thirteen names for four beaches. Debrief: a blank
+plus a <code>missing_reason</code> column, flag columns for censored
+values (RR 45-50), a fixed list enforced by a drop-down (<a href="04-quality-control.html">episode 4</a>). Demonstrate the drop-down
+in one minute if time allows.</p>
+<p><strong>15-20 · Step 4, what day is A9?</strong> Prompt: “What date
+is A9? Save as CSV UTF-8, open in a text editor, then in Excel.”
+Expected: A9 <code>04/02/2024</code> reads as 4 February in South
+Africa; the weekly schedule shows it is 2 April. <code>12 Mar</code>
+gains the current year on reopening. Debrief: ISO 8601, CSV UTF-8 as the
+master copy (<a href="03-dates-as-data.html">episodes 3</a> and <a href="05-exporting-data.html">5</a>).</p>
+<p><strong>20-30 · Check 1.</strong> Pairs tick their Step 2 list
+against Key 1 (on the projector), then compute the mean from the tidy
+CSV. Explain the −26 now: (308 + 54 − 999 + 114 + 252 + 115) / 6 =
+−26.0. <code>AVERAGE</code> counted <code>-999</code> as a number and
+silently skipped <code>55 cfu</code> and <code>&lt;10</code> because
+they are text. The measured counts give 149.7, n = 6. Point out that
+149.7 is now a <em>known answer</em>: anything that reports otherwise in
+Topic 2 is wrong (RR 40-45).</p>
 </div>
-<div class="section level4">
-<h4 id="people-are-not-interactive-or-responsive-on-the-exercise">People are not interactive or responsive on the Exercise<a class="anchor" aria-label="anchor" href="#people-are-not-interactive-or-responsive-on-the-exercise"></a>
-</h4>
-<p>This lesson depends on people working on the exercise and responding
-with things that are fixed. If your audience is reluctant to
-participate, start out with some things on your own, or ask a helper for
-their answers. This generally gets even a reluctant audience
-started.</p>
+<div class="section level3">
+<h3 id="topic-2-giving-the-model-its-context">Topic 2 · Giving the model its context<a class="anchor" aria-label="anchor" href="#topic-2-giving-the-model-its-context"></a>
+</h3>
+<p><strong>30-35 · Step 5, write the dictionary.</strong> Prompt:
+“Without looking, define <code>sample_id</code>, <code>collector</code>,
+<code>above_count_range</code>, <code>water_temp_c</code> and
+<code>notes</code>.” Then compare with the dictionary file. Typical
+gaps: the upper count limit (2000 cfu/100 mL), the temperature unit,
+that <code>sample_id</code> is never reused. Link: the dictionary is to
+the data what Prof Rawatlal’s initialisation file is to a project, the
+standing instructions the model reads every time (RR 5-10).</p>
+<p><strong>35-40 · Step 6, ask the model, messy.</strong> Prompt: “Ask a
+free chat model for the North Beach 2024 mean from the messy workbook.”
+Pairs write down the answer and whether the model mentioned
+<code>-999</code>, <code>&lt;10</code> or <code>55 cfu</code>. Answers
+vary by model and by run; collect three or four aloud. That variation is
+the point.</p>
+<p><strong>40-45 · Step 7, ask the model, tidy.</strong> Prompt: “Attach
+the tidy CSV and dictionary, use the prompt on the sheet, and ask for
+the code.” Pairs compare with the known answer and read which rows the
+code kept. Link: asking for the code turns a conversation into a tool
+you can check and re-run (RR 30-34).</p>
+<p><strong>45-50 · Step 8, your own data.</strong> Prompt: “Sketch your
+project folder, log Step 7 in one line, and decide the four cases.” Keep
+the debrief short; Prof Rawatlal has covered the repository and data
+classes (RR 0-5, 10-13). Stress only what is new: <code>raw</code> is
+read-only and files flow one way to <code>processed</code> and
+<code>outputs</code> (<a href="07-project-organisation.html">episode
+7</a>).</p>
+<p><strong>50-60 · Check 2.</strong> Key 2 on the projector. Close by
+asking each learner to write on a sticky note one change they will make
+to their own data this week.</p>
 </div>
-</section><section id="aggregate-instructor-notes"></section>
+</section><section><h2 class="section-heading" id="key-1-problems-planted-in-the-messy-workbook">Key 1 · Problems planted in the messy workbook<a class="anchor" aria-label="anchor" href="#key-1-problems-planted-in-the-messy-workbook"></a>
+</h2>
+<hr class="half-width">
+<p>Nineteen problems. Pairs typically find eight to twelve. Each is
+described in <a href="02-common-mistakes.html">episode 2</a>.</p>
+<table class="table">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr>
+<th>#</th>
+<th>Problem</th>
+<th>Where</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Two tables side by side on one tab</td>
+<td>
+<code>2024 Sipho</code>, A-D and F-I</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Two tabs for one kind of data, with different column names, order
+and units</td>
+<td>
+<code>2024 Sipho</code>, <code>2025_Lerato (final) v2</code>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Merged cells</td>
+<td>Sipho A1:I1, A3:D3, F3:I3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Title and legend inside the data</td>
+<td>Sipho A1, A15</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Blank: zero, missing or forgotten?</td>
+<td>Sipho G9</td>
+</tr>
+<tr>
+<td>6</td>
+<td>
+<code>-999</code> as a missing-value code, counted by
+<code>AVERAGE</code>
+</td>
+<td>Sipho B7; Summary B3 gives −26.0</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Censored values typed as text</td>
+<td>
+<code>&lt;10</code>: Sipho B10, G7; Lerato C6, C30.
+<code>TNTC</code>: Sipho G6</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Units typed into number cells</td>
+<td>
+<code>55 cfu</code> Sipho B8; Lerato C5, C13, C21, C28, C35.
+<code>23.0C</code> throughout Lerato column D</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Numbers stored as text</td>
+<td>Sipho temperatures C6, C7, C9, C10, C12 and H6, H7, H9, H10,
+H12</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Five date formats, one with no year</td>
+<td>Sipho A5-A9; Lerato column B</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Ambiguous day and month</td>
+<td>Sipho A9 <code>04/02/2024</code> (2 April); Lerato B5, B11, B16,
+B22, B27, B32 are month-first. B11 <code>03/04/2025</code> is 4 March,
+not 3 April</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Thirteen spellings of four beaches, including trailing spaces</td>
+<td>Lerato column A (A5, A9 end in a space)</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Colour carries meaning</td>
+<td>Red = above a guideline (Sipho, Lerato); yellow = “exclude” (Lerato
+rows 5-6); Summary B5 asks for a count of red cells</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Information in a cell comment</td>
+<td>Sipho B6: “Retest? Lab said contamination possible”</td>
+</tr>
+<tr>
+<td>15</td>
+<td>More than one value in a cell</td>
+<td>Lerato column E (tide / sea state); F8 (two counts, two
+categories)</td>
+</tr>
+<tr>
+<td>16</td>
+<td>A calculation inside the data</td>
+<td>Lerato row 10, <code>Mean North Beach</code>, which averages only
+six of eight values (101.7)</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Header repeated part-way down</td>
+<td>Lerato row 19</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Fahrenheit among Celsius</td>
+<td>Lerato D14, 74.1 °F = 23.4 °C</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Problem column names and special characters</td>
+<td>
+<code>Entero (cfu/100mL)</code>, <code>Temp °C</code>,
+<code>Site / tide</code>; Lerato F12 has an em-dash and curly quotes
+from WhatsApp; tab name <code>2025_Lerato (final) v2</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A trap worth showing.</strong> Summary B4 gives the Addington
+2024 mean as 102.8, which matches the tidy answer. It is right by luck:
+there is no <code>-999</code> in that column, and <code>AVERAGE</code>
+dropped <code>TNTC</code>, <code>&lt;10</code> and the blank, which the
+tidy calculation also excludes. A correct number from a broken method is
+still a broken method.</p>
+</section><section><h2 class="section-heading" id="key-2-model-runs-and-the-four-cases">Key 2 · Model runs and the four cases<a class="anchor" aria-label="anchor" href="#key-2-model-runs-and-the-four-cases"></a>
+</h2>
+<hr class="half-width">
+<p><strong>Step 6 (messy).</strong> No single right answer. Look for
+whether the model noticed the two-table layout, treated
+<code>-999</code> as missing, and said what it did with
+<code>&lt;10</code> and <code>55 cfu</code>. Some models report −26.0;
+some report a number near 149.7 without saying which cells they dropped;
+a few ask a clarifying question. Only the last behaviour is acceptable
+without checking.</p>
+<p><strong>Step 7 (tidy).</strong> The full answer, for checking any
+model’s output:</p>
+<table style="width:100%;" class="table">
+<colgroup>
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+</colgroup>
+<thead><tr>
+<th>Site</th>
+<th>Year</th>
+<th>Mean (cfu/100 mL)</th>
+<th>n</th>
+<th>Below detection</th>
+<th>Above range</th>
+<th>Missing (reason)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>North Beach</td>
+<td>2024</td>
+<td>149.7</td>
+<td>6</td>
+<td>1</td>
+<td>0</td>
+<td>1 (bottle_broken)</td>
+</tr>
+<tr>
+<td>Addington</td>
+<td>2024</td>
+<td>102.8</td>
+<td>5</td>
+<td>1</td>
+<td>1</td>
+<td>1 (not_sampled_rough_sea)</td>
+</tr>
+<tr>
+<td>North Beach</td>
+<td>2025</td>
+<td>112.4</td>
+<td>7</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Addington</td>
+<td>2025</td>
+<td>215.6</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>uShaka</td>
+<td>2025</td>
+<td>48.2</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Umhlanga Main</td>
+<td>2025</td>
+<td>144.3</td>
+<td>7</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 8 (four cases).</strong></p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Yes.</strong> The beach data are synthetic and CC-BY.</li>
+<li>
+<strong>Only with conditions.</strong> Check the funder agreement;
+use an institution-approved tool.</li>
+<li>
+<strong>No,</strong> not as it stands. Student numbers and marks are
+personal information under POPIA. Remove them first, or use an approved
+tool.</li>
+<li>
+<strong>No,</strong> unless participants consented and the ethics
+approval allows it. Anonymise first.</li>
+</ol>
+<p>A good log line for Step 7:</p>
+<pre class="text"><code>2026-11-10  JP  Mean count per site and year from tidy CSV, with dictionary;
+                Claude (free), prompt in docs/prompts/2026-11-10_means.txt;
+                checked North Beach 2024 against known answer 149.7, n = 6.</code></pre>
+</section><section><h2 class="section-heading" id="if-there-are-no-devices">If there are no devices<a class="anchor" aria-label="anchor" href="#if-there-are-no-devices"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>Steps 1-4: pairs mark problems on the printout; the presenter
+performs each prompt on the projector.</li>
+<li>Steps 6-7: a demonstrator runs both queries on the projector, or
+shows the screenshots taken the day before.</li>
+<li>Steps 5 and 8 need only paper.</li>
+</ul></section><section><h2 class="section-heading" id="common-problems">Common problems<a class="anchor" aria-label="anchor" href="#common-problems"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>
+<strong>Excel looks different on every machine.</strong> Do not
+demonstrate menus at length; the demonstrators handle them pair by
+pair.</li>
+<li>
+<strong>Opening files from inside the zip.</strong> Excel opens them
+read-only. Unzip first.</li>
+<li>
+<strong>Uploads refused on a free account.</strong> Paste the CSV
+text into the chat instead; open the CSV in a text editor, select all,
+copy.</li>
+<li>
+<strong>A quiet room at Step 2.</strong> Start the list yourself
+with one problem, or ask a demonstrator for theirs.</li>
+</ul></section><section id="aggregate-instructor-notes"></section>
 </div>
     </main>
 </div>
@@ -586,13 +896,13 @@ started.</p>
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://justinpringle.github.io/2026-AI-DATA/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://justinpringle.github.io/2026-AI-DATA/" class="external-link">Source</a></p>
+        | <a href="https://github.com/JustinPringle/2026-AI-DATA/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/JustinPringle/2026-AI-DATA/" class="external-link">Source</a></p>
         <p>
-        <a href="https://justinpringle.github.io/2026-AI-DATA/blob/main/" class="external-link">Cite</a>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/blob/main/" class="external-link">Cite</a>
         | <a href="mailto:pringlej@ukzn.ac.za">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
@@ -613,18 +923,18 @@ started.</p>
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor-notes.html",
+  "@id": "https://justinpringle.github.io/2026-AI-DATA/instructor-notes.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "data organisation, spreadsheets, tidy data, metadata, AI, higher education, The Carpentries",
   "name": "Instructor Notes",
   "creativeWorkStatus": "active",
-  "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor-notes.html",
-  "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor-notes.html",
+  "url": "https://justinpringle.github.io/2026-AI-DATA/instructor-notes.html",
+  "identifier": "https://justinpringle.github.io/2026-AI-DATA/instructor-notes.html",
   "dateCreated": "2026-10-22",
-  "dateModified": "2026-10-22",
-  "datePublished": "2026-10-22"
+  "dateModified": "2026-11-02",
+  "datePublished": "2026-11-02"
 }
 
   </script><script>

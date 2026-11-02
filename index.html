@@ -98,7 +98,7 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="reference.html">Glossary</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="prompts.html">Session prompts</a></li><li><a class="dropdown-item" href="reference.html">Glossary</a></li><li><a class="dropdown-item" href="discuss.html">Going further</a></li>
           </ul></li>
       </ul></div>
     <!--
@@ -314,7 +314,7 @@
                 </h2>
                 <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
-                    <ul><li><a href="discuss.html">Discussion</a></li><li><a href="reference.html">Glossary</a></li>
+                    <ul><li><a href="prompts.html">Session prompts</a></li><li><a href="reference.html">Glossary</a></li><li><a href="discuss.html">Going further</a></li>
                     </ul></div>
                 </div>
               </div>
@@ -396,11 +396,21 @@ November 2026.</p>
 </div>
 </div>
 </div>
+<p>The session runs as one exercise in pairs; the prompts are on the <a href="prompts.html">Session prompts</a> page.</p>
 <p>For instructors: see the <a href="instructor-notes.html">Instructor
 Notes</a> for the one-hour plan and the answer key.</p>
 
 
-      <section id="setup"><div id="data" class="callout prereq">
+      <section id="setup"><p>You need three things for this session, and nothing to install if you
+use the LAN computers or Google Sheets:</p>
+<ol style="list-style-type: decimal"><li>a laptop, or a seat in the LAN next to the venue;</li>
+<li>a spreadsheet program: Excel, LibreOffice Calc (free) or Google
+Sheets (free, in the browser);</li>
+<li>a free account with a chat model: ChatGPT, Claude or Gemini. Create
+and test it <strong>before</strong> the session; sign-up emails can take
+a while to arrive.</li>
+</ol><p>Work in pairs if devices are short.</p>
+<div id="data" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
 </div>
@@ -408,21 +418,41 @@ Notes</a> for the one-hour plan and the answer key.</p>
 <div id="data" class="callout-inner">
 <h3 class="callout-title">Data</h3>
 <div class="callout-content">
-<p><strong>Download</strong> this data file to your computer: <a href="https://ndownloader.figshare.com/files/2252083" class="external-link">https://ndownloader.figshare.com/files/2252083</a></p>
+<p>Download all the lesson files in one go:</p>
+<p><strong><a href="https://justinpringle.github.io/2026-AI-DATA/data/2026-AI-DATA_data.zip" class="external-link">2026-AI-DATA_data.zip</a></strong></p>
+<p>Unzip it into a new folder, for example
+<code>Documents/ai-data-workshop/</code>. Do not open the files straight
+from the zip; Excel opens them read-only and saves your changes
+somewhere you will not find them.</p>
+<p>Or download the files one at a time:</p>
+<table class="table"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup><thead><tr><th>File</th>
+<th>What it is</th>
+<th>Used in</th>
+</tr></thead><tbody><tr><td><a href="https://justinpringle.github.io/2026-AI-DATA/data/beach_water_quality_MESSY.xlsx" class="external-link">beach_water_quality_MESSY.xlsx</a></td>
+<td>Two field assistants’ spreadsheets, as received</td>
+<td>Topic 1, Topic 2</td>
+</tr><tr><td><a href="https://justinpringle.github.io/2026-AI-DATA/data/beach_water_quality_tidy.csv" class="external-link">beach_water_quality_tidy.csv</a></td>
+<td>The same data, tidy</td>
+<td>Topic 1 check, Topic 2</td>
+</tr><tr><td><a href="https://justinpringle.github.io/2026-AI-DATA/data/beach_water_quality_data_dictionary.csv" class="external-link">beach_water_quality_data_dictionary.csv</a></td>
+<td>What each column of the tidy file means</td>
+<td>Topic 2</td>
+</tr><tr><td><a href="https://justinpringle.github.io/2026-AI-DATA/data/README_TEMPLATE.txt" class="external-link">README_TEMPLATE.txt</a></td>
+<td>A README skeleton for your own project</td>
+<td>Topic 2</td>
+</tr><tr><td><a href="https://justinpringle.github.io/2026-AI-DATA/data/demo_messy_vs_tidy.py" class="external-link">demo_messy_vs_tidy.py</a></td>
+<td>Optional Python demonstration of the two means</td>
+<td>Topic 2 (optional)</td>
+</tr></tbody></table><p>If a link above does not work, the same files are in the <a href="https://github.com/JustinPringle/2026-AI-DATA/tree/main/episodes/data" class="external-link">data
+folder on GitHub</a>: open a file and click <strong>Download raw
+file</strong>.</p>
 <div class="section level4">
 <h4 id="about-the-data">About the data<a class="anchor" aria-label="anchor" href="#about-the-data"></a></h4>
-<p>The data for this lesson is a part of the Data Carpentry Ecology
-workshop. It is a teaching version of the Portal Database. The data in
-this lesson is a subset of the teaching version that has been
-intentionally ‘messed up’ for this lesson.</p>
-<p>The data for this lesson and the workshop are in the <a href="https://figshare.com/articles/Portal_Project_Teaching_Database/1314459" class="external-link">Portal
-Project Teaching Database</a> available on FigShare, with a CC-BY
-license available for reuse.</p>
-<blockquote>
-<p>Ernest, M., Brown, J., Valone, T., and White, E.P. (2017). Portal
-Project Teaching Database. Version 6. Figshare. <a href="https://figshare.com/articles/Portal_Project_Teaching_Database/1314459" class="external-link">DOI:
-10.6084/m9.figshare.1314459.v6</a></p>
-</blockquote>
+<p>The data are <strong>synthetic</strong>: weekly Enterococci counts
+and water temperatures at four Durban beaches, March to April 2024 (two
+beaches, collected by “Sipho”) and 2025 (four beaches, collected by
+“Lerato”). No real monitoring results or people are involved, so the
+data may be given to any AI tool. They are released under CC-BY 4.0.</p>
 </div>
 </div>
 </div>
@@ -435,51 +465,33 @@ Project Teaching Database. Version 6. Figshare. <a href="https://figshare.com/ar
 <div id="software" class="callout-inner">
 <h3 class="callout-title">Software</h3>
 <div class="callout-content">
-<p>To interact with spreadsheets, we can use LibreOffice, Microsoft
-Excel, Gnumeric, OpenOffice.org, or other programs. Commands may differ
-a bit between programs, but the general ideas for thinking about
-spreadsheets are the same.</p>
-<p>For this lesson, if you don’t have a spreadsheet program already, you
-can use LibreOffice. It’s a free, open source spreadsheet program.</p>
 <div class="section level4">
-<h4 id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a></h4>
-<ul><li>Download the Installer
-<ul><li>Install LibreOffice by going to <a href="https://www.libreoffice.org/download/libreoffice-fresh/" class="external-link">the
-installation page</a>. The version for Windows should automatically be
-selected. Click Download Version X.X.X (whichever is the most recent
-version). You will go to a page that asks about a donation, but you
-don’t need to make one. Your download should begin automatically.</li>
-</ul></li>
-<li>Install LibreOffice</li>
-<li>Once the installer is downloaded, double click on it and LibreOffice
-should install.</li>
-</ul></div>
+<h4 id="spreadsheet">Spreadsheet<a class="anchor" aria-label="anchor" href="#spreadsheet"></a></h4>
+<ul><li>
+<strong>Excel</strong>: available to UKZN staff and students through
+Microsoft 365.</li>
+<li>
+<strong>LibreOffice Calc</strong>: free; download from <a href="https://www.libreoffice.org/download/download-libreoffice/" class="external-link">libreoffice.org</a>.</li>
+<li>
+<strong>Google Sheets</strong>: free in the browser. Upload the
+<code>.xlsx</code> to Google Drive and open it with Google Sheets.</li>
+</ul><p>Menus differ between programs and between Windows and macOS. The
+ideas do not. The demonstrators will help you find the right menu.</p>
+</div>
 <div class="section level4">
-<h4 id="mac-os-x">Mac OS X<a class="anchor" aria-label="anchor" href="#mac-os-x"></a></h4>
-<ul><li>Download the Installer
-<ul><li>Install LibreOffice by going to <a href="https://www.libreoffice.org/download/libreoffice-fresh/" class="external-link">the
-installation page</a>. The version for Mac should automatically be
-selected. Click Download Version X.X.X (whichever is the most recent
-version). You will go to a page that asks about a donation, but you
-don’t need to make one. Your download should begin automatically.</li>
-</ul></li>
-<li>Install LibreOffice</li>
-<li>Once the installer is downloaded, double click on it and LibreOffice
-should install.</li>
-</ul></div>
+<h4 id="chat-model">Chat model<a class="anchor" aria-label="anchor" href="#chat-model"></a></h4>
+<p>A free account with <a href="https://chatgpt.com" class="external-link">ChatGPT</a>, <a href="https://claude.ai" class="external-link">Claude</a> or <a href="https://gemini.google.com" class="external-link">Gemini</a>. Check that you can attach a
+file to a message. If your account cannot attach files, you can paste
+the contents of the CSV instead.</p>
+</div>
 <div class="section level4">
-<h4 id="linux">Linux<a class="anchor" aria-label="anchor" href="#linux"></a></h4>
-<ul><li>Download the Installer
-<ul><li>Install LibreOffice by going to <a href="https://www.libreoffice.org/download/libreoffice-fresh/" class="external-link">the
-installation page</a>. The version for Linux should automatically be
-selected. Click Download Version X.X.X (whichever is the most recent
-version). You will go to a page that asks about a donation, but you
-don’t need to make one. Your download should begin automatically.</li>
-</ul></li>
-<li>Install LibreOffice</li>
-<li>Once the installer is downloaded, double click on it and LibreOffice
-should install.</li>
-</ul></div>
+<h4 id="python-optional">Python (optional)<a class="anchor" aria-label="anchor" href="#python-optional"></a></h4>
+<p>Not needed. To run the optional demonstration, open <a href="https://colab.research.google.com" class="external-link">Google Colab</a> (free, in the
+browser), upload <code>demo_messy_vs_tidy.py</code>,
+<code>beach_water_quality_MESSY.xlsx</code> and
+<code>beach_water_quality_tidy.csv</code>, and run
+<code>!python demo_messy_vs_tidy.py</code>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -500,13 +512,13 @@ should install.</li>
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/index.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/index.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://justinpringle.github.io/2026-AI-DATA/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://justinpringle.github.io/2026-AI-DATA/" class="external-link">Source</a></p>
+        | <a href="https://github.com/JustinPringle/2026-AI-DATA/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/JustinPringle/2026-AI-DATA/" class="external-link">Source</a></p>
         <p>
-        <a href="https://justinpringle.github.io/2026-AI-DATA/blob/main/" class="external-link">Cite</a>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/blob/main/" class="external-link">Cite</a>
         | <a href="mailto:pringlej@ukzn.ac.za">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
@@ -526,18 +538,18 @@ should install.</li>
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/index.html",
+  "@id": "https://justinpringle.github.io/2026-AI-DATA/index.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "data organisation, spreadsheets, tidy data, metadata, AI, higher education, The Carpentries",
   "name": "Organising Data for AI: Spreadsheets, Projects and AI Tools",
   "creativeWorkStatus": "active",
-  "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/index.html",
-  "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/index.html",
+  "url": "https://justinpringle.github.io/2026-AI-DATA/index.html",
+  "identifier": "https://justinpringle.github.io/2026-AI-DATA/index.html",
   "dateCreated": "2026-10-22",
-  "dateModified": "2026-10-22",
-  "datePublished": "2026-10-22"
+  "dateModified": "2026-11-02",
+  "datePublished": "2026-11-02"
 }
 
   </script><script>

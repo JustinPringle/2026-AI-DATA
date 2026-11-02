@@ -1,135 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/00-intro.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/00-intro.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/01-format-data.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/01-format-data.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/02-common-mistakes.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/02-common-mistakes.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/03-dates-as-data.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/03-dates-as-data.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/04-quality-control.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/04-quality-control.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/05-exporting-data.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/05-exporting-data.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/06-data-dictionary.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/06-data-dictionary.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/07-project-organisation.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/07-project-organisation.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/08-ai-and-your-data.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/08-ai-and-your-data.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/404.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/404.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/CODE_OF_CONDUCT.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/LICENSE.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/NEWS.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/NEWS.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/aio.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/aio.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/datamanagement.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/datamanagement.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/discuss.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/discuss.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/images.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/images.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/index.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/index.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/00-intro.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/00-intro.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/01-format-data.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/01-format-data.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/02-common-mistakes.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/02-common-mistakes.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/03-dates-as-data.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/03-dates-as-data.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/04-quality-control.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/04-quality-control.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/05-exporting-data.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/05-exporting-data.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/06-data-dictionary.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/06-data-dictionary.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/07-project-organisation.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/07-project-organisation.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/08-ai-and-your-data.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/08-ai-and-your-data.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/404.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/LICENSE.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/NEWS.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/NEWS.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/aio.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/datamanagement.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/datamanagement.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/discuss.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/discuss.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/images.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/index.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/instructor-notes.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/key-points.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/key-points.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/profiles.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/profiles.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/reference.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/prompts.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor-notes.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor/reference.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/key-points.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/profiles.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/key-points.html</loc>
   </url>
   <url>
-    <loc>https://datacarpentry.github.io/spreadsheet-ecology-lesson/reference.html</loc>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/prompts.html</loc>
+  </url>
+  <url>
+    <loc>https://justinpringle.github.io/2026-AI-DATA/reference.html</loc>
   </url>
 </urlset>

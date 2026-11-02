@@ -122,10 +122,10 @@
             More <i data-feather="chevron-down"></i>
           </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-<li><a class="dropdown-item" href="datamanagement.html">Data Management Tips</a></li>
 <hr>
-<li><a class="dropdown-item" href="discuss.html">Discussion</a></li>
+<li><a class="dropdown-item" href="prompts.html">Session prompts</a></li>
 <li><a class="dropdown-item" href="reference.html">Glossary</a></li>
+<li><a class="dropdown-item" href="discuss.html">Going further</a></li>
           </ul>
 </li>
       </ul>
@@ -386,10 +386,10 @@
                 <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul>
-<li><a href="datamanagement.html">Data Management Tips</a></li>
 <hr>
-<li><a class="dropdown-item" href="discuss.html">Discussion</a></li>
+<li><a class="dropdown-item" href="prompts.html">Session prompts</a></li>
 <li><a class="dropdown-item" href="reference.html">Glossary</a></li>
+<li><a class="dropdown-item" href="discuss.html">Going further</a></li>
                     </ul>
 </div>
                 </div>
@@ -421,10 +421,10 @@
         
 <section id="aio-00-intro"><p>Content from <a href="00-intro.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2026-10-22 |
+<p>Last updated on 2026-11-02 |
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/00-intro.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 18 minutes</p>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/episodes/00-intro.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -436,8 +436,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What are basic principles for using spreadsheets for good data
-organization?</li>
+<li>Why does data organisation matter when I use AI tools?</li>
 </ul>
 </div>
 </div>
@@ -447,153 +446,67 @@ organization?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Describe best practices for organizing data so computers can make
-the best use of data sets.</li>
+<li>Explain why the layout of data decides what a program, or an AI
+tool, does with it.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>Good data organization is the foundation of your research project.
-Most researchers have data or do data entry in spreadsheets. Spreadsheet
-programs are very useful graphical interfaces for designing data tables
-and handling very basic data quality control functions.</p>
-<div class="section level3">
-<h3 id="spreadsheet-outline">Spreadsheet outline<a class="anchor" aria-label="anchor" href="#spreadsheet-outline"></a>
-</h3>
-<p>After this lesson, you will be able to:</p>
+<section><h2 class="section-heading" id="one-field-sheet-two-answers">One field sheet, two answers<a class="anchor" aria-label="anchor" href="#one-field-sheet-two-answers"></a>
+</h2>
+<hr class="half-width">
+<p>Sipho sampled North Beach eight times in 2024 and typed the
+Enterococci counts into a spreadsheet. Ask the spreadsheet for the mean
+and it says <strong>−26.0</strong>. A count of bacteria cannot be
+negative. The correct mean of the same field sheet is
+<strong>149.7</strong>.</p>
+<p>Nothing crashed and nothing warned. The spreadsheet did exactly what
+the layout told it to do. An AI tool given the same sheet reads it just
+as literally, and reports its answer with more confidence.</p>
+<p>This session is about closing that gap: organising data so that
+people, programs and AI tools all read it the way you intend.</p>
+</section><section><h2 class="section-heading" id="how-the-session-runs">How the session runs<a class="anchor" aria-label="anchor" href="#how-the-session-runs"></a>
+</h2>
+<hr class="half-width">
+<p>The whole session is one exercise, done in pairs, on one synthetic
+dataset: Enterococci counts at four Durban beaches, recorded by two
+field assistants in two very different, very messy spreadsheets. The
+presenter gives a prompt; you carry it out; the presenter draws out the
+principle from what you found. The prompts are on the <a href="prompts.html">Session prompts</a> page.</p>
 <ul>
-<li>Implement best practices in data table formatting</li>
-<li>Identify and address common formatting mistakes</li>
-<li>Understand approaches for handling dates in spreadsheets</li>
-<li>Utilize basic quality control features and data manipulation
-practices</li>
-<li>Effectively export data from spreadsheet programs</li>
+<li>
+<strong>Topic 1 · The table a machine can read.</strong> Tidy data,
+missing and censored values, categories, dates and export. (<a href="01-format-data.html">Episodes 1-5</a>)</li>
+<li>
+<strong>Topic 2 · Giving the model its context.</strong> The data
+dictionary, asking a chat model about messy and tidy data, project
+folders, and what data may go to which tool. (<a href="06-data-dictionary.html">Episodes 6-8</a>)</li>
 </ul>
-<p><em>Overall good data practices</em></p>
-<p>Spreadsheets are good for data entry. Therefore we have a lot of data
-in spreadsheets. Much of your time as a researcher will be spent in this
-‘data wrangling’ stage. It’s not the most fun, but it’s necessary. We’ll
-teach you how to think about data organization and some practices for
-more effective data wrangling. Not only will this save time and effort,
-it also paves the way for more equitable and inclusive science. Making
-our work more accessible provides wider avenues for collaboration and
-improvement!</p>
-</div>
-<div class="section level3">
-<h3 id="what-this-lesson-will-not-teach-you">What this lesson will not teach you<a class="anchor" aria-label="anchor" href="#what-this-lesson-will-not-teach-you"></a>
-</h3>
-<ul>
-<li>How to do <em>statistics</em> in a spreadsheet</li>
-<li>How to do <em>plotting</em> in a spreadsheet</li>
-<li>How to <em>write code</em> in spreadsheet programs</li>
-</ul>
-<p>If you’re looking to do this, a good reference is <a href="https://www.amazon.com/Excel-Cookbook-Recipes-Mastering-Microsoft/dp/1098143329/" class="external-link">Excel
-Cookbook</a>, published by O’Reilly.</p>
-<hr>
-</div>
-<div class="section level3">
-<h3 id="why-arent-we-teaching-data-analysis-in-spreadsheets">Why aren’t we teaching data analysis in spreadsheets<a class="anchor" aria-label="anchor" href="#why-arent-we-teaching-data-analysis-in-spreadsheets"></a>
-</h3>
-<ul>
-<li><p>Data analysis in spreadsheets usually requires a lot of manual
-work. If you want to change a parameter or run an analysis with a new
-dataset, you usually have to redo everything by hand. (We do know that
-you can create macros, but see the next point.)</p></li>
-<li><p>It is also difficult to track or reproduce statistical or
-plotting analyses done in spreadsheet programs when you want to go back
-to your work or someone asks for details of your analysis.</p></li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="spreadsheet-programs">Spreadsheet programs<a class="anchor" aria-label="anchor" href="#spreadsheet-programs"></a>
-</h3>
-<p>Many spreadsheet programs are available. Since most participants
-utilize Excel as their primary spreadsheet program, this lesson will
-make use of Excel examples.</p>
-<p>Free spreadsheet programs that can also be used are LibreOffice Calc,
-and even Google Sheets.</p>
-<p>Commands may differ a bit between programs, but the general idea is
-the same.</p>
-<div id="exercise" class="callout">
+<p>Each topic ends with a check against a key.</p>
+<div id="following-prof-rawatlals-session" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="exercise" class="callout-inner">
-<h3 class="callout-title">Exercise</h3>
+<div id="following-prof-rawatlals-session" class="callout-inner">
+<h3 class="callout-title">Following Prof Rawatlal’s session</h3>
 <div class="callout-content">
-<ul>
-<li>How many people have used spreadsheets in their research?</li>
-<li>How many people have accidentally done something that made them
-frustrated or sad?</li>
-</ul>
+<p>This session comes after <em>Working with generative AI on a
+postgraduate project</em>. Several of his practices return here, applied
+to data: raw data never edited, standing instructions for the model, a
+log line for AI-assisted work, which data may go to which model, and
+testing against a known answer. Watch for them.</p>
 </div>
 </div>
 </div>
-<p>Spreadsheets encompass a lot of the things we need to be able to do
-as researchers. We can use them for:</p>
-<ul>
-<li>Data entry</li>
-<li>Organizing data</li>
-<li>Subsetting and sorting data</li>
-<li>Statistics</li>
-<li>Plotting</li>
-</ul>
-<p>We do a lot of different operations in spreadsheets. What kind of
-operations do you do in spreadsheets? Which ones do you think
-spreadsheets are good for?</p>
-</div>
-<section><h2 class="section-heading" id="problems-with-spreadsheets">Problems with Spreadsheets<a class="anchor" aria-label="anchor" href="#problems-with-spreadsheets"></a>
+</section><section><h2 class="section-heading" id="what-this-session-will-not-teach">What this session will not teach<a class="anchor" aria-label="anchor" href="#what-this-session-will-not-teach"></a>
 </h2>
 <hr class="half-width">
-<p>Spreadsheets are good for data entry, but in reality we tend to use
-spreadsheet programs for much more than data entry. We use them to
-create data tables for publications, to generate summary statistics, and
-make figures.</p>
-<p>Generating tables for publications in a spreadsheet is not optimal -
-often, when formatting a data table for publication, we’re reporting key
-summary statistics in a way that is not really meant to be read as data,
-and often involves special formatting (merging cells, creating borders,
-making it pretty). Cutting and pasting from a spreadsheet to a document
-software (like Word) can have unpredictable results. We advise you to
-create tables within these document software using the document’s own
-table editing software.</p>
-<p>The latter two applications, generating statistics and figures,
-should be used with caution: because of the graphical, drag and drop
-nature of spreadsheet programs, it can be very difficult, if not
-impossible, to replicate your steps (much less retrace anyone else’s),
-particularly if your stats or figures require you to do more complex
-calculations. Furthermore, in doing calculations in a spreadsheet, it’s
-easy to accidentally apply a slightly different formula to multiple
-adjacent cells. When using a command-line based statistics program like
-R or SAS, it’s practically impossible to apply a calculation to one
-observation in your dataset but not another unless you’re doing it on
-purpose.</p>
-<div class="section level3">
-<h3 id="using-spreadsheets-for-data-entry-and-cleaning">Using Spreadsheets for Data Entry and Cleaning<a class="anchor" aria-label="anchor" href="#using-spreadsheets-for-data-entry-and-cleaning"></a>
-</h3>
-<p>However, there are circumstances where you might want to use a
-spreadsheet program to produce “quick and dirty” calculations or
-figures, and data cleaning will help you use some of these features.
-Data cleaning also puts your data in a better format prior to
-importation into a statistical analysis program. We will show you how to
-use some features of spreadsheet programs to check your data quality
-along the way and produce preliminary summary statistics.</p>
-<p>In this lesson, we will assume that you are most likely using Excel
-as your primary spreadsheet program - there are others (gnumeric, Calc
-from OpenOffice), and their functionality is similar, but Excel seems to
-be the program most used by biologists and ecologists.</p>
-<p>In this lesson we’re going to talk about:</p>
-<ol style="list-style-type: decimal">
-<li><a href="01-format-data.html">Formatting data tables in
-spreadsheets</a></li>
-<li><a href="02-common-mistakes.html">Formatting problems</a></li>
-<li><a href="03-dates-as-data.html">Dates as data</a></li>
-<li><a href="04-quality-control.html">Quality control</a></li>
-<li><a href="05-exporting-data.html">Exporting data</a></li>
-</ol>
+<p>Statistics, plotting or programming. Spreadsheets are good for
+entering and checking data; for analysis, a script is easier to check
+and to repeat. See <a href="discuss.html">Going further</a>.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -602,19 +515,19 @@ spreadsheets</a></li>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Good data organization is the foundation of any research
-project.</li>
+<li>Programs and AI tools read data literally; the layout decides the
+answer.</li>
+<li>A wrong answer from messy data arrives without a warning.</li>
 </ul>
-</div>
 </div>
 </div>
 </div>
 </section></section><section id="aio-01-format-data"><p>Content from <a href="01-format-data.html">Formatting data tables</a></p>
 <hr>
-<p>Last updated on 2026-10-22 |
+<p>Last updated on 2026-11-02 |
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/01-format-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 17 minutes</p>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/episodes/01-format-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 10 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -823,7 +736,7 @@ each problem, write how you would fix it.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The workbook contains every mistake listed in <a href="02-common-mistakes.html">the next episode</a>, and a few more.
 Among them: two tables on one tab, merged headings, a title and a legend
@@ -871,9 +784,9 @@ value in each cell.</li>
 </div>
 </section></section><section id="aio-02-common-mistakes"><p>Content from <a href="02-common-mistakes.html">Common mistakes</a></p>
 <hr>
-<p>Last updated on 2026-10-22 |
+<p>Last updated on 2026-11-02 |
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/02-common-mistakes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/episodes/02-common-mistakes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -910,7 +823,7 @@ them?</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>This episode is a reference. Do not teach it line by line; refer to
 it during the debrief of the “spot the mess” exercise.</p>
@@ -936,6 +849,7 @@ meaning</a></li>
 <li><a href="#merged-cells">Merged cells</a></li>
 <li><a href="#comments-and-units-in-cells">Comments and units in
 cells</a></li>
+<li><a href="#numbers-stored-as-text">Numbers stored as text</a></li>
 <li><a href="#more-than-one-value-in-a-cell">More than one value in a
 cell</a></li>
 <li><a href="#calculations-and-repeated-headers-inside-the-data">Calculations
@@ -1092,6 +1006,18 @@ in the column header (<code>water_temp_c</code>), with one unit per
 column. Lerato’s row 14 holds 74.1, a temperature in Fahrenheit among
 Celsius values; convert it (23.4 °C) and note the conversion in your
 processing log.</p>
+</section><section><h2 class="section-heading" id="numbers-stored-as-text">Numbers stored as text<a class="anchor" aria-label="anchor" href="#numbers-stored-as-text"></a>
+</h2>
+<hr class="half-width">
+<p><em>Where:</em> <code>2024 Sipho</code>, temperatures in C6, C7, C9,
+C10, C12 and H6, H7, H9, H10, H12.</p>
+<p>These cells look like numbers but hold text, often because they were
+pasted from another program. Excel marks them with a small green
+triangle and aligns them left. <code>AVERAGE</code> skips them; a script
+may refuse the whole column.</p>
+<p><strong>Fix:</strong> convert the column to numbers (select it, then
+the warning icon &gt; <strong>Convert to Number</strong>), and check the
+count of values before and after.</p>
 </section><section><h2 class="section-heading" id="more-than-one-value-in-a-cell">More than one value in a cell<a class="anchor" aria-label="anchor" href="#more-than-one-value-in-a-cell"></a>
 </h2>
 <hr class="half-width">
@@ -1197,10 +1123,10 @@ information.</li>
 </div>
 </section></section><section id="aio-03-dates-as-data"><p>Content from <a href="03-dates-as-data.html">Dates as data</a></p>
 <hr>
-<p>Last updated on 2026-10-22 |
+<p>Last updated on 2026-11-02 |
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/03-dates-as-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 4 minutes</p>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/episodes/03-dates-as-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1279,7 +1205,12 @@ value:</p>
 <td>Text, month first: ambiguous</td>
 </tr>
 </tbody>
-</table></section><section><h2 class="section-heading" id="how-spreadsheets-store-dates">How spreadsheets store dates<a class="anchor" aria-label="anchor" href="#how-spreadsheets-store-dates"></a>
+</table>
+<p>Lerato’s tab is worse. Six of her dates are written month first, in
+the United States order: B5 <code>03/25/2025</code> is plainly 25 March,
+but B11 <code>03/04/2025</code> is 4 March, not 3 April. Read with South
+African settings, it silently becomes the wrong date.</p>
+</section><section><h2 class="section-heading" id="how-spreadsheets-store-dates">How spreadsheets store dates<a class="anchor" aria-label="anchor" href="#how-spreadsheets-store-dates"></a>
 </h2>
 <hr class="half-width">
 <p>Excel stores a date as a number: the count of days since 31 December
@@ -1335,7 +1266,7 @@ TextEdit). Then open the CSV again in Excel.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The real date in A5 is written out in whatever format your computer’s
 regional settings use. The text <code>12 Mar</code> may be turned into a
@@ -1366,10 +1297,10 @@ computers.</li>
 </div>
 </section></section><section id="aio-04-quality-control"><p>Content from <a href="04-quality-control.html">Quality control</a></p>
 <hr>
-<p>Last updated on 2026-10-22 |
+<p>Last updated on 2026-11-02 |
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/04-quality-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 3 minutes</p>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/episodes/04-quality-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1494,9 +1425,9 @@ categories.</li>
 </div>
 </section></section><section id="aio-05-exporting-data"><p>Content from <a href="05-exporting-data.html">Exporting data</a></p>
 <hr>
-<p>Last updated on 2026-10-22 |
+<p>Last updated on 2026-11-02 |
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/05-exporting-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/episodes/05-exporting-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 3 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -1607,10 +1538,10 @@ dictionary.</li>
 </div>
 </section></section><section id="aio-06-data-dictionary"><p>Content from <a href="06-data-dictionary.html">Data dictionaries, and AI as a reader</a></p>
 <hr>
-<p>Last updated on 2026-10-22 |
+<p>Last updated on 2026-11-02 |
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/06-data-dictionary.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 10 minutes</p>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/episodes/06-data-dictionary.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1787,7 +1718,7 @@ allowed values.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Compare yours with
 <code>beach_water_quality_data_dictionary.csv</code>. Typical gaps: the
@@ -1813,6 +1744,24 @@ site were below detection, above the count range, or missing, and why.
 Show the code you used.</code></pre>
 <p>Note the last line. Asking for the code lets you check the
 calculation, rather than trusting a number.</p>
+<div id="prof-rawatlals-session-applied-to-data" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="prof-rawatlals-session-applied-to-data" class="callout-inner">
+<h3 class="callout-title">Prof Rawatlal’s session, applied to data</h3>
+<div class="callout-content">
+<p>The data dictionary does for your data what a standing instruction
+file does for a project: the model reads it every time, and you can
+check its work against it. Asking for the code moves a repeated,
+checkable task out of the conversation and into a tool you can re-run.
+And the tidy North Beach mean, 149.7 with n = 6, is a <em>known
+answer</em>: test any model’s output against it before you trust the
+rest.</p>
+</div>
+</div>
+</div>
 <div id="exercise-messy-versus-tidy-demonstration" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1836,7 +1785,7 @@ to check before trusting either?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Discussion </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Answers vary between tools and between runs. With the messy file,
 look for whether the tool noticed <code>-999</code>,
@@ -1868,10 +1817,10 @@ code it used.</li>
 </div>
 </section></section><section id="aio-07-project-organisation"><p>Content from <a href="07-project-organisation.html">Organising a project</a></p>
 <hr>
-<p>Last updated on 2026-10-22 |
+<p>Last updated on 2026-11-02 |
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/07-project-organisation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 8 minutes</p>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/episodes/07-project-organisation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 3 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1920,9 +1869,11 @@ find things without asking.</p>
   docs/                 data dictionary, protocols, permits, ethics approval
   scripts/              code that turns raw into processed, and processed into results
   outputs/              figures, tables, model results; can be regenerated</code></pre>
-<p>The rule that matters most: <strong>files flow one way</strong>, from
-<code>raw</code> to <code>processed</code> to <code>outputs</code>.
-Nothing is ever written back into <code>raw</code>.</p>
+<p>This is the research repository from Prof Rawatlal’s session, seen
+from the data’s side. The rule that matters most: <strong>files flow one
+way</strong>, from <code>raw</code> to <code>processed</code> to
+<code>outputs</code>. Nothing is ever written back into
+<code>raw</code>.</p>
 </section><section><h2 class="section-heading" id="leave-raw-data-raw">Leave raw data raw<a class="anchor" aria-label="anchor" href="#leave-raw-data-raw"></a>
 </h2>
 <hr class="half-width">
@@ -2061,10 +2012,10 @@ one way.</li>
 </div>
 </section></section><section id="aio-08-ai-and-your-data"><p>Content from <a href="08-ai-and-your-data.html">AI tools and your data</a></p>
 <hr>
-<p>Last updated on 2026-10-22 |
+<p>Last updated on 2026-11-02 |
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/08-ai-and-your-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/episodes/08-ai-and-your-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 4 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -2129,8 +2080,11 @@ for that kind of data, or remove the sensitive parts first.</p>
 <div id="your-institutions-rules" class="callout-inner">
 <h3 class="callout-title">Your institution’s rules</h3>
 <div class="callout-content">
-<p>[ADD: link to your institution’s guideline on generative AI and its
-list of approved tools.]</p>
+<p>UKZN’s <em>Principles and Guidelines on the Use of Generative AI in
+Academic Writing</em> and related resources are collected in the
+Library’s guide <a href="https://libguides.ukzn.ac.za/c.php?g=1505779" class="external-link">All things AI @
+UKZN</a>. [ADD: link to UKZN’s list of approved AI tools, if one is
+published.]</p>
 <p>[ADD: name or office of the POPIA information officer to contact with
 questions.]</p>
 </div>
@@ -2162,7 +2116,7 @@ up”.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>
@@ -2185,6 +2139,9 @@ your ethics approval allows it. Anonymise first.</li>
 </section><section><h2 class="section-heading" id="keep-ai-assisted-work-reproducible">Keep AI-assisted work reproducible<a class="anchor" aria-label="anchor" href="#keep-ai-assisted-work-reproducible"></a>
 </h2>
 <hr class="half-width">
+<p>Prof Rawatlal’s session asked for a log line for each piece of work
+done with a model. For data, the log line goes in the processing log of
+the README, beside every other change made to the raw data.</p>
 <p>If an AI tool cleaned, transformed or analysed your data, treat it
 like any other instrument and log its settings. Add a line to the
 processing log in your README:</p>
@@ -2234,13 +2191,13 @@ and how you checked the result.</li>
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/README.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/README.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://justinpringle.github.io/2026-AI-DATA/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://justinpringle.github.io/2026-AI-DATA/" class="external-link">Source</a></p>
+        | <a href="https://github.com/JustinPringle/2026-AI-DATA/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/JustinPringle/2026-AI-DATA/" class="external-link">Source</a></p>
         <p>
-        <a href="https://justinpringle.github.io/2026-AI-DATA/blob/main/" class="external-link">Cite</a>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/blob/main/" class="external-link">Cite</a>
         | <a href="mailto:pringlej@ukzn.ac.za">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
@@ -2261,18 +2218,18 @@ and how you checked the result.</li>
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/aio.html",
+  "@id": "https://justinpringle.github.io/2026-AI-DATA/instructor/aio.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "data organisation, spreadsheets, tidy data, metadata, AI, higher education, The Carpentries",
   "name": "All in One View",
   "creativeWorkStatus": "active",
-  "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/aio.html",
-  "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/aio.html",
+  "url": "https://justinpringle.github.io/2026-AI-DATA/instructor/aio.html",
+  "identifier": "https://justinpringle.github.io/2026-AI-DATA/instructor/aio.html",
   "dateCreated": "2026-10-22",
-  "dateModified": "2026-10-22",
-  "datePublished": "2026-10-22"
+  "dateModified": "2026-11-02",
+  "datePublished": "2026-11-02"
 }
 
   </script><script>

@@ -98,7 +98,7 @@
           <button class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             More <i data-feather="chevron-down"></i>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="datamanagement.html">Data Management Tips</a></li><hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="reference.html">Glossary</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><hr><li><a class="dropdown-item" href="prompts.html">Session prompts</a></li><li><a class="dropdown-item" href="reference.html">Glossary</a></li><li><a class="dropdown-item" href="discuss.html">Going further</a></li>
           </ul></li>
       </ul></div>
     <!--
@@ -114,7 +114,7 @@
     <a id="search-button-nav" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress data">
-    <div class="progress-bar data" role="progressbar" style="width: 51%" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">51%</div>
+    <div class="progress-bar data" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">25%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -236,6 +236,7 @@
 <li><a href="#formatting-that-carries-meaning">Formatting that carries meaning</a></li>
 <li><a href="#merged-cells">Merged cells</a></li>
 <li><a href="#comments-and-units-in-cells">Comments and units in cells</a></li>
+<li><a href="#numbers-stored-as-text">Numbers stored as text</a></li>
 <li><a href="#more-than-one-value-in-a-cell">More than one value in a cell</a></li>
 <li><a href="#calculations-and-repeated-headers-inside-the-data">Calculations and repeated headers inside the data</a></li>
 <li><a href="#problematic-column-names">Problematic column names</a></li>
@@ -337,7 +338,7 @@
                 </h2>
                 <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
-                    <ul><li><a href="datamanagement.html">Data Management Tips</a></li><hr><li><a class="dropdown-item" href="discuss.html">Discussion</a></li><li><a class="dropdown-item" href="reference.html">Glossary</a></li>
+                    <ul><hr><li><a class="dropdown-item" href="prompts.html">Session prompts</a></li><li><a class="dropdown-item" href="reference.html">Glossary</a></li><li><a class="dropdown-item" href="discuss.html">Going further</a></li>
                     </ul></div>
                 </div>
               </div>
@@ -373,9 +374,9 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Common mistakes</h1>
-        <p>Last updated on 2026-10-22 |
+        <p>Last updated on 2026-11-02 |
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/02-common-mistakes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/episodes/02-common-mistakes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
@@ -415,7 +416,7 @@ them?</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>This episode is a reference. Do not teach it line by line; refer to
 it during the debrief of the “spot the mess” exercise.</p>
@@ -440,6 +441,7 @@ meaning</a></li>
 <li><a href="#merged-cells">Merged cells</a></li>
 <li><a href="#comments-and-units-in-cells">Comments and units in
 cells</a></li>
+<li><a href="#numbers-stored-as-text">Numbers stored as text</a></li>
 <li><a href="#more-than-one-value-in-a-cell">More than one value in a
 cell</a></li>
 <li><a href="#calculations-and-repeated-headers-inside-the-data">Calculations
@@ -556,6 +558,16 @@ in the column header (<code>water_temp_c</code>), with one unit per
 column. Lerato’s row 14 holds 74.1, a temperature in Fahrenheit among
 Celsius values; convert it (23.4 °C) and note the conversion in your
 processing log.</p>
+</section><section><h2 class="section-heading" id="numbers-stored-as-text">Numbers stored as text<a class="anchor" aria-label="anchor" href="#numbers-stored-as-text"></a></h2>
+<hr class="half-width"><p><em>Where:</em> <code>2024 Sipho</code>, temperatures in C6, C7, C9,
+C10, C12 and H6, H7, H9, H10, H12.</p>
+<p>These cells look like numbers but hold text, often because they were
+pasted from another program. Excel marks them with a small green
+triangle and aligns them left. <code>AVERAGE</code> skips them; a script
+may refuse the whole column.</p>
+<p><strong>Fix:</strong> convert the column to numbers (select it, then
+the warning icon &gt; <strong>Convert to Number</strong>), and check the
+count of values before and after.</p>
 </section><section><h2 class="section-heading" id="more-than-one-value-in-a-cell">More than one value in a cell<a class="anchor" aria-label="anchor" href="#more-than-one-value-in-a-cell"></a></h2>
 <hr class="half-width"><p><em>Where:</em> Lerato column E (<code>HW+2 / calm</code>) and F8
 (<code>1M swimmer, 2F swimmers</code>).</p>
@@ -656,13 +668,13 @@ information.</li>
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://justinpringle.github.io/2026-AI-DATA/edit/main/episodes/02-common-mistakes.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/edit/main/episodes/02-common-mistakes.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://justinpringle.github.io/2026-AI-DATA/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://justinpringle.github.io/2026-AI-DATA/" class="external-link">Source</a></p>
+        | <a href="https://github.com/JustinPringle/2026-AI-DATA/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/JustinPringle/2026-AI-DATA/" class="external-link">Source</a></p>
         <p>
-        <a href="https://justinpringle.github.io/2026-AI-DATA/blob/main/" class="external-link">Cite</a>
+        <a href="https://github.com/JustinPringle/2026-AI-DATA/blob/main/" class="external-link">Cite</a>
         | <a href="mailto:pringlej@ukzn.ac.za">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
@@ -682,18 +694,18 @@ information.</li>
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/02-common-mistakes.html",
+  "@id": "https://justinpringle.github.io/2026-AI-DATA/instructor/02-common-mistakes.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "data organisation, spreadsheets, tidy data, metadata, AI, higher education, The Carpentries",
   "name": "Common mistakes",
   "creativeWorkStatus": "active",
-  "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/02-common-mistakes.html",
-  "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/02-common-mistakes.html",
+  "url": "https://justinpringle.github.io/2026-AI-DATA/instructor/02-common-mistakes.html",
+  "identifier": "https://justinpringle.github.io/2026-AI-DATA/instructor/02-common-mistakes.html",
   "dateCreated": "2026-10-22",
-  "dateModified": "2026-10-22",
-  "datePublished": "2026-10-22"
+  "dateModified": "2026-11-02",
+  "datePublished": "2026-11-02"
 }
 
   </script><script>
