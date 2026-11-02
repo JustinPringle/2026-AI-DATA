@@ -48,10 +48,10 @@ contact: 'pringlej@ukzn.ac.za'
 # - first-steps.md
 #
 # learners:
-- setup.md
-- prompts.md
-- reference.md
-- discuss.md
+# - setup.md
+# - prompts.md
+# - reference.md
+# - discuss.md
 # - setup.md
 #
 # instructors:
